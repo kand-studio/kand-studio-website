@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from 'react-router-dom';
+import "./style/style.css"
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import Error from "./pages/Error"
+import Project001 from "./pages/Project001"
 
 function App() {
+
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+    useEffect(() => {
+    document.body.classList.remove(
+      "hero-active",
+      "footer-hero",
+    );
+  }, [location.pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`container ${isHome ? "" : "container--padding-bottom"}`}>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* projects */}
+        <Route path="/project-001" element={<Project001 />} />
+        <Route path="/project-002" element={<Project001 />} />
+        <Route path="/project-003" element={<Project001 />} />
+        <Route path="/project-004" element={<Project001 />} />
+      </Routes>
+
+      {!isHome && <Footer />}
     </div>
   );
 }

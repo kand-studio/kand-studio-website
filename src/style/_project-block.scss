@@ -1,0 +1,32 @@
+.project-block {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    &__text {
+        height: 96px;
+
+        &__number {
+            color: var(--gray);
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        &__desc {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img {
+        height: 400px;
+    }
+}

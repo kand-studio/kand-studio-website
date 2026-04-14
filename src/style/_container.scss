@@ -1,0 +1,8 @@
+.container {
+    position: relative;
+    background-color: var(--bg);
+
+    &--padding-bottom {
+        padding-bottom: 80px;
+    }
+}

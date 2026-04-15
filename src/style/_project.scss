@@ -32,8 +32,8 @@
     bottom: 120px;
     left: 60px;
     color: white;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 400;
     max-width: 600px;
     z-index: 2;
     transition: opacity 0.2s ease;
@@ -43,60 +43,72 @@
   &__content {
     padding: 80px 40px;
     background: var(--bg);
-  }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  &__sidebar {
-    position: sticky;
-    top: 100px;
-    align-self: start;
-  }
-
-  &__title {
-    font-size: 28px;
-    font-weight: 500;
-    height: 100px;
-    color: var(--text);
-  }
-
-  &__meta {
-    font-size: 14px;
-    line-height: 1.8;
-    opacity: 0.7;
-    color: var(--text);
-
-    strong {
-        font-weight: 500;
+    &__grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-  }
 
-  &__main {
-    max-width: 700px;
-    color: var(--text);
-    margin-top: 100px;
-  }
+    &__sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
 
-  &__description {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 40px;
-    color: var(--text);
-  }
+    &__number {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
 
-  &__gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    &__title {
+      font-size: 14px;
+      font-weight: 400;
+      height: 100px;
+      color: var(--text);
+    }
 
-    img {
-      width: 100%;
+    &__meta {
+      font-size: 12px;
+      color: var(--text);
+
+      p {
+        strong {
+          font-weight: 500;
+          display: block;
+          font-size: 10px;
+          line-height: 14px;
+          color: var(--gray);
+        }
+        margin-bottom: 12px;
+        max-width: 200px;
+      }
+    }
+
+    &__main {
+      max-width: 700px;
+      color: var(--text);
+      margin-top: 130.5px;
+    }
+
+    &__description {
+      font-size: 14px;
+      margin-bottom: 40px;
+      color: var(--text);
+    }
+
+    &__gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 

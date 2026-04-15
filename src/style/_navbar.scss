@@ -17,11 +17,11 @@
     }
 
     &__logo {
-        font-size: 24px;
-
-        svg {
-            color: var(--text);
-        }
+        width: 88px;
+        height: 40px;
+        background-image: var(--logo);
+        background-size: cover;
+        background-position: center;
     }
 
     &__wrapper {
@@ -40,7 +40,7 @@
         background: none;
         cursor: pointer;
         color: var(--text);
-        font-size: 16px;
+        font-size: 12px;
 
         .icon {
             position: relative;
@@ -99,6 +99,10 @@ body.hero-active .navbar {
     a {
         color: white;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar__logo {
+        background-image: url("../media/logos/logo-white.png");
     }
 
     .sun {

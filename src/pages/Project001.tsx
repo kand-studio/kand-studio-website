@@ -15,7 +15,7 @@ function Project001() {
         document.body.classList.remove("hero-active");
         }
 
-        if (scrollY < 20) {
+        if (scrollY < 24) {
         document.body.classList.add("footer-hero");
         } else {
         document.body.classList.remove("footer-hero");
@@ -40,7 +40,6 @@ function Project001() {
   return (
     <div className="project">
 
-      {/* HERO */}
       <section className="project__hero">
         <img
           src="https://picsum.photos/1600/900"
@@ -70,27 +69,32 @@ function Project001() {
         </h1>
       </section>
 
-      {/* CONTENT */}
       <section className="project__content">
-        <div className="project__grid">
+        <div className="project__content__grid">
 
-          <aside className="project__sidebar">
-            <h2 className="project__title">Nowoczesny Dom</h2>
+          <aside className="project__content__sidebar">
+            <p className="project__content__number">001</p>
+            <h2 className="project__content__title">Nowoczesny Dom w Lesie</h2>
 
-            <div className="project__meta">
-              <p><strong>Lokalizacja:</strong> Wrocław</p>
-              <p><strong>Rok:</strong> 2024</p>
+            <div className="project__content__meta">
               <p><strong>Styl:</strong> Minimalizm</p>
+              <p><strong>Lokalizacja:</strong>Wrocław</p>
+              <p><strong>Rok:</strong> 2024</p>
+              <p><strong>Metraż:</strong> 130 m<sup>2</sup></p>
+              <p>
+                <strong>Pomieszczenia:</strong> 
+                 salon, kuchnia, łazienka, biuro, sypialnia, garderoba
+              </p>
             </div>
           </aside>
 
-          <div className="project__main">
-            <p className="project__description">
+          <div className="project__content__main">
+            <p className="project__content__description">
               Projekt nowoczesnego domu jednorodzinnego inspirowanego naturą.
               Duże przeszklenia, minimalistyczna bryła i naturalne materiały.
             </p>
 
-            <div className="project__gallery">
+            <div className="project__content__gallery">
               <img src="https://picsum.photos/800/500?1" />
               <img src="https://picsum.photos/800/500?2" />
               <img src="https://picsum.photos/800/500?3" />

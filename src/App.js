@@ -15,11 +15,15 @@ function App() {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-    useEffect(() => {
-    document.body.classList.remove(
-      "hero-active",
-      "footer-hero",
-    );
+  useEffect(() => {
+    const isProjectPage = location.pathname.includes("project-00");
+
+    if (!isProjectPage) {
+      document.body.classList.remove(
+        "hero-active",
+        "footer-hero",
+      );
+    }
   }, [location.pathname]);
 
   return (

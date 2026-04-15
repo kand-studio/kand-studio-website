@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ReactComponent as Logo } from "../media/icons/logo.svg";
 
 const links = [
-  { path: "/about", label: "O nas" },
+  { path: "/about", label: "O mnie" },
   { path: "/contact", label: "Ofertownik" },
   { path: "/how", label: "Jak działamy" },
   { path: "/contact", label: "Kontakt" },
@@ -32,9 +32,9 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
-        <Link to="/"><Logo /></Link>
-      </div>
+      <Link to="/">
+       <div className="navbar__logo"></div>
+      </Link>
 
       <div className="navbar__wrapper">
         {links.map((link) => (

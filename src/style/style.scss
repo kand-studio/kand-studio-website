@@ -15,6 +15,10 @@ body {
      font-family: var(--font);
 }
 
+button, input {
+    font-family: var(--font);
+}
+
 // @import "./base/colors";
 // @import "./base/breakpoints";
 @import "./container";
@@ -22,6 +26,7 @@ body {
 @import "./footer";
 @import "./home";
 @import "./about";
+@import "./offer";
 
 @import "./project-block";
 @import "./project";

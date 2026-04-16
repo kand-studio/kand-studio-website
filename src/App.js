@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
 import Project001 from "./pages/Project001"
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
         <Route path="/about" element={<About />} />
+        <Route path="/offer" element={<Offer />} />
         <Route path="/contact" element={<Contact />} />
         {/* projects */}
         <Route path="/project-001" element={<Project001 />} />

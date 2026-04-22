@@ -41,6 +41,7 @@ button, input {
 .container {
   position: relative;
   background-color: var(--bg);
+  min-height: 100vh;
 }
 .container--padding-bottom {
   padding-bottom: 80px;
@@ -335,6 +336,9 @@ body.footer-hero .footer {
   line-height: 14px;
   color: var(--gray);
 }
+.offer__calculator__result p {
+  color: var(--text);
+}
 .offer__calculator__disclaimer, .offer__calculator__error {
   margin-top: 16px;
   max-width: 200px;
@@ -484,6 +488,8 @@ body.footer-hero .footer {
 }
 .project-block__img {
   height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project__hero {
@@ -571,6 +577,11 @@ body.footer-hero .footer {
   font-size: 14px;
   margin-bottom: 40px;
   color: var(--text);
+}
+.project__content__description strong {
+  font-weight: 500;
+  display: block;
+  font-size: 16px;
 }
 .project__content__gallery {
   display: flex;

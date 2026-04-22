@@ -1,6 +1,7 @@
 .container {
     position: relative;
     background-color: var(--bg);
+    min-height: 100vh;
 
     &--padding-bottom {
         padding-bottom: 80px;

@@ -10,6 +10,7 @@ import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
 import Project001 from "./pages/Project001"
+import ProjectPage from "./pages/ProjectPage"
 
 function App() {
 
@@ -32,15 +33,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error />} />
         <Route path="/about" element={<About />} />
         <Route path="/offer" element={<Offer />} />
         <Route path="/contact" element={<Contact />} />
         {/* projects */}
-        <Route path="/project-001" element={<Project001 />} />
+        {/* <Route path="/project-001" element={<Project001 />} />
         <Route path="/project-002" element={<Project001 />} />
         <Route path="/project-003" element={<Project001 />} />
-        <Route path="/project-004" element={<Project001 />} />
+        <Route path="/project-004" element={<Project001 />} /> */}
+        <Route path="/project/:number" element={<ProjectPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
 
       {!isHome && <Footer />}

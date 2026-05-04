@@ -218,7 +218,10 @@ function OfferPage() {
 
           <div className="offer__content__main">
 
-            <p className="offer__content__title">Ofertownik</p>
+            <div style={{ display: "flex" }}>
+              <p className="offer__content__title" style={{ cursor: "pointer" }}>Ofertownik</p>
+              <p className="offer__content__title" style={{ marginLeft: "24px", cursor: "pointer", color: "#828282" }}>INFORMACJE DOTYCZĄCE WYCENY</p>
+            </div>
 
             <p className="offer__content__label">Pakiet:</p>
 
@@ -277,11 +280,11 @@ function OfferPage() {
               </ul>
             </div>
 
-            <div className="offer__content__extra-info">
+            {/* <div className="offer__content__extra-info">
               <p className="offer__content__title">
                 INFORMACJE DOTYCZĄCE WYCENY
               </p>
-            </div>
+            </div> */}
 
           </div>
         </div>

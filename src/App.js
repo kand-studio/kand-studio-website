@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import Home from "./pages/Home"
 import About from "./pages/About"
+import Work from "./pages/Work"
 import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/how-we-work" element={<Work />} />
         <Route path="/offer" element={<Offer />} />
         <Route path="/contact" element={<Contact />} />
         {/* projects */}

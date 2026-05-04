@@ -20,11 +20,13 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
             <p className="project-block__text__title">{title}</p>
             <p className="project-block__text__desc">{description}</p>
         </div>
-        <img
-          src={image}
-          alt={title}
-          className="project-block__img"
-        />
+        <div className="project-block__img-wrapper">
+          <img
+            src={image}
+            alt={title}
+            className="project-block__img"
+          />
+        </div>
     </div>
   );
 };

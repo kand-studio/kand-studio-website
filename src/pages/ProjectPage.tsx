@@ -85,10 +85,6 @@ function ProjectPage() {
               <p>
                 <strong>Metraż:</strong> {project.area} m²
               </p>
-              <p>
-                <strong>Pomieszczenia:</strong>{" "}
-                {project.rooms.join(", ")}
-              </p>
             </div>
           </aside>
 

@@ -1,29 +1,34 @@
-import cover1 from "../media/projects/kamienica-001/img0.jpg";
+import cover1 from "../media/projects/kamienica-001/cover.jpg";
+import img1_0 from "../media/projects/kamienica-001/img0.jpg";
 import img1_1 from "../media/projects/kamienica-001/img1.jpg";
 import img1_2 from "../media/projects/kamienica-001/img2.jpg";
 import img1_3 from "../media/projects/kamienica-001/img3.jpg";
 import img1_4 from "../media/projects/kamienica-001/img4.jpg";
 import img1_5 from "../media/projects/kamienica-001/img5.jpg";
 
-import cover2 from "../media/projects/frosz-002/img0.jpg";
+import cover2 from "../media/projects/frosz-002/cover.jpg";
+import img2_0 from "../media/projects/frosz-002/img0.jpg";
 import img2_1 from "../media/projects/frosz-002/img1.jpg";
 import img2_2 from "../media/projects/frosz-002/img2.jpg";
 import img2_3 from "../media/projects/frosz-002/img3.jpg";
 import img2_4 from "../media/projects/frosz-002/img4.jpg";
 
-import cover3 from "../media/projects/skra-003/img0.jpg";
+import cover3 from "../media/projects/skra-003/cover.jpg";
+import img3_0 from "../media/projects/skra-003/img0.jpg";
 import img3_1 from "../media/projects/skra-003/img1.jpg";
 import img3_2 from "../media/projects/skra-003/img2.jpg";
 import img3_3 from "../media/projects/skra-003/img3.jpg";
 import img3_4 from "../media/projects/skra-003/img4.jpg";
 import img3_5 from "../media/projects/skra-003/img5.jpg";
 
-import cover4 from "../media/projects/krys-004/img0.jpg";
+import cover4 from "../media/projects/krys-004/cover.jpg";
+import img4_0 from "../media/projects/krys-004/img0.jpg";
 import img4_1 from "../media/projects/krys-004/img1.jpg";
 import img4_2 from "../media/projects/krys-004/img2.jpg";
 import img4_3 from "../media/projects/krys-004/img3.jpg";
 
-import cover5 from "../media/projects/mor-005/img0.jpg";
+import cover5 from "../media/projects/mor-005/cover.jpg";
+import img5_0 from "../media/projects/mor-005/img0.jpg";
 import img5_1 from "../media/projects/mor-005/img1.jpg";
 import img5_2 from "../media/projects/mor-005/img2.jpg";
 import img5_3 from "../media/projects/mor-005/img3.jpg";
@@ -39,8 +44,7 @@ export type Project = {
   images: string[];
   cover: string;
   year: number;
-  area: number;
-  rooms: string[];
+  area: string;
 };
 
 export const projects: Project[] = [
@@ -58,10 +62,9 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na zestawieniu historycznego kontekstu z nowoczesną, minimalistyczną formą. Kluczową rolę odgrywają naturalne materiały - przede wszystkim kamień - traktowane w sposób rzeźbiarski. Całość dopełnia świadomie zaprojektowane światło, które wydobywa fakturę i buduje klimat wnętrza.",
     cover: cover1,
-    images: [img1_1, img1_2, img1_3, img1_4, img1_5],
-    year: 2024,
-    area: 180,
-    rooms: ["Salon", "Kuchnia", "Sypialnia", "Łazienka"],
+    images: [img1_0, img1_1, img1_2, img1_3, img1_4, img1_5],
+    year: 2026,
+    area: "Mieszkanie 100",
   },
   {
     number: "002",
@@ -77,10 +80,9 @@ export const projects: Project[] = [
     styleDescription:
       "Połączenie surowych, naturalnych materiałów z minimalistyczną formą i rzeźbiarskim podejściem do detalu. Styl oparty na kontraście: ciężar kamienia zestawiony z lekkością światła, prostota brył z organiczną nieregularnością.",
     cover: cover2,
-    images: [img2_1, img2_2, img2_3, img2_4],
-    year: 2023,
-    area: 140,
-    rooms: ["???", "???", "???"],
+    images: [img2_0, img2_1, img2_2, img2_3, img2_4],
+    year: 2026,
+    area: "Dom 300",
   },
   {
     number: "003",
@@ -95,10 +97,9 @@ export const projects: Project[] = [
     styleDescription:
       "Połączenie klasycznej architektury z nowoczesnym, minimalistycznym podejściem do formy. Styl oparty na świetle, proporcji i selektywnym użyciu materiałów, z wyraźnym odniesieniem do estetyki galerii sztuki. ",
     cover: cover3,
-    images: [img3_1, img3_2, img3_3, img3_4, img3_5],
-    year: 2023,
-    area: 140,
-    rooms: ["???", "???", "???"],
+    images: [img3_0, img3_1, img3_2, img3_3, img3_4, img3_5],
+    year: 2025,
+    area: "Dom 220",
   },
   {
     number: "004",
@@ -114,10 +115,9 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na naturalnych materiałach, ciepłej palecie barw i prostych formach. Kluczowe są tu proporcja, światło i autentyczność materiałów, które razem budują spokojną, ponadczasową przestrzeń.",
     cover: cover4,
-    images: [img4_1, img4_2, img4_3],
-    year: 2023,
-    area: 140,
-    rooms: ["???", "???", "???"],
+    images: [img4_0, img4_1, img4_2, img4_3],
+    year: 2025,
+    area: "Mieszkanie 120",
   },
   {
     number: "005",
@@ -134,9 +134,8 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na kontraście, prostocie i wysokiej jakości materiałach. Minimalizm wzbogacony o wyraźne akcenty kamienia i światła, tworzący elegancką, miejską przestrzeń.",
     cover: cover5,
-    images: [img5_1, img5_2, img5_3, img5_4],
-    year: 2023,
-    area: 140,
-    rooms: ["???", "???", "???"],
+    images: [img5_0, img5_1, img5_2, img5_3, img5_4],
+    year: 2025,
+    area: "Mieszkanie 55",
   },
 ];

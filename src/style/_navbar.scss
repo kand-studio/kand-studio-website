@@ -1,13 +1,13 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
+    align-items: center; 
     position: fixed;
     top: 0;
     padding: 12px 12px 0 12px;
-    z-index: 1000;
+    z-index: 1001;
     transition: 0.3s;
+    width: 100%;  
 
     a {
         color: var(--text);
@@ -22,32 +22,89 @@
         background-image: var(--logo);
         background-size: cover;
         background-position: center;
+        position: relative;
+        z-index: 1001;
     }
 
     &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg);
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1000;
+        &.open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (min-width: 992px) {
+            position: static;
+            height: auto;
+            width: auto;
+            background: transparent;
+            flex-direction: row;
+            transform: none;
+            opacity: 1;
+            pointer-events: auto;
+        }
     }
 
     &__link {
-        margin-left: 20px;
-        font-size: 12px;
+        margin: 16px 0 0 40px;
+        font-size: 20px;
         text-transform: uppercase;
+
+        @media (min-width: 992px) {
+            margin: 0 0 0 20px;
+            font-size: 12px;
+            width: auto;
+        }
+    }
+
+    &__ig {
+        width: 20px;
+        height: 20px;
+        background-image: var(--instaIcon);
+        background-position: center;
+        background-size: cover;
+        margin-left: 16px;
+
+        @media (min-width: 992px) {
+            display: none;
+        }
     }
 
     &__darkmode {
-        margin-left: 20px;
         border: none;
         background: none;
         cursor: pointer;
         color: var(--text);
         font-size: 12px;
 
+        @media (min-width: 992px) {
+            margin: 0 0 0 20px;
+        }
+
         .icon {
             position: relative;
-            width: 14px;
-            height: 14px;
+            width: 20px;
+            height: 20px;
             overflow: hidden;
             display: inline-block;
+            @media (min-width: 992px) {
+                width: 14px;
+                height: 14px;
+            }
         }
 
         .sun {
@@ -92,10 +149,52 @@
             opacity: 1;
         }
     }
+
+    &__darkmode-wrapper {
+        display: flex;
+        margin: 40px 0 0 40px;
+
+        @media (min-width: 992px) {
+            display: block;
+            margin: 0;
+        }
+    }
+
+    &__burger {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+        padding: 0;
+
+        .icon {
+            width: 100%;
+            height: 100%;
+            background-image: url("../media/icons/menu.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &.open .icon {
+            background-image: url("../media/icons/close.png");
+        }
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 992px) {
+        align-items: flex-start;
+    }
 }
 
 // project hero section 
-body.hero-active .navbar {
+body.hero-active .navbar:not(.is-open) {
     a {
         color: white;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
@@ -108,4 +207,40 @@ body.hero-active .navbar {
     .sun {
         background-image: url("../media/icons/dark-mode-moon-white.png");
     }
+
+    .navbar__burger .icon {
+        background-image: url("../media/icons/dark-mode-menu.png");
+    }
+
+    .navbar__burger.open .icon {
+        background-image: url("../media/icons/dark-mode-close.png");
+    }
+}
+
+
+body.dark {
+    .navbar__burger .icon {
+        background-image: url("../media/icons/dark-mode-menu.png");
+    }
+
+    .navbar__burger.open .icon {
+        background-image: url("../media/icons/dark-mode-close.png");
+    }
+}
+
+body::after {
+    content: "";
+    display: none;
+    background-image:
+        url("../media/icons/menu.png"),
+        url("../media/icons/close.png"),
+        url("../media/icons/dark-mode-menu.png"),
+        url("../media/icons/dark-mode-close.png");
+}
+
+// no scroll on nav mobile open 
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
 }

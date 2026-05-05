@@ -50,13 +50,13 @@ button, input {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
+  align-items: center;
   position: fixed;
   top: 0;
   padding: 12px 12px 0 12px;
-  z-index: 1000;
+  z-index: 1001;
   transition: 0.3s;
+  width: 100%;
 }
 .navbar a {
   color: var(--text);
@@ -70,29 +70,91 @@ button, input {
   background-image: var(--logo);
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 1001;
 }
 .navbar__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+.navbar__wrapper.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (min-width: 992px) {
+  .navbar__wrapper {
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 .navbar__link {
-  margin-left: 20px;
-  font-size: 12px;
+  margin: 16px 0 0 40px;
+  font-size: 20px;
   text-transform: uppercase;
 }
+@media (min-width: 992px) {
+  .navbar__link {
+    margin: 0 0 0 20px;
+    font-size: 12px;
+    width: auto;
+  }
+}
+.navbar__ig {
+  width: 20px;
+  height: 20px;
+  background-image: var(--instaIcon);
+  background-position: center;
+  background-size: cover;
+  margin-left: 16px;
+}
+@media (min-width: 992px) {
+  .navbar__ig {
+    display: none;
+  }
+}
 .navbar__darkmode {
-  margin-left: 20px;
   border: none;
   background: none;
   cursor: pointer;
   color: var(--text);
   font-size: 12px;
 }
+@media (min-width: 992px) {
+  .navbar__darkmode {
+    margin: 0 0 0 20px;
+  }
+}
 .navbar__darkmode .icon {
   position: relative;
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
   display: inline-block;
+}
+@media (min-width: 992px) {
+  .navbar__darkmode .icon {
+    width: 14px;
+    height: 14px;
+  }
 }
 .navbar__darkmode .sun {
   background-image: url("../media/icons/dark-mode-moon.png");
@@ -127,16 +189,81 @@ button, input {
   transform: translateY(0);
   opacity: 1;
 }
+.navbar__darkmode-wrapper {
+  display: flex;
+  margin: 40px 0 0 40px;
+}
+@media (min-width: 992px) {
+  .navbar__darkmode-wrapper {
+    display: block;
+    margin: 0;
+  }
+}
+.navbar__burger {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 0;
+}
+.navbar__burger .icon {
+  width: 100%;
+  height: 100%;
+  background-image: url("../media/icons/menu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navbar__burger.open .icon {
+  background-image: url("../media/icons/close.png");
+}
+@media (min-width: 992px) {
+  .navbar__burger {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    align-items: flex-start;
+  }
+}
 
-body.hero-active .navbar a {
+body.hero-active .navbar:not(.is-open) a {
   color: white;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
 }
-body.hero-active .navbar .navbar__logo {
+body.hero-active .navbar:not(.is-open) .navbar__logo {
   background-image: url("../media/logos/logo-white.png");
 }
-body.hero-active .navbar .sun {
+body.hero-active .navbar:not(.is-open) .sun {
   background-image: url("../media/icons/dark-mode-moon-white.png");
+}
+body.hero-active .navbar:not(.is-open) .navbar__burger .icon {
+  background-image: url("../media/icons/dark-mode-menu.png");
+}
+body.hero-active .navbar:not(.is-open) .navbar__burger.open .icon {
+  background-image: url("../media/icons/dark-mode-close.png");
+}
+
+body.dark .navbar__burger .icon {
+  background-image: url("../media/icons/dark-mode-menu.png");
+}
+body.dark .navbar__burger.open .icon {
+  background-image: url("../media/icons/dark-mode-close.png");
+}
+
+body::after {
+  content: "";
+  display: none;
+  background-image: url("../media/icons/menu.png"), url("../media/icons/close.png"), url("../media/icons/dark-mode-menu.png"), url("../media/icons/dark-mode-close.png");
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .footer {

@@ -46,9 +46,6 @@
     &__main {
       max-width: 700px;
       color: var(--text);
-      @media (min-width: 992px) {
-        margin-top: 130.5px;
-      }
     }
 
     &__title {

@@ -17,9 +17,10 @@ function App() {
 
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isProjectPage = location.pathname.includes("project");
 
   useEffect(() => {
-    const isProjectPage = location.pathname.includes("project-00");
+    const isProjectPage = location.pathname.includes("project");
 
     if (!isProjectPage) {
       document.body.classList.remove(
@@ -30,7 +31,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className={`container ${isHome ? "" : "container--padding-bottom"}`}>
+    <div className={`container ${(isHome || isProjectPage) ? "" : "container--padding-bottom"}`}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

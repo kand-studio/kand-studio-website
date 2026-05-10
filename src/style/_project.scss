@@ -142,5 +142,66 @@
     }
   }
 
+  &__next-project {
+    width: 100%;
+    background-color: var(--bg-gray);
+
+    a {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 40px 64px 40px;
+      color: var(--text);
+
+      @media (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+
+      @media (min-width: 992px) {
+        flex-direction: row;
+        align-items: center;
+         margin-top: 0px;
+      }
+
+      &--title {
+        margin: 0 0 20px 0 ;
+        @media (min-width: 992px) {
+          margin: 0 40px 0 0 ;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--text);
+          margin-bottom: 8px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--text);
+
+          @media (min-width: 992px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &--img {
+        width: 200px;
+        height: 112px;
+      }
+    }
+  }
+
   scroll-behavior: smooth;
 }

@@ -1,11 +1,18 @@
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 
 function ProjectPage() {
   const { number } = useParams();
   const project = projects.find((p) => p.number === number);
 
+  const currentIndex = projects.findIndex((p) => p.number === number);
+
+  const nextProject =
+    currentIndex !== -1
+      ? projects[(currentIndex + 1) % projects.length]
+      : null;
+      
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -31,6 +38,10 @@ function ProjectPage() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [number]);
 
   if (!project) return <div>Projekt nie istnieje</div>;
 
@@ -117,6 +128,29 @@ function ProjectPage() {
 
         </div>
       </section>
+
+      {/* DOKOŃCZYĆ TO NIZEJ - wyrównac padding tez do kolumn?, inny kolor?  */}
+
+      {nextProject && (
+        <section className="project__next-project">
+          <Link to={`/project/${nextProject.number}`}>
+            <p>(ikonka strzałki) Następny projekt</p>
+
+            <div className="project__next-project__content">
+              <div className="project__next-project__content--title">
+                <p>{nextProject.number}</p>
+                <h2>{nextProject.title}</h2>
+              </div>
+
+              <img
+                src={nextProject.cover}
+                alt={nextProject.title}
+                className="project__next-project__content--img"
+              />
+            </div>
+          </Link>
+        </section>
+      )}
 
     </div>
   );

@@ -7,6 +7,7 @@
   --text: #000000;
   --card: #f5f5f5;
   --gray: #828282;
+  --bg-gray: #f4f3f3;
   --instaIcon: url("../media/icons/insta-black.png");
   --logo: url("../media/logos/logo-black.png");
   --logoSmall: url("../media/logos/logo-black-small.png");
@@ -17,6 +18,7 @@ body.dark {
   --text: #f5f5f5;
   --card: #1a1a1a;
   --gray: #828282;
+  --bg-gray: #161616;
   --instaIcon: url("../media/icons/insta-white.png");
   --logo: url("../media/logos/logo-white.png");
   --logoSmall: url("../media/logos/logo-white-small.png");
@@ -386,11 +388,6 @@ body.footer-hero .footer {
 .about__content__main {
   max-width: 700px;
   color: var(--text);
-}
-@media (min-width: 992px) {
-  .about__content__main {
-    margin-top: 130.5px;
-  }
 }
 .about__content__title {
   font-size: 14px;
@@ -876,6 +873,65 @@ body.footer-hero .footer {
 }
 .project__content__gallery img {
   width: 100%;
+}
+.project__next-project {
+  width: 100%;
+  background-color: var(--bg-gray);
+}
+.project__next-project a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 64px 40px;
+  color: var(--text);
+}
+@media (min-width: 992px) {
+  .project__next-project a {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+  }
+}
+.project__next-project__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+@media (min-width: 992px) {
+  .project__next-project__content {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+.project__next-project__content--title {
+  margin: 0 0 20px 0;
+}
+@media (min-width: 992px) {
+  .project__next-project__content--title {
+    margin: 0 40px 0 0;
+  }
+}
+.project__next-project__content--title p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.project__next-project__content--title h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+}
+@media (min-width: 992px) {
+  .project__next-project__content--title h2 {
+    font-size: 14px;
+  }
+}
+.project__next-project__content--img {
+  width: 200px;
+  height: 112px;
 }
 .project {
   scroll-behavior: smooth;

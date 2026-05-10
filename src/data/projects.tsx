@@ -34,6 +34,33 @@ import img5_2 from "../media/projects/mor-005/img2.jpg";
 import img5_3 from "../media/projects/mor-005/img3.jpg";
 import img5_4 from "../media/projects/mor-005/img4.jpg";
 
+import cover6 from "../media/projects/cichow-006/cover.jpg";
+import img6_0 from "../media/projects/cichow-006/img0.jpg";
+import img6_1 from "../media/projects/cichow-006/img1.jpg";
+import img6_2 from "../media/projects/cichow-006/img2.jpg";
+import img6_3 from "../media/projects/cichow-006/img3.jpg";
+import img6_4 from "../media/projects/cichow-006/img4.jpg";
+
+import cover7 from "../media/projects/kawalerka-007/cover.jpg";
+import img7_0 from "../media/projects/kawalerka-007/img0.jpg";
+import img7_1 from "../media/projects/kawalerka-007/img1.jpg";
+import img7_2 from "../media/projects/kawalerka-007/img2.jpg";
+import img7_3 from "../media/projects/kawalerka-007/img3.jpg";
+
+// jedno zdjęcie jest szerokie i nie pasuje do układu
+import cover8 from "../media/projects/chor-008/cover.jpg";
+import img8_0 from "../media/projects/chor-008/img0.jpg";
+import img8_1 from "../media/projects/chor-008/img1.jpg";
+import img8_2 from "../media/projects/chor-008/img2.jpg";
+import img8_3 from "../media/projects/chor-008/img3.jpg";
+import img8_4 from "../media/projects/chor-008/img4.jpg";
+
+import cover9 from "../media/projects/syr-009/cover.jpg";
+import img9_0 from "../media/projects/syr-009/img0.jpg";
+import img9_1 from "../media/projects/syr-009/img1.jpg";
+import img9_2 from "../media/projects/syr-009/img2.jpg";
+import img9_3 from "../media/projects/syr-009/img3.jpg";
+
 export type Project = {
   number: string;
   title: string;
@@ -137,5 +164,78 @@ export const projects: Project[] = [
     images: [img5_0, img5_1, img5_2, img5_3, img5_4],
     year: 2025,
     area: "Mieszkanie 55",
+  },
+  {
+    number: "006",
+    title: "Birch Forest Residence",
+    style: "Modern Nature",
+    location: "Pilzno, Polska",
+      description: [
+        "Ten dom został zaprojektowany w bezpośrednim dialogu z otaczającym go lasem brzozowym. Duże przeszklenia otwierają wnętrze na naturę, wprowadzając zmieniające się światło i widok drzew jako integralną część przestrzeni.",
+        "Wnętrze opiera się na kontrastowym zestawieniu materiałów - ciemnego kamienia o wyraźnym użyleniu, naturalnego drewna oraz stonowanych, miękkich tkanin. Kamień nadaje przestrzeni wyrazistość i elegancję, podczas gdy drewno i światło wprowadzają równowagę i ciepło.",
+        "Układ funkcjonalny został zaprojektowany jako otwarta, płynna przestrzeń dzienna, w której poszczególne strefy przenikają się, zachowując jednocześnie czytelny podział. Centralnym punktem jest kuchnia i strefa wypoczynkowa, z których widok prowadzi bezpośrednio na otaczający krajobraz.",
+        "To dom, który nie odcina się od natury - tylko świadomie ją włącza do wnętrza.",
+    ],
+    styleDescription:
+      "Styl oparty na silnym powiązaniu wnętrza z otoczeniem. Kontrast naturalnych materiałów — kamienia i drewna — z nowoczesną, minimalistyczną formą tworzy przestrzeń elegancką, ale jednocześnie osadzoną w naturze.",
+    cover: cover6,
+    images: [img6_0, img6_1, img6_2, img6_3, img6_4],
+    year: 2024,
+    area: "Dom 280m",
+  },
+  {
+    number: "007",
+    title: "Skyline Studio",
+    style: "Urban Soft Minimalism",
+    location: "Rzeszów, Polska",
+      description: [
+        "Kompaktowa przestrzeń zaprojektowana jako spójne, funkcjonalne wnętrze o wyraźnie zdefiniowanym klimacie.",
+        "Projekt opiera się na pracy światłem i materiałem — miękkie, rozproszone oświetlenie buduje atmosferę i podkreśla faktury, tworząc przytulne, wieczorne wnętrze. Stonowana paleta kolorystyczna, oparta na odcieniach szarości, beżu i ciepłego drewna, nadaje przestrzeni elegancji i spokoju.",
+        "Każdy element został dobrany z myślą o maksymalnym wykorzystaniu metrażu — od zabudowy po układ funkcjonalny. Zaokrąglone formy mebli łagodzą geometrię wnętrza, wprowadzając miękkość i komfort użytkowania.",
+        "To niewielka przestrzeń, która oferuje pełne doświadczenie mieszkania — bez kompromisów w estetyce.",
+    ],
+    styleDescription:
+      "Styl oparty na tworzeniu atmosfery poprzez światło, kolor i proporcję. Minimalizm wzbogacony o miękkie formy i ciepłe materiały, dostosowany do życia w przestrzeni o ograniczonym metrażu.",
+    cover: cover7,
+    images: [img7_0, img7_1, img7_2, img7_3],
+    year: 2025,
+    area: "Mieszkanie 40m",
+  },
+  {
+    number: "008",
+    title: "Adriatic Horizon Residence",
+    style: "Industrial Luxury",
+    location: "Rogoznica, Chorwacja",
+      description: [
+       "Projekt apartamentowca w Chorwacji opiera się na świadomym kontraście między surowością materiałów a komfortem użytkowania.",
+       "Dominują tu naturalne, nieprzetworzone powierzchnie — lane betony, kamień oraz miedziane akcenty, które nadają wnętrzom wyrazisty, industrialny charakter. Materiały te zostały zestawione z miękkimi tkaninami, drewnem i skórą, które wprowadzają równowagę i ocieplają przestrzeń.",
+       "Duże przeszklenia otwierają wnętrza na widok morza, wprowadzając naturalne światło jako kluczowy element kompozycji. Przestrzenie wspólne zaprojektowano jako centralny punkt doświadczenia — miejsce spotkań, relaksu i regeneracji, uzupełnione o strefę basenową, jacuzzi oraz saunarium.",
+       "Każdy z apartamentów zachowuje prywatność, jednocześnie będąc częścią większej, spójnej całości.",
+       "To miejsce, które łączy surową estetykę z komfortem wypoczynku — bez zbędnych ozdobników, ale z wyraźnym charakterem."
+    ],
+    styleDescription:
+      "Styl oparty na eksponowaniu surowych materiałów — betonu, kamienia i metalu — przełamanych miękkimi, naturalnymi elementami. Minimalizm o wyraźnym, industrialnym charakterze, dostosowany do funkcji wypoczynkowej.",
+    cover: cover8,
+    images: [img8_0, img8_1, img8_2, img8_3, img8_4],
+    year: 2025,
+    area: "Apartamentowiec 670m",
+  },
+  {
+    number: "009",
+    title: "Refined Heritage Apartment",
+    style: "Modern Heritage",
+    location: "Kraków, Polska",
+      description: [
+      "Projekt mieszkania w krakowskiej kamienicy opiera się na dialogu między klasyczną architekturą a współczesnym minimalizmem.",
+      "Zachowane detale — sztukaterie i proporcje wnętrza — stanowią tło dla nowoczesnych, surowych materiałów. Odsłonięty beton stropu oraz kamień wprowadzają wyrazisty, architektoniczny charakter, który został przełamany ciepłem drewna i subtelnym światłem.",
+      "Zabudowa kuchenna została zaprojektowana w sposób minimalistyczny, z naciskiem na czystość formy i jakość materiałów. Ograniczona paleta kolorystyczna podkreśla elegancję wnętrza, jednocześnie pozwalając wybrzmieć detalom.",
+      "Całość tworzy przestrzeń, która łączy historię miejsca z nowoczesnym podejściem do życia — bez zbędnych kontrastów, ale z wyraźną tożsamością.",
+    ],
+    styleDescription:
+      "Styl oparty na zestawieniu klasycznych elementów architektury z surowymi, współczesnymi materiałami. Minimalizm wzbogacony o strukturę i detal, tworzący elegancką, ponadczasową przestrzeń.",
+    cover: cover9,
+    images: [img9_0, img9_1, img9_2, img9_3],
+    year: 2025,
+    area: "Mieszkanie 110m",
   },
 ];

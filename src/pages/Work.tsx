@@ -9,7 +9,7 @@ function Work() {
         <div className="work__content__grid">
 
           <aside className="work__content__sidebar">
-            ...
+            Lista projektów tutaj
           </aside>
 
           <div className="work__content__main">

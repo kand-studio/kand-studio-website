@@ -9,7 +9,7 @@ function About() {
       <section className="about__content">
         <div className="about__content__grid">
 
-          <aside className="about__content__sidebar">
+          <aside className="about__content__sidebar desktop">
             <img src={AboutMe} className="about__content__img" />
           </aside>
 
@@ -24,6 +24,9 @@ function About() {
             <p className="about__content__title">O mnie</p>
             <p className="about__content__description">
               <span>Kamil Niemiec</span>
+              <br className="mobile" />
+              <br className="mobile" />
+              <img src={AboutMe} className="about__content__img mobile" />
               <br />
               <br />
               Każdy projekt to dla mnie indywidualna historia - dlatego z pełną uwagą wsłuchuję się w potrzeby klientów, doradzam na wszystkich etapach współpracy i konsekwentnie dążę do realizacji ich wizji. Kluczowe znaczenie mają dla mnie precyzja, staranność oraz spójność estetyczna, co przekłada się na wysokie zadowolenie klientów i długofalowe relacje oparte na zaufaniu.<br /><br />

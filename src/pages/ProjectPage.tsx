@@ -91,7 +91,7 @@ function ProjectPage() {
           <div className="project__content__main">
 
             <div className="project__content__description">
-                <p><strong>{project.title}</strong> </p>
+                <p className="desktop"><strong>{project.title}</strong> </p>
                 <br />
               {project.description.map((p, i) => (
                 <>

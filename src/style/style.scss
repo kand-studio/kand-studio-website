@@ -31,3 +31,16 @@ button, input {
 
 @import "./project-block";
 @import "./project";
+
+.mobile {
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.desktop {
+    display: none;
+    @media (min-width: 992px) {
+       display: block;
+    }
+}

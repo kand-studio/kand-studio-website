@@ -2,9 +2,12 @@
 
   &__hero {
     position: relative;
-    height: 100vh;
     width: 100%;
     overflow: hidden;
+    @media (min-width: 992px) {
+      height: 100vh;
+      width: 100%;
+    }
   }
 
   &__hero-img {
@@ -32,30 +35,44 @@
     bottom: 120px;
     left: 60px;
     color: white;
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 400;
     max-width: 600px;
     z-index: 2;
     transition: opacity 0.2s ease;
     will-change: transform, opacity;
+    display: none;
+    @media (min-width: 992px) {
+      display: block;
+    }
   }
 
   &__content {
-    padding: 80px 40px;
+    padding: 64px 40px;
     background: var(--bg);
+
+    @media (min-width: 992px) {
+      padding: 80px 40px;
+    }
 
     &__grid {
       display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 60px;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
+
+      @media (min-width: 992px) {
+        grid-template-columns: 300px 1fr;
+        gap: 60px;
+      }
     }
 
     &__sidebar {
-      position: sticky;
-      top: 100px;
       align-self: start;
+      @media (min-width: 992px) {
+        position: sticky;
+        top: 100px;
+      }
     }
 
     &__number {
@@ -66,10 +83,16 @@
     }
 
     &__title {
-      font-size: 14px;
+      font-size: 20px;
       font-weight: 400;
-      height: 100px;
       color: var(--text);
+      margin-bottom: 24px;
+
+      @media (min-width: 992px) {
+        height: 100px;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
     }
 
     &__meta {
@@ -92,7 +115,9 @@
     &__main {
       max-width: 700px;
       color: var(--text);
-      margin-top: 130.5px;
+      @media (min-width: 992px) {
+        margin-top: 130.5px;
+      }
     }
 
     &__description {

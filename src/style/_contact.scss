@@ -1,0 +1,114 @@
+.contact {
+    padding-top: 100px;
+
+    &__content {
+        padding: 64px 24px 0px 24px;
+        background: var(--bg);
+
+        @media (min-width: 992px) {
+        padding: 80px 40px 0px 40px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__logo {
+            display: block;
+            width: 64px;
+            height: 40px;
+            background-image: var(--logoSmall);
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+
+        &__grid {
+            display: grid;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            @media (min-width: 992px) {
+                gap: 60px;
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: var(--text);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: var(--text);
+
+            @media (min-width: 992px) {
+                margin-bottom: 120px;
+                max-width: 800px;
+            }
+
+            span {
+                font-family: var(--fontFancy);
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            &--info {
+                font-size: 14px;
+                color: var(--text);
+                margin-bottom: 40px;
+
+                p {
+                    margin-bottom: 12px;
+                    max-width: 280px;
+                    strong {
+                        font-weight: 500;
+                        display: block;
+                        font-size: 10px;
+                        line-height: 16px;
+                        color: var(--gray);
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+
+            a {
+                color: var(--text);
+                font-size: 14px;
+                text-decoration: none;
+                display: flex;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .arrow-link {
+                transform: rotate(90deg);
+                content: "";
+                display: block;
+                width: 14px;
+                height: 14px;
+                background-image: var(--arrowLink);
+                background-size: cover;
+                background-position: center;
+                margin-right: 8px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        background-image: var(--instaIcon);
+        background-position: center;
+        background-size: cover;
+        margin-top: -8px;
+    }
+}

@@ -38,7 +38,10 @@ function About() {
                 <p><strong>E-mail:</strong> projekt@kandstudio.pl</p>
                 <p><strong>Telefon:</strong> (+48) 668 642 807</p>
                 <p><strong>Godziny pracy:</strong> Poniedziałek - Piątek 09:00-18:00</p>
-                <Link to="/contact">Kontakt</Link>
+                <Link to="/contact">
+                  <span className="arrow-link" />
+                  Kontakt
+                </Link>
             </p>
 
           </div>

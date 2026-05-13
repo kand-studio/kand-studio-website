@@ -164,6 +164,10 @@
       }
     }
 
+    &__title {
+      display: flex;
+    }
+
     &__content {
       display: flex;
       flex-direction: column;
@@ -204,6 +208,19 @@
         height: 112px;
       }
     }
+
+    .arrow-link {
+        transform: rotate(90deg);
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: var(--arrowLink);
+        background-size: cover;
+        background-position: center;
+        margin-right: 8px;
+        margin-bottom: 0px;
+      }
   }
 
   scroll-behavior: smooth;

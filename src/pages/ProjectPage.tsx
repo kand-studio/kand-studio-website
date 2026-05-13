@@ -39,9 +39,9 @@ function ProjectPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [number]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [number]);
 
   if (!project) return <div>Projekt nie istnieje</div>;
 
@@ -134,7 +134,7 @@ function ProjectPage() {
       {nextProject && (
         <section className="project__next-project">
           <Link to={`/project/${nextProject.number}`}>
-            <p>(ikonka strzałki) Następny projekt</p>
+            <p className="project__next-project__title"><span className="arrow-link" /> Następny projekt</p>
 
             <div className="project__next-project__content">
               <div className="project__next-project__content--title">

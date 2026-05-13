@@ -25,7 +25,7 @@ function Work() {
       <section className="work__content">
         <div className="work__content__grid">
 
-          <aside className="work__content__sidebar">
+          <aside className="work__content__sidebar desktop">
             <p className="work__content__title">Projekty</p>
 
             <ul className="work__projects">

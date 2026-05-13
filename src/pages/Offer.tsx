@@ -156,66 +156,6 @@ function OfferPage() {
       <section className="offer__content">
         <div className="offer__content__grid">
 
-          <aside className="offer__content__sidebar">
-
-            <div className="offer__content__selected fade-in">
-              <h4>Pakiet {selectedOffer.name}</h4>
-              <p className="offer__content__label">
-                {selectedOffer.content.priceText}
-              </p>
-            </div>
-
-            <div className="offer__calculator">
-              <p className="offer__content__label">
-                Kuchnia / Łazienka (m²)
-              </p>
-
-              <input
-                className="offer__calculator__input"
-                type="number"
-                value={kitchenArea}
-                onChange={(e) => setKitchenArea(e.target.value)}
-              />
-
-              <p className="offer__content__label">
-                Pozostałe pomieszczenia (m²)
-              </p>
-
-              <input
-                className="offer__calculator__input"
-                type="number"
-                value={otherArea}
-                onChange={(e) => setOtherArea(e.target.value)}
-              />
-
-              <button
-                className="offer__calculator__button"
-                onClick={() => calculate(selectedOffer)}
-              >
-                Oblicz
-              </button>
-            </div>
-
-            {error && (
-              <p className="offer__calculator__error">{error}</p>
-            )}
-
-            {result && (
-              <div className="offer__calculator__result fade-in">
-                <span>Szacunkowy koszt:</span>
-                <p>
-                  {formatPrice(result.min)} – {formatPrice(result.max)}
-                </p>
-              </div>
-            )}
-
-            {result && (
-               <p className="offer__content__label">
-                Przedziały cenowe przedstawione na stronie mają charakter orientacyjny i służą wyłącznie celom poglądowym. Ostateczna wycena projektu może się różnić i zostanie przedstawiona po przeprowadzeniu rozmowy wstępnej.
-              </p>
-            )}
-          </aside>
-
           <div className="offer__content__main">
 
             <div style={{ display: "flex" }}>
@@ -287,6 +227,67 @@ function OfferPage() {
             </div> */}
 
           </div>
+
+          <aside className="offer__content__sidebar">
+
+            <div className="offer__content__selected fade-in">
+              <h4>Pakiet {selectedOffer.name}</h4>
+              <p className="offer__content__label">
+                {selectedOffer.content.priceText}
+              </p>
+            </div>
+
+            <div className="offer__calculator">
+              <p className="offer__content__label">
+                Kuchnia / Łazienka (m²)
+              </p>
+
+              <input
+                className="offer__calculator__input"
+                type="number"
+                value={kitchenArea}
+                onChange={(e) => setKitchenArea(e.target.value)}
+              />
+
+              <p className="offer__content__label">
+                Pozostałe pomieszczenia (m²)
+              </p>
+
+              <input
+                className="offer__calculator__input"
+                type="number"
+                value={otherArea}
+                onChange={(e) => setOtherArea(e.target.value)}
+              />
+
+              <button
+                className="offer__calculator__button"
+                onClick={() => calculate(selectedOffer)}
+              >
+                Oblicz
+              </button>
+            </div>
+
+            {error && (
+              <p className="offer__calculator__error">{error}</p>
+            )}
+
+            {result && (
+              <div className="offer__calculator__result fade-in">
+                <span>Szacunkowy koszt:</span>
+                <p>
+                  {formatPrice(result.min)} – {formatPrice(result.max)}
+                </p>
+              </div>
+            )}
+
+            {result && (
+               <p className="offer__content__label">
+                Przedziały cenowe przedstawione na stronie mają charakter orientacyjny i służą wyłącznie celom poglądowym. Ostateczna wycena projektu może się różnić i zostanie przedstawiona po przeprowadzeniu rozmowy wstępnej.
+              </p>
+            )}
+          </aside>
+
         </div>
       </section>
     </div>

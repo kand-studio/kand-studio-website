@@ -69,6 +69,11 @@
             font-size: 12px;
             width: auto;
         }
+
+        &--active {
+            text-decoration: underline !important;
+            text-underline-offset: 4px;
+        }
     }
 
     &__ig {

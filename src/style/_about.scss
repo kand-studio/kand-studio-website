@@ -92,7 +92,27 @@
 
         a {
             color: var(--text);
-            text-decoration: underline;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 24px;
+            display: flex;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .arrow-link {
+            transform: rotate(90deg);
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-image: var(--arrowLink);
+            background-size: cover;
+            background-position: center;
+            margin-right: 8px;
+            margin-bottom: 0px;
         }
     }
   }

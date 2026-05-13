@@ -5,7 +5,7 @@
     flex-direction: column;
 
     &__text {
-        height: 96px;
+        min-height: 82px;
 
         &__number {
             color: var(--gray);

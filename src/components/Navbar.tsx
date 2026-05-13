@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "../media/icons/logo.svg";
 const links = [
   { path: "/about", label: "O mnie" },
   { path: "/how-we-work", label: "Jak działamy" },
+  { path: "/projects", label: "Projekty" },
   { path: "/offer", label: "Ofertownik" },
   { path: "/contact", label: "Kontakt" },
 ];

@@ -1,16 +1,51 @@
 import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
+import { useState } from "react";
 
 function Work() {
+  const [hoveredProject, setHoveredProject] = useState<any>(null);
+
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePosition({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
 
   return (
-    <div className="work">
-
+    <div
+      className="work"
+      onMouseMove={handleMouseMove}
+    >
       <section className="work__content">
         <div className="work__content__grid">
 
           <aside className="work__content__sidebar">
-            Lista projektów tutaj
+            <p className="work__content__title">Projekty</p>
+
+            <ul className="work__projects">
+              {projects.map((project) => (
+                <li
+                  key={project.number}
+                  className="work__projects__item"
+                >
+                  <Link 
+                    to={`/project/${project.number}`}                   
+                    onMouseEnter={() => setHoveredProject(project)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    {project.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </aside>
+
 
           <div className="work__content__main">
             <p className="work__content__title">Jak działamy</p>
@@ -22,7 +57,9 @@ function Work() {
               Na tej podstawie prowadzę cały proces projektowy w sposób uporządkowany, transparentny i maksymalnie odciążający dla Klienta.
             </p>
 
-            <p className="work__content__title">1. Układ funkcjonalny</p>
+            <div className="work__divider" /> 
+
+            <p className="work__content__title">Układ funkcjonalny</p>
             <p className="work__content__description">
               Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni.
               <br /><br />
@@ -31,7 +68,9 @@ function Work() {
               To etap, który decyduje o jakości codziennego życia w projektowanym wnętrzu.
             </p>
 
-            <p className="work__content__title">2. Koncepcja i wizualizacje</p>
+            <div className="work__divider" /> 
+
+            <p className="work__content__title">Koncepcja i wizualizacje</p>
             <p className="work__content__description">
                 Na tym etapie projekt zyskuje swój charakter i tożsamość.
                 <br /><br />
@@ -40,7 +79,9 @@ function Work() {
                 Dopracowujemy każdy detal — aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
             </p>
 
-            <p className="work__content__title">3. Dokumentacja techniczna</p>
+            <div className="work__divider" /> 
+
+            <p className="work__content__title">Dokumentacja techniczna</p>
             <p className="work__content__description">
               Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą.
               <br /><br />
@@ -48,6 +89,8 @@ function Work() {
               <br /><br />
               Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
             </p>
+
+            <div className="work__divider" /> 
 
             <p className="work__content__title">Realizacja i nadzór</p>
             <p className="work__content__description">
@@ -63,6 +106,8 @@ function Work() {
               Dodatkowo otrzymujesz szczegółową listę wyposażenia oraz kosztorys, co pozwala zachować pełną kontrolę nad budżetem.
             </p>   
 
+            <div className="work__divider" /> 
+            
             <p className="work__content__title">Realizacja „pod klucz”</p>
             <p className="work__content__description">
               Dla Klientów, którzy cenią swój czas i komfort, oferuję kompleksową realizację wnętrza „pod klucz”.
@@ -87,6 +132,23 @@ function Work() {
         </div>
       </section>
 
+      {hoveredProject && (
+        <div
+          className="work__preview"
+          style={{
+            left: mousePosition.x + 30,
+            top: mousePosition.y - 120,
+          }}
+        >
+          {hoveredProject.images.slice(0, 3).map((image: string) => (
+            <img
+              key={image}
+              src={image}
+              alt=""
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

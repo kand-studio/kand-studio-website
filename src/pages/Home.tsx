@@ -5,15 +5,10 @@ import { projects } from "../data/projects";
 
 function Home() {
   const trackRef = useRef<HTMLDivElement | null>(null);
-
   const position = useRef(0);
-
-  // 🔥 velocity zamiast boost
   const velocity = useRef(0);
-
   const raf = useRef<number | null>(null);
 
-  // 🚫 blokada scrolla strony
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -21,7 +16,6 @@ function Home() {
     };
   }, []);
 
-  // 🧲 wheel steruje kierunkiem
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
       // deltaY:
@@ -36,7 +30,6 @@ function Home() {
     return () => window.removeEventListener("wheel", onWheel);
   }, []);
 
-  // 🌊 loop
   useEffect(() => {
     const animate = () => {
       raf.current = requestAnimationFrame(animate);
@@ -45,13 +38,10 @@ function Home() {
 
       const totalWidth = trackRef.current.scrollWidth / 2;
 
-      // 🔥 base auto movement
       const baseSpeed = 0.8;
 
-      // 👉 velocity może być + lub -
       position.current += baseSpeed + velocity.current;
 
-      // 🔁 seamless loop
       if (position.current >= totalWidth) {
         position.current -= totalWidth;
       }
@@ -60,7 +50,6 @@ function Home() {
         position.current += totalWidth;
       }
 
-      // 🌊 smooth decay (wraca do auto scrolla)
       velocity.current *= 0.92;
 
       trackRef.current.style.transform =
@@ -83,7 +72,7 @@ function Home() {
           {projects.map((project) => (
             <Link key={project.number} to={`/project/${project.number}`}>
               <ProjectBlock
-                image={project.cover}
+                image={project.images[0]}
                 title={project.title}
                 number={project.number}
                 description={project.style}
@@ -94,7 +83,7 @@ function Home() {
           {projects.map((project) => (
             <Link key={`dup-${project.number}`} to={`/project/${project.number}`}>
               <ProjectBlock
-                image={project.cover}
+                image={project.images[0]}
                 title={project.title}
                 number={project.number}
                 description={project.style}

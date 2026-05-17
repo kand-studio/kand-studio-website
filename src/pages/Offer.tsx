@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 type Offer = {
   id: number;
@@ -72,7 +72,7 @@ function OfferPage() {
           "Wizyty w sklepach branżowych, prezentowanie materiałów i wyposażenia na żywo oraz omówienie i przedstawienie zalet i wad wybranych produktów",
           "Omówienie projektu z wykonawcami",
           "Druk projektu dla Inwestora",
-          "__description__Dokładna dokumentacja techniczna i pełna kontrola projektu."
+          "__description__Dokładna dokumentacja techniczna i pełna kontrola projektu.",
         ],
         priceText: "Cena od 210 zł/m²",
       },
@@ -102,7 +102,7 @@ function OfferPage() {
           "Cotygodniowe raporty zrealizowanych prac wykończeniowych",
           "Druk projektu dla wykonawców",
           "Druk projektu oraz GiftBox dla Inwestora",
-          "__description__Pełna obsługa projektu od A do Z wraz z nadzorem realizacji."
+          "__description__Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
         ],
         priceText: "Cena od 290 zł/m²",
       },
@@ -110,12 +110,12 @@ function OfferPage() {
   ];
 
   const [selectedOffer, setSelectedOffer] = useState<Offer>(offers[0]);
+
   const [kitchenArea, setKitchenArea] = useState<string>("");
   const [otherArea, setOtherArea] = useState<string>("");
 
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string>("");
-  const [animKey, setAnimKey] = useState(0);
 
   const calculate = (offer: Offer) => {
     const kitchen = Number(kitchenArea) || 0;
@@ -151,87 +151,45 @@ function OfferPage() {
       currency: "PLN",
     });
 
+  const allBenefits = useMemo(() => {
+    const map = new Map<
+      string,
+      {
+        text: string;
+        firstOfferId: number;
+      }
+    >();
+
+    offers.forEach((offer) => {
+      offer.content.items.forEach((item) => {
+        const isDescription = item.startsWith("__description__");
+
+        if (isDescription) return;
+
+        if (!map.has(item)) {
+          map.set(item, {
+            text: item,
+            firstOfferId: offer.id,
+          });
+        }
+      });
+    });
+
+    return Array.from(map.values());
+  }, []);
+
+  const currentDescription = selectedOffer.content.items.find((item) =>
+    item.startsWith("__description__")
+  );
+
   return (
     <div className="offer">
       <section className="offer__content">
         <div className="offer__content__grid">
-
-          <div className="offer__content__main">
-
-            <div style={{ display: "flex" }}>
-              <p className="offer__content__title" style={{ cursor: "pointer" }}>Ofertownik</p>
-              <p className="offer__content__title" style={{ marginLeft: "24px", cursor: "pointer", color: "#828282" }}>INFORMACJE DOTYCZĄCE WYCENY</p>
-            </div>
-
-            <p className="offer__content__label">Pakiet:</p>
-
-            <ul className="offer__content__offer-list">
-              {offers.map((offer) => (
-                <li key={offer.id}>
-                  <button
-                    className={`offer__content__offer-btn ${
-                      selectedOffer.id === offer.id
-                        ? "offer__content__offer-btn--active"
-                        : ""
-                    }`}
-                    onClick={() => {
-                      setSelectedOffer(offer);
-
-                      setAnimKey((prev) => prev + 1);
-
-                      if (kitchenArea || otherArea) {
-                        calculate(offer);
-                      } else {
-                        setResult(null);
-                      }
-                    }}
-                  >
-                    {offer.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-
-            <p className="offer__content__label">
-              Co zawiera:
-            </p>
-
-            <div
-              className="offer__content__selected fade-in"
-              key={`${selectedOffer.id}-${animKey}`}
-            >
-              <ul className="offer__content__list">
-                {selectedOffer.content.items.map((item, index) => {
-                  const isDescription = item.startsWith("__description__");
-                  const text = isDescription ? item.replace("__description__", "") : item;
-
-                  return (
-                    <li
-                      key={index}
-                      className={`offer__content__item ${
-                        isDescription ? "offer__content__item--desc" : ""
-                      }`}
-                      style={{ animationDelay: `${index * 60}ms` }}
-                    >
-                      {text}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
-            {/* <div className="offer__content__extra-info">
-              <p className="offer__content__title">
-                INFORMACJE DOTYCZĄCE WYCENY
-              </p>
-            </div> */}
-
-          </div>
-
           <aside className="offer__content__sidebar">
-
             <div className="offer__content__selected fade-in">
               <h4>Pakiet {selectedOffer.name}</h4>
+
               <p className="offer__content__label">
                 {selectedOffer.content.priceText}
               </p>
@@ -275,6 +233,7 @@ function OfferPage() {
             {result && (
               <div className="offer__calculator__result fade-in">
                 <span>Szacunkowy koszt:</span>
+
                 <p>
                   {formatPrice(result.min)} – {formatPrice(result.max)}
                 </p>
@@ -282,12 +241,117 @@ function OfferPage() {
             )}
 
             {result && (
-               <p className="offer__content__label">
-                Przedziały cenowe przedstawione na stronie mają charakter orientacyjny i służą wyłącznie celom poglądowym. Ostateczna wycena projektu może się różnić i zostanie przedstawiona po przeprowadzeniu rozmowy wstępnej.
+              <p className="offer__content__label">
+                Przedziały cenowe przedstawione na stronie mają charakter
+                orientacyjny i służą wyłącznie celom poglądowym. Ostateczna
+                wycena projektu może się różnić i zostanie przedstawiona po
+                przeprowadzeniu rozmowy wstępnej.
               </p>
             )}
           </aside>
 
+          <div className="offer__content__main">
+            <div style={{ display: "flex" }}>
+              <p
+                className="offer__content__title"
+                style={{ cursor: "pointer" }}
+              >
+                Ofertownik
+              </p>
+
+              <p
+                className="offer__content__title"
+                style={{
+                  marginLeft: "24px",
+                  cursor: "pointer",
+                  color: "#828282",
+                }}
+              >
+                INFORMACJE DOTYCZĄCE WYCENY
+              </p>
+            </div>
+
+            <p className="offer__content__label">Pakiet:</p>
+
+            <ul className="offer__content__offer-list">
+              {offers.map((offer) => (
+                <li key={offer.id}>
+                  <button
+                    className={`offer__content__offer-btn ${
+                      selectedOffer.id === offer.id
+                        ? "offer__content__offer-btn--active"
+                        : ""
+                    }`}
+                    onClick={() => {
+                      setSelectedOffer(offer);
+
+                      if (kitchenArea || otherArea) {
+                        calculate(offer);
+                      } else {
+                        setResult(null);
+                      }
+                    }}
+                  >
+                    {offer.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            <div className="offer__content__benefits">
+              <div className="offer__content__benefits__header">
+                <div>
+                  <p className="offer__content__label">
+                    Co zawiera dany pakiet:
+                  </p>
+                </div>
+              </div>
+
+              <div className="offer__content__benefits__list">
+                {allBenefits.map((benefit, index) => {
+                  const isActive =
+                    selectedOffer.content.items.includes(benefit.text);
+
+                  const isNew =
+                    benefit.firstOfferId === selectedOffer.id;
+
+                  return (
+                    <div
+                      key={benefit.text}
+                      className={`offer__content__benefit ${
+                        isActive
+                          ? "offer__content__benefit--active"
+                          : "offer__content__benefit--disabled"
+                      }`}
+                      style={{
+                        animationDelay: `${index * 40}ms`,
+                      }}
+                    >
+                      <div className="offer__content__benefit__left">
+                        <div
+                          className={`offer__content__benefit__icon ${
+                            isActive
+                              ? "offer__content__benefit__icon--active"
+                              : ""
+                          }`}
+                        >
+                          {isActive ? "✓" : "—"}
+                        </div>
+
+                        <span>{benefit.text}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {currentDescription && (
+                <div className="offer__content__benefits__description fade-in">
+                  {currentDescription.replace("__description__", "")}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </section>
     </div>

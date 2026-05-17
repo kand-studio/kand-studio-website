@@ -129,8 +129,6 @@ function ProjectPage() {
         </div>
       </section>
 
-      {/* DOKOŃCZYĆ TO NIZEJ - wyrównac padding tez do kolumn?, inny kolor?  */}
-
       {nextProject && (
         <section className="project__next-project">
           <Link to={`/project/${nextProject.number}`}>

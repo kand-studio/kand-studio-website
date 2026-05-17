@@ -1,0 +1,11 @@
+.page-title {
+    font-weight: 400;
+    font-family: var(--fontTitle);
+    font-size: 32px;
+    color: var(--text);
+    @media (min-width: 992px) {
+      max-width: 1024px;
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 40px;
+    }    
+}

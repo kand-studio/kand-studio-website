@@ -48,13 +48,9 @@ function Work() {
 
 
           <div className="work__content__main">
-            <p className="work__content__title">Jak działamy</p>
+            <p className="work__content__title">Jak działamy?</p>
             <p className="work__content__description">
-              Projektowanie wnętrza to proces, który wymaga nie tylko estetyki, ale przede wszystkim przemyślanej strategii i pełnej kontroli nad każdym etapem.
-              <br /><br />
-              Współpracę rozpoczynam od indywidualnej konsultacji, podczas której poznaję Twoje potrzeby, styl życia oraz oczekiwania wobec przyszłej przestrzeni. To kluczowy moment, który pozwala mi stworzyć spójną wizję projektu dopasowaną nie tylko do wnętrza, ale przede wszystkim do Ciebie.
-              <br /><br />
-              Na tej podstawie prowadzę cały proces projektowy w sposób uporządkowany, transparentny i maksymalnie odciążający dla Klienta.
+              Projektowanie wnętrza to proces, który wymaga nie tylko estetyki, ale przede wszystkim przemyślanej strategii i pełnej kontroli nad każdym etapem. Współpracę rozpoczynam od indywidualnej konsultacji, podczas której poznaję Twoje potrzeby, styl życia oraz oczekiwania wobec przyszłej przestrzeni. To kluczowy moment, który pozwala mi stworzyć spójną wizję projektu dopasowaną nie tylko do wnętrza, ale przede wszystkim do Ciebie. Na tej podstawie prowadzę cały proces projektowy w sposób uporządkowany, transparentny i maksymalnie odciążający dla Klienta.
             </p>
 
             <div className="work__divider" /> 
@@ -62,11 +58,7 @@ function Work() {
             <p className="work__content__label">Pierwszy krok</p>
             <p className="work__content__title">Układ funkcjonalny</p>
             <p className="work__content__description">
-              Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni.
-              <br /><br />
-              Tworzę dopracowane warianty układu funkcjonalnego, które analizujemy pod kątem ergonomii, komfortu i realnych możliwości wykonawczych. Wspólnie wybieramy najlepsze rozwiązanie, które następnie dopracowuję w szczegółach.
-              <br /><br />
-              To etap, który decyduje o jakości codziennego życia w projektowanym wnętrzu.
+              Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni. Tworzę dopracowane warianty układu funkcjonalnego, które analizujemy pod kątem ergonomii, komfortu i realnych możliwości wykonawczych. Wspólnie wybieramy najlepsze rozwiązanie, które następnie dopracowuję w szczegółach. To etap, który decyduje o jakości codziennego życia w projektowanym wnętrzu.
             </p>
 
             <div className="work__divider" /> 
@@ -74,11 +66,7 @@ function Work() {
             <p className="work__content__label">Drugi krok</p>
             <p className="work__content__title">Koncepcja i wizualizacje</p>
             <p className="work__content__description">
-                Na tym etapie projekt zyskuje swój charakter i tożsamość.
-                <br /><br />
-                Dobieram materiały, faktury i wyposażenie, tworząc spójną, ponadczasową estetykę. Całość przedstawiam w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji.
-                <br /><br />
-                Dopracowujemy każdy detal - aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
+                Na tym etapie projekt zyskuje swój charakter i tożsamość. Dobieram materiały, faktury i wyposażenie, tworząc spójną, ponadczasową estetykę. Całość przedstawiam w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji. Dopracowujemy każdy detal - aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
             </p>
 
             <div className="work__divider" /> 
@@ -86,20 +74,14 @@ function Work() {
             <p className="work__content__label">Trzeci krok</p>
             <p className="work__content__title">Dokumentacja techniczna</p>
             <p className="work__content__description">
-              Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą.
-              <br /><br />
-              Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, po detale wykończeniowe.
-              <br /><br />
-              Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
+              Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą. Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, po detale wykończeniowe. Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
             </p>
 
             <div className="work__divider" /> 
 
             <p className="work__content__title">Realizacja i nadzór</p>
             <p className="work__content__description">
-              Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością prac z projektem.
-              <br /><br />
-              W zależności od potrzeb:
+              Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością prac z projektem. W zależności od potrzeb:
               <br /><br />
               – koordynuję komunikację z wykonawcami
               <br />
@@ -116,11 +98,7 @@ function Work() {
             
             <p className="work__content__title">Realizacja „pod klucz”</p>
             <p className="work__content__description">
-              Dla Klientów, którzy cenią swój czas i komfort, oferuję kompleksową realizację wnętrza „pod klucz”.
-              <br /><br />
-              W tym modelu przejmuję pełną odpowiedzialność za cały proces - od zatwierdzenia projektu aż po oddanie gotowej, w pełni urządzonej przestrzeni.
-              <br /><br />
-              Twoje zaangażowanie ogranicza się do kluczowych decyzji.
+              Dla Klientów, którzy cenią swój czas i komfort, oferuję kompleksową realizację wnętrza „pod klucz”. W tym modelu przejmuję pełną odpowiedzialność za cały proces - od zatwierdzenia projektu aż po oddanie gotowej, w pełni urządzonej przestrzeni. Twoje zaangażowanie ogranicza się do kluczowych decyzji.
               <br /><br />
               Całą resztą zajmuję się ja i mój zespół:
               <br /><br />

@@ -207,28 +207,25 @@ button, input {
   .navbar__darkmode-wrapper {
     display: block;
     margin: 0;
+    margin-bottom: -2px;
   }
 }
 .navbar__burger {
   display: block;
-  width: 24px;
-  height: 24px;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 1100;
   padding: 0;
+  transition: 0.3s;
+  margin-bottom: auto;
 }
-.navbar__burger .icon {
-  width: 100%;
-  height: 100%;
-  background-image: url("../media/icons/menu.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.navbar__burger span {
+  font-size: 16px;
+  font-weight: 500;
 }
-.navbar__burger.open .icon {
-  background-image: url("../media/icons/close.png");
+.navbar__burger.open span {
+  text-decoration: line-through;
 }
 @media (min-width: 992px) {
   .navbar__burger {
@@ -385,6 +382,7 @@ body.footer-hero .footer {
 .homev2 .project-block__text__title {
   margin-bottom: 4px !important;
   margin-top: 16px !important;
+  color: var(--text);
 }
 .homev2 .project-block__img {
   animation: none !important;
@@ -761,7 +759,7 @@ body.footer-hero .footer {
   font-size: 10px;
   line-height: 14px;
   color: var(--gray);
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 .work__content__description {
   font-size: 16px;

@@ -20,10 +20,10 @@ function App() {
 
   const location = useLocation();
   const isHome = location.pathname === "/homev2";
-  const isProjectPage = location.pathname.includes("project");
+  const isProjectPage = location.pathname.startsWith("/project/");
 
   useEffect(() => {
-    const isProjectPage = location.pathname.includes("project");
+    const isProjectPage = location.pathname.startsWith("/project/");
 
     if (!isProjectPage) {
       document.body.classList.remove(
@@ -46,10 +46,6 @@ function App() {
         <Route path="/offer" element={<Offer />} />
         <Route path="/contact" element={<Contact />} />
         {/* projects */}
-        {/* <Route path="/project-001" element={<Project001 />} />
-        <Route path="/project-002" element={<Project001 />} />
-        <Route path="/project-003" element={<Project001 />} />
-        <Route path="/project-004" element={<Project001 />} /> */}
         <Route path="/project/:number" element={<ProjectPage />} />
         <Route path="*" element={<Error />} />
       </Routes>

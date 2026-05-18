@@ -79,11 +79,18 @@ function Navbar() {
         </div>
       </div>
 
-      <button
+      {/* <button
         className={`navbar__burger ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen((prev) => !prev)}
       >
         <div className="icon"></div>
+      </button> */}
+
+      <button
+        className={`navbar__burger ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        <span>MENU</span>
       </button>
     </nav>
   );

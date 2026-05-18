@@ -59,6 +59,7 @@ function Work() {
 
             <div className="work__divider" /> 
 
+            <p className="work__content__label">Pierwszy krok</p>
             <p className="work__content__title">Układ funkcjonalny</p>
             <p className="work__content__description">
               Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni.
@@ -70,22 +71,24 @@ function Work() {
 
             <div className="work__divider" /> 
 
+            <p className="work__content__label">Drugi krok</p>
             <p className="work__content__title">Koncepcja i wizualizacje</p>
             <p className="work__content__description">
                 Na tym etapie projekt zyskuje swój charakter i tożsamość.
                 <br /><br />
                 Dobieram materiały, faktury i wyposażenie, tworząc spójną, ponadczasową estetykę. Całość przedstawiam w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji.
                 <br /><br />
-                Dopracowujemy każdy detal — aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
+                Dopracowujemy każdy detal - aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
             </p>
 
             <div className="work__divider" /> 
 
+            <p className="work__content__label">Trzeci krok</p>
             <p className="work__content__title">Dokumentacja techniczna</p>
             <p className="work__content__description">
               Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą.
               <br /><br />
-              Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych — od instalacji, przez zabudowy meblowe, po detale wykończeniowe.
+              Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, po detale wykończeniowe.
               <br /><br />
               Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
             </p>
@@ -99,12 +102,15 @@ function Work() {
               W zależności od potrzeb:
               <br /><br />
               – koordynuję komunikację z wykonawcami
+              <br />
               – odpowiadam na bieżące pytania i decyzje techniczne
+               <br />
               – weryfikuję zgodność realizacji z projektem
+               <br />
               – pełnię autorski nadzór nad inwestycją
               <br /><br />
               Dodatkowo otrzymujesz szczegółową listę wyposażenia oraz kosztorys, co pozwala zachować pełną kontrolę nad budżetem.
-            </p>   
+            </p>  
 
             <div className="work__divider" /> 
             
@@ -112,19 +118,23 @@ function Work() {
             <p className="work__content__description">
               Dla Klientów, którzy cenią swój czas i komfort, oferuję kompleksową realizację wnętrza „pod klucz”.
               <br /><br />
-              W tym modelu przejmuję pełną odpowiedzialność za cały proces — od zatwierdzenia projektu aż po oddanie gotowej, w pełni urządzonej przestrzeni.
+              W tym modelu przejmuję pełną odpowiedzialność za cały proces - od zatwierdzenia projektu aż po oddanie gotowej, w pełni urządzonej przestrzeni.
               <br /><br />
               Twoje zaangażowanie ogranicza się do kluczowych decyzji.
               <br /><br />
               Całą resztą zajmuję się ja i mój zespół:
               <br /><br />
               – kompleksowa koordynacja zamówień i dostaw
+               <br />
               – zarządzanie ekipami wykonawczymi
+               <br />
               – kontrola jakości i harmonogramu prac
+               <br />
               – rozwiązywanie bieżących kwestii technicznych
+               <br />
               – obsługa ewentualnych reklamacji
               <br /><br />
-              Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu — bez chaosu organizacyjnego i bez angażowania Cię w procesy techniczne.
+              Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu - bez chaosu organizacyjnego i bez angażowania Cię w procesy techniczne.
             </p> 
     
           </div>

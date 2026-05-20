@@ -8,6 +8,7 @@ type Offer = {
   content: {
     items: string[];
     priceText: string;
+    description?: string;
   };
 };
 
@@ -28,8 +29,8 @@ function OfferPage() {
           "Rzuty układu funkcjonalnego z wyposażeniem",
           "Przedstawienie proponowanej kolorystyki i materiałów",
           "Spis gładzi i podłóg (bez metrażu)",
-          "__description__Dla osób, które chcą zobaczyć koncepcję wnętrza bez pełnej dokumentacji.",
         ],
+        description: "Dla osób, które chcą zobaczyć koncepcję wnętrza bez pełnej dokumentacji.",
         priceText: "Cena od 70 zł/m²",
       },
     },
@@ -46,8 +47,8 @@ function OfferPage() {
           "Wizualizacje 3D o charakterze poglądowym",
           "Uproszczony rysunek techniczny z zaznaczeniem układu gładzi ściennych",
           "Spis gładzi i podłóg (bez metrażu)",
-          "__description__Spójna koncepcja wnętrza bez pełnej dokumentacji technicznej.",
         ],
+        description: "Spójna koncepcja wnętrza bez pełnej dokumentacji technicznej.",
         priceText: "Cena od 150 zł/m²",
       },
     },
@@ -72,8 +73,8 @@ function OfferPage() {
           "Wizyty w sklepach branżowych, prezentowanie materiałów i wyposażenia na żywo oraz omówienie i przedstawienie zalet i wad wybranych produktów",
           "Omówienie projektu z wykonawcami",
           "Druk projektu dla Inwestora",
-          "__description__Dokładna dokumentacja techniczna i pełna kontrola projektu.",
         ],
+        description:"Dokładna dokumentacja techniczna i pełna kontrola projektu.",
         priceText: "Cena od 210 zł/m²",
       },
     },
@@ -102,8 +103,8 @@ function OfferPage() {
           "Cotygodniowe raporty zrealizowanych prac wykończeniowych",
           "Druk projektu dla wykonawców",
           "Druk projektu oraz GiftBox dla Inwestora",
-          "__description__Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
         ],
+        description:"Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
         priceText: "Cena od 290 zł/m²",
       },
     },
@@ -187,12 +188,37 @@ function OfferPage() {
       <section className="offer__content">
         <div className="offer__content__grid">
           <aside className="offer__content__sidebar">
-            <div className="offer__content__selected fade-in">
-              <h4>Pakiet {selectedOffer.name}</h4>
+            <div className="offer__content__selected">
+              <h4>Kalkulator wyceny</h4>
+              <p className="offer__content__label">Wybrany pakiet:</p>
+              <ul className="offer__content__offer-list">
+                {offers.map((offer) => (
+                  <li key={offer.id}>
+                    <button
+                      className={`offer__content__offer-btn ${
+                        selectedOffer.id === offer.id
+                          ? "offer__content__offer-btn--active"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        setSelectedOffer(offer);
 
-              <p className="offer__content__label">
-                {selectedOffer.content.priceText}
-              </p>
+                        if (kitchenArea || otherArea) {
+                          calculate(offer);
+                        } else {
+                          setResult(null);
+                        }
+                      }}
+                    >
+                      {offer.name}
+                    </button>
+
+                    {/* <p className="offer__content__label">
+                      {offer.content.priceText}
+                    </p> */}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="offer__calculator">
@@ -251,106 +277,34 @@ function OfferPage() {
           </aside>
 
           <div className="offer__content__main">
-            <div style={{ display: "flex" }}>
-              <p
-                className="offer__content__title"
-                style={{ cursor: "pointer" }}
-              >
-                Ofertownik
+          {offers.map((offer) => (
+            <>
+              <p className="offer__content__title-benefits">
+                <span>Pakiet {offer.name}</span>
+                <span>{offer.content.priceText}</span>
               </p>
 
-              <p
-                className="offer__content__title"
-                style={{
-                  marginLeft: "24px",
-                  cursor: "pointer",
-                  color: "#828282",
-                }}
-              >
-                INFORMACJE DOTYCZĄCE WYCENY
-              </p>
-            </div>
+              <div className="offer__content__label">
+                {offer.content.description}
+              </div>
 
-            <p className="offer__content__label">Pakiet:</p>
-
-            <ul className="offer__content__offer-list">
-              {offers.map((offer) => (
-                <li key={offer.id}>
-                  <button
-                    className={`offer__content__offer-btn ${
-                      selectedOffer.id === offer.id
-                        ? "offer__content__offer-btn--active"
-                        : ""
-                    }`}
-                    onClick={() => {
-                      setSelectedOffer(offer);
-
-                      if (kitchenArea || otherArea) {
-                        calculate(offer);
-                      } else {
-                        setResult(null);
-                      }
-                    }}
-                  >
-                    {offer.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-
-            <div className="offer__content__benefits">
-              <div className="offer__content__benefits__header">
-                <div>
-                  <p className="offer__content__label">
-                    Co zawiera dany pakiet:
-                  </p>
+              <div className="offer__content__benefits">
+                <div className="offer__content__benefits__list">
+                {offer.content.items.map((benefit) => (
+                  <div className="offer__content__benefit" key={benefit}>
+                    <span>- {benefit}</span>
+                  </div>
+                ))}
                 </div>
               </div>
 
-              <div className="offer__content__benefits__list">
-                {allBenefits.map((benefit, index) => {
-                  const isActive =
-                    selectedOffer.content.items.includes(benefit.text);
+              <div className="offer__divider" /> 
 
-                  const isNew =
-                    benefit.firstOfferId === selectedOffer.id;
-
-                  return (
-                    <div
-                      key={benefit.text}
-                      className={`offer__content__benefit ${
-                        isActive
-                          ? "offer__content__benefit--active"
-                          : "offer__content__benefit--disabled"
-                      }`}
-                      style={{
-                        animationDelay: `${index * 40}ms`,
-                      }}
-                    >
-                      <div className="offer__content__benefit__left">
-                        <div
-                          className={`offer__content__benefit__icon ${
-                            isActive
-                              ? "offer__content__benefit__icon--active"
-                              : ""
-                          }`}
-                        >
-                          {isActive ? "✓" : "—"}
-                        </div>
-
-                        <span>{benefit.text}</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {currentDescription && (
-                <div className="offer__content__benefits__description fade-in">
-                  {currentDescription.replace("__description__", "")}
-                </div>
-              )}
-            </div>
+            </>
+          ))}
+              <p className="offer__content__title">
+                  INFORMACJE DOTYCZĄCE WYCENY
+              </p>
           </div>
         </div>
       </section>

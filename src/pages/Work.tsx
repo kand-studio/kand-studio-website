@@ -55,24 +55,24 @@ function Work() {
 
             <div className="work__divider" /> 
 
+            <p className="work__content__title work__content__title--with-label">Układ funkcjonalny</p>
             <p className="work__content__label">Pierwszy krok</p>
-            <p className="work__content__title">Układ funkcjonalny</p>
             <p className="work__content__description">
               Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni. Tworzę dopracowane warianty układu funkcjonalnego, które analizujemy pod kątem ergonomii, komfortu i realnych możliwości wykonawczych. Wspólnie wybieramy najlepsze rozwiązanie, które następnie dopracowuję w szczegółach. To etap, który decyduje o jakości codziennego życia w projektowanym wnętrzu.
             </p>
 
             <div className="work__divider" /> 
 
+            <p className="work__content__title work__content__title--with-label">Koncepcja i wizualizacje</p>
             <p className="work__content__label">Drugi krok</p>
-            <p className="work__content__title">Koncepcja i wizualizacje</p>
             <p className="work__content__description">
                 Na tym etapie projekt zyskuje swój charakter i tożsamość. Dobieram materiały, faktury i wyposażenie, tworząc spójną, ponadczasową estetykę. Całość przedstawiam w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji. Dopracowujemy każdy detal - aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
             </p>
 
             <div className="work__divider" /> 
 
+            <p className="work__content__title work__content__title--with-label">Dokumentacja techniczna</p>
             <p className="work__content__label">Trzeci krok</p>
-            <p className="work__content__title">Dokumentacja techniczna</p>
             <p className="work__content__description">
               Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą. Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, po detale wykończeniowe. Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
             </p>

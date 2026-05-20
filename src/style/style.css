@@ -457,6 +457,7 @@ body.footer-hero .footer {
   font-size: clamp(16px, 1.2vw, 24px);
   margin-bottom: 40px;
   color: var(--text);
+  line-height: 1.4;
 }
 @media (min-width: 992px) {
   .about__content__description {
@@ -753,13 +754,21 @@ body.footer-hero .footer {
     margin-bottom: 40px;
   }
 }
+.work__content__title--with-label {
+  margin-bottom: 4px;
+}
 .work__content__label {
   font-weight: 500;
   display: block;
   font-size: 10px;
   line-height: 14px;
   color: var(--gray);
-  margin-bottom: 4px;
+  margin-bottom: 24px;
+}
+@media (min-width: 992px) {
+  .work__content__label {
+    margin-bottom: 40px;
+  }
 }
 .work__content__description {
   font-size: 16px;
@@ -873,6 +882,17 @@ body.footer-hero .footer {
   padding-top: 100px;
   scroll-behavior: smooth;
 }
+.offer__divider {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 24px 0;
+}
+@media (min-width: 992px) {
+  .offer__divider {
+    margin: 60px 0;
+  }
+}
 .offer__calculator {
   display: flex;
   margin-top: 20px;
@@ -966,6 +986,16 @@ body.footer-hero .footer {
   margin-bottom: 40px;
   font-weight: 500;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.offer__content__title-benefits {
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
 }
 .offer__content__label {
   font-weight: 500;
@@ -978,9 +1008,17 @@ body.footer-hero .footer {
 .offer__content__offer-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   display: flex;
+  flex-direction: column;
   gap: 16px;
+}
+.offer__content__offer-list li {
+  padding: 8px 8px 8px 8px;
+  border: 1px solid var(--gray);
+  background: transparent;
+  color: var(--text);
+  width: 200px;
 }
 .offer__content__offer-btn {
   background: transparent;
@@ -991,10 +1029,6 @@ body.footer-hero .footer {
   font-weight: 500;
   color: var(--text);
 }
-.offer__content__offer-btn:hover, .offer__content__offer-btn--active {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
 .offer__content__selected {
   margin-bottom: 24px;
 }
@@ -1003,7 +1037,7 @@ body.footer-hero .footer {
   color: var(--text);
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 24px;
 }
 .offer__content__extra-info {
   margin-top: 120px;
@@ -1013,46 +1047,8 @@ body.footer-hero .footer {
 }
 .offer__content__benefits {
   position: relative;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .offer__content__benefits {
-    padding: 24px;
-    border-radius: 24px;
-  }
-}
-.offer__content__benefits::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 35%);
-}
-.offer__content__benefits__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 32px;
-}
-@media (max-width: 768px) {
-  .offer__content__benefits__header {
-    flex-direction: column;
-  }
-}
-.offer__content__benefits__title {
-  font-size: 32px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  margin-top: 4px;
-}
-@media (max-width: 768px) {
-  .offer__content__benefits__title {
-    font-size: 24px;
-  }
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .offer__content__benefits__list {
   display: flex;
@@ -1074,103 +1070,22 @@ body.footer-hero .footer {
 .offer__content__benefit {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 20px;
-  border-radius: 20px;
-  transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-  border: 1px solid transparent;
-  opacity: 0;
-  transform: translateY(6px);
-  animation: itemFade 0.3s ease forwards;
-}
-@media (max-width: 768px) {
-  .offer__content__benefit {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-.offer__content__benefit:hover {
-  transform: translateY(-1px);
-}
-.offer__content__benefit--active {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-}
-.offer__content__benefit--active .offer__content__benefit__left {
-  color: var(--text);
-}
-.offer__content__benefit--disabled {
-  opacity: 0.28;
-}
-.offer__content__benefit--disabled .offer__content__benefit__left {
-  color: var(--gray);
-}
-.offer__content__benefit--disabled .offer__content__benefit__icon {
-  border-color: rgba(255, 255, 255, 0.04);
-}
-.offer__content__benefit__left {
-  display: flex;
-  align-items: center;
   gap: 16px;
-  transition: 0.25s ease;
-  line-height: 1.5;
-}
-@media (max-width: 768px) {
-  .offer__content__benefit__left {
-    align-items: flex-start;
-  }
-}
-.offer__content__benefit__left span {
-  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid transparent;
 }
 .offer__content__benefit__icon {
   min-width: 28px;
   width: 28px;
   height: 28px;
-  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 12px;
   transition: 0.25s ease;
 }
 .offer__content__benefit__icon--active {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
-}
-.offer__content__benefit__badge {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--text);
-  white-space: nowrap;
-}
-.offer__content__list {
-  list-style: none;
-  padding: 0;
-  margin-top: 8px;
-}
-.offer__content__item {
-  opacity: 0;
-  transform: translateY(6px);
-  animation: itemFade 0.2s ease forwards;
-  margin-bottom: 6px;
-}
-.offer__content__item--desc {
-  font-style: italic;
-  color: var(--gray);
-  margin-top: 24px;
-  font-size: 12px;
 }
 
 /* ANIMACJA */

@@ -83,14 +83,35 @@ function Work() {
             <p className="work__content__description">
               Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością prac z projektem. W zależności od potrzeb:
               <br /><br />
-              – koordynuję komunikację z wykonawcami
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                         koordynuję komunikację z wykonawcami
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        odpowiadam na bieżące pytania i decyzje techniczne
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        weryfikuję zgodność realizacji z projektem
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                       pełnię autorski nadzór nad inwestycją
+                      </p>
+                    </div>
               <br />
-              – odpowiadam na bieżące pytania i decyzje techniczne
-               <br />
-              – weryfikuję zgodność realizacji z projektem
-               <br />
-              – pełnię autorski nadzór nad inwestycją
-              <br /><br />
               Dodatkowo otrzymujesz szczegółową listę wyposażenia oraz kosztorys, co pozwala zachować pełną kontrolę nad budżetem.
             </p>  
 
@@ -102,16 +123,42 @@ function Work() {
               <br /><br />
               Całą resztą zajmuję się ja i mój zespół:
               <br /><br />
-              – kompleksowa koordynacja zamówień i dostaw
-               <br />
-              – zarządzanie ekipami wykonawczymi
-               <br />
-              – kontrola jakości i harmonogramu prac
-               <br />
-              – rozwiązywanie bieżących kwestii technicznych
-               <br />
-              – obsługa ewentualnych reklamacji
-              <br /><br />
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        kompleksowa koordynacja zamówień i dostaw
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        zarządzanie ekipami wykonawczymi    
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        kontrola jakości i harmonogramu prac
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        rozwiązywanie bieżących kwestii technicznych
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        obsługa ewentualnych reklamacji
+                      </p>
+                    </div>
+              <br />
               Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu - bez chaosu organizacyjnego i bez angażowania Cię w procesy techniczne.
             </p> 
     

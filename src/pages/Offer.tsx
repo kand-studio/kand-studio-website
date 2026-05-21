@@ -114,7 +114,7 @@ function OfferPage() {
 
   const [kitchenArea, setKitchenArea] = useState<string>("");
   const [otherArea, setOtherArea] = useState<string>("");
-
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string>("");
 
@@ -152,37 +152,6 @@ function OfferPage() {
       currency: "PLN",
     });
 
-  const allBenefits = useMemo(() => {
-    const map = new Map<
-      string,
-      {
-        text: string;
-        firstOfferId: number;
-      }
-    >();
-
-    offers.forEach((offer) => {
-      offer.content.items.forEach((item) => {
-        const isDescription = item.startsWith("__description__");
-
-        if (isDescription) return;
-
-        if (!map.has(item)) {
-          map.set(item, {
-            text: item,
-            firstOfferId: offer.id,
-          });
-        }
-      });
-    });
-
-    return Array.from(map.values());
-  }, []);
-
-  const currentDescription = selectedOffer.content.items.find((item) =>
-    item.startsWith("__description__")
-  );
-
   return (
     <div className="offer">
       <section className="offer__content">
@@ -191,17 +160,38 @@ function OfferPage() {
             <div className="offer__content__selected">
               <h4>Kalkulator wyceny</h4>
               <p className="offer__content__label">Wybrany pakiet:</p>
-              <ul className="offer__content__offer-list">
-                {offers.map((offer) => (
-                  <li key={offer.id}>
+              <div className="offer__select">
+                <button
+                  className="offer__select__trigger"
+                  onClick={() => setIsSelectOpen((prev) => !prev)}
+                >
+                  <span>{selectedOffer.name}</span>
+
+                  <span
+                    className={`offer__select__arrow ${
+                      isSelectOpen ? "offer__select__arrow--open" : ""
+                    }`}
+                  >
+                    +
+                  </span>
+                </button>
+
+                <div
+                  className={`offer__select__dropdown ${
+                    isSelectOpen ? "offer__select__dropdown--open" : ""
+                  }`}
+                >
+                  {offers.map((offer) => (
                     <button
-                      className={`offer__content__offer-btn ${
+                      key={offer.id}
+                      className={`offer__select__option ${
                         selectedOffer.id === offer.id
-                          ? "offer__content__offer-btn--active"
+                          ? "offer__select__option--active"
                           : ""
                       }`}
                       onClick={() => {
                         setSelectedOffer(offer);
+                        setIsSelectOpen(false);
 
                         if (kitchenArea || otherArea) {
                           calculate(offer);
@@ -210,15 +200,14 @@ function OfferPage() {
                         }
                       }}
                     >
-                      {offer.name}
+                      <div>
+                        <p>{offer.name}</p>
+                        <span>{offer.content.priceText}</span>
+                      </div>
                     </button>
-
-                    {/* <p className="offer__content__label">
-                      {offer.content.priceText}
-                    </p> */}
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="offer__calculator">
@@ -257,23 +246,22 @@ function OfferPage() {
             )}
 
             {result && (
-              <div className="offer__calculator__result fade-in">
-                <span>Szacunkowy koszt:</span>
+            <div className="offer__calculator__result--wrapper">
+                <div className="offer__calculator__result fade-in">
+                  <span>Szacunkowy koszt:</span>
 
-                <p>
-                  {formatPrice(result.min)} – {formatPrice(result.max)}
-                </p>
-              </div>
-            )}
-
-            {result && (
-              <p className="offer__content__label">
-                Przedziały cenowe przedstawione na stronie mają charakter
-                orientacyjny i służą wyłącznie celom poglądowym. Ostateczna
-                wycena projektu może się różnić i zostanie przedstawiona po
-                przeprowadzeniu rozmowy wstępnej.
-              </p>
-            )}
+                  <p>
+                    {formatPrice(result.min)} – {formatPrice(result.max)}
+                  </p>
+                </div>
+                  <p className="offer__content__label">
+                    Przedziały cenowe przedstawione na stronie mają charakter
+                    orientacyjny i służą wyłącznie celom poglądowym. Ostateczna
+                    wycena projektu może się różnić i zostanie przedstawiona po
+                    przeprowadzeniu rozmowy wstępnej.
+                  </p>
+                </div>
+              )}
           </aside>
 
           <div className="offer__content__main">
@@ -290,11 +278,15 @@ function OfferPage() {
 
               <div className="offer__content__benefits">
                 <div className="offer__content__benefits__list">
-                {offer.content.items.map((benefit) => (
-                  <div className="offer__content__benefit" key={benefit}>
-                    <span>- {benefit}</span>
-                  </div>
-                ))}
+                  {offer.content.items.map((benefit) => (
+                    <div className="offer__content__benefit" key={benefit}>
+                      <span className="offer__content__benefit__dot" />
+
+                      <span className="offer__content__benefit__text">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -305,6 +297,16 @@ function OfferPage() {
               <p className="offer__content__title">
                   INFORMACJE DOTYCZĄCE WYCENY
               </p>
+
+              <div className="offer__content__benefits">
+                  <p className="offer__content__benefit">
+                    Przy projekcie całego mieszkania/domu (wszystkich pomieszczeń należących do inwestora) oferujemy dodatkowe 2% rabatu “RABAT dla CAŁOŚCI - RC”.
+                  </p>
+                  <br />
+                  <p className="offer__content__benefit">
+                    Płatności następują w ratach i są one dostosowane do wartości projektu. Czas realizacji projektu zależny jest od ilości pomieszczeń oraz wybranego pakietu projektowego.
+                  </p>
+              </div>
           </div>
         </div>
       </section>

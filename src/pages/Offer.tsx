@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 type Offer = {
   id: number;
@@ -30,7 +30,8 @@ function OfferPage() {
           "Przedstawienie proponowanej kolorystyki i materiałów",
           "Spis gładzi i podłóg (bez metrażu)",
         ],
-        description: "Dla osób, które chcą zobaczyć koncepcję wnętrza bez pełnej dokumentacji.",
+        description:
+          "Dla osób, które chcą zobaczyć koncepcję wnętrza bez pełnej dokumentacji.",
         priceText: "Cena od 70 zł/m²",
       },
     },
@@ -48,7 +49,8 @@ function OfferPage() {
           "Uproszczony rysunek techniczny z zaznaczeniem układu gładzi ściennych",
           "Spis gładzi i podłóg (bez metrażu)",
         ],
-        description: "Spójna koncepcja wnętrza bez pełnej dokumentacji technicznej.",
+        description:
+          "Spójna koncepcja wnętrza bez pełnej dokumentacji technicznej.",
         priceText: "Cena od 150 zł/m²",
       },
     },
@@ -74,7 +76,8 @@ function OfferPage() {
           "Omówienie projektu z wykonawcami",
           "Druk projektu dla Inwestora",
         ],
-        description:"Dokładna dokumentacja techniczna i pełna kontrola projektu.",
+        description:
+          "Dokładna dokumentacja techniczna i pełna kontrola projektu.",
         priceText: "Cena od 210 zł/m²",
       },
     },
@@ -104,7 +107,8 @@ function OfferPage() {
           "Druk projektu dla wykonawców",
           "Druk projektu oraz GiftBox dla Inwestora",
         ],
-        description:"Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
+        description:
+          "Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
         priceText: "Cena od 290 zł/m²",
       },
     },
@@ -115,9 +119,13 @@ function OfferPage() {
   const [kitchenArea, setKitchenArea] = useState<string>("");
   const [otherArea, setOtherArea] = useState<string>("");
   const [isSelectOpen, setIsSelectOpen] = useState(false);
+
   const [result, setResult] = useState<Result | null>(null);
+
   const [error, setError] = useState<string>("");
   const [info, setInfo] = useState<string>("");
+
+  const [openOffers, setOpenOffers] = useState<number[]>([]);
 
   const calculate = (offer: Offer) => {
     const kitchen = Number(kitchenArea) || 0;
@@ -140,7 +148,7 @@ function OfferPage() {
       );
       return;
     }
-    
+
     setError("");
     setInfo("");
 
@@ -165,7 +173,9 @@ function OfferPage() {
           <aside className="offer__content__sidebar">
             <div className="offer__content__selected">
               <h4>Kalkulator wyceny</h4>
+
               <p className="offer__content__label">Wybrany pakiet:</p>
+
               <div className="offer__select">
                 <button
                   className="offer__select__trigger"
@@ -256,7 +266,7 @@ function OfferPage() {
             )}
 
             {result && (
-            <div className="offer__calculator__result--wrapper">
+              <div className="offer__calculator__result--wrapper">
                 <div className="offer__calculator__result fade-in">
                   <span>Szacunkowy koszt:</span>
 
@@ -264,59 +274,101 @@ function OfferPage() {
                     {formatPrice(result.min)} – {formatPrice(result.max)}
                   </p>
                 </div>
-                  <p className="offer__content__label">
-                    Przedziały cenowe przedstawione na stronie mają charakter
-                    orientacyjny i służą wyłącznie celom poglądowym. Ostateczna
-                    wycena projektu może się różnić i zostanie przedstawiona po
-                    przeprowadzeniu rozmowy wstępnej.
-                  </p>
-                </div>
-              )}
+
+                <p className="offer__content__label">
+                  Przedziały cenowe przedstawione na stronie mają charakter
+                  orientacyjny i służą wyłącznie celom poglądowym. Ostateczna
+                  wycena projektu może się różnić i zostanie przedstawiona po
+                  przeprowadzeniu rozmowy wstępnej.
+                </p>
+              </div>
+            )}
           </aside>
 
           <div className="offer__content__main">
-          {offers.map((offer) => (
-            <>
-              <p className="offer__content__title-benefits">
-                <span>Pakiet {offer.name}</span>
-                <span>{offer.content.priceText}</span>
-              </p>
+            {offers.map((offer) => {
+              const isOpen = openOffers.includes(offer.id);
 
-              <div className="offer__content__label">
-                {offer.content.description}
-              </div>
+              return (
+                <div key={offer.id}>
+                  <button
+                    className="offer__content__title-benefits offer__content__title-benefits--mobile"
+                    onClick={() => {
+                      setOpenOffers((prev) =>
+                        prev.includes(offer.id)
+                          ? prev.filter((id) => id !== offer.id)
+                          : [...prev, offer.id]
+                      );
+                    }}
+                  >
+                    <span>Pakiet {offer.name}</span>
 
-              <div className="offer__content__benefits">
-                <div className="offer__content__benefits__list">
-                  {offer.content.items.map((benefit) => (
-                    <div className="offer__content__benefit" key={benefit}>
-                      <span className="offer__content__benefit__dot" />
+                    <span className="offer__content__price">
+                      {offer.content.priceText}
+                    </span>
 
-                      <span className="offer__content__benefit__text">
-                        {benefit}
-                      </span>
+                    <span
+                      className={`offer__select__arrow offer__select__arrow--benefit ${
+                        isOpen ? "offer__select__arrow--open" : ""
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  <div
+                    className={`offer__content__accordion ${
+                      isOpen ? "offer__content__accordion--open" : ""
+                    }`}
+                  >
+                    <div>
+                      <div className="offer__content__label">
+                        {offer.content.description}
+                      </div>
+
+                      <div className="offer__content__benefits">
+                        <div className="offer__content__benefits__list">
+                          {offer.content.items.map((benefit) => (
+                            <div
+                              className="offer__content__benefit"
+                              key={benefit}
+                            >
+                              <span className="offer__content__benefit__dot" />
+
+                              <span className="offer__content__benefit__text">
+                                {benefit}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="offer__divider" />
                 </div>
-              </div>
+              );
+            })}
 
-              <div className="offer__divider" /> 
+            <p className="offer__content__title">
+              INFORMACJE DOTYCZĄCE WYCENY
+            </p>
 
-            </>
-          ))}
-              <p className="offer__content__title">
-                  INFORMACJE DOTYCZĄCE WYCENY
+            <div className="offer__content__benefits">
+              <p className="offer__content__benefit">
+                Przy projekcie całego mieszkania/domu (wszystkich pomieszczeń
+                należących do inwestora) oferujemy dodatkowe 2% rabatu “RABAT
+                dla CAŁOŚCI - RC”.
               </p>
 
-              <div className="offer__content__benefits">
-                  <p className="offer__content__benefit">
-                    Przy projekcie całego mieszkania/domu (wszystkich pomieszczeń należących do inwestora) oferujemy dodatkowe 2% rabatu “RABAT dla CAŁOŚCI - RC”.
-                  </p>
-                  <br />
-                  <p className="offer__content__benefit">
-                    Płatności następują w ratach i są one dostosowane do wartości projektu. Czas realizacji projektu zależny jest od ilości pomieszczeń oraz wybranego pakietu projektowego.
-                  </p>
-              </div>
+              <br />
+
+              <p className="offer__content__benefit">
+                Płatności następują w ratach i są one dostosowane do wartości
+                projektu. Czas realizacji projektu zależny jest od ilości
+                pomieszczeń oraz wybranego pakietu projektowego.
+              </p>
+            </div>
           </div>
         </div>
       </section>

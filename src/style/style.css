@@ -10,6 +10,7 @@
   --card: #f5f5f5;
   --gray: #828282;
   --bg-gray: #f1f1f1;
+  --glass-bg: rgba(248, 248, 246, 0.72);
   --hover: rgba(0,0,0,0.04);
   --hover-strong: rgba(0,0,0,0.06);
   --instaIcon: url("../media/icons/insta-black.png");
@@ -24,6 +25,7 @@ body.dark {
   --card: #1a1a1a;
   --gray: #828282;
   --bg-gray: #161616;
+  --glass-bg: rgba(17, 17, 17, 0.72);
   --hover: rgba(255,255,255,0.04);
   --hover-strong: rgba(255,255,255,0.06);
   --instaIcon: url("../media/icons/insta-white.png");
@@ -67,6 +69,15 @@ button, input {
   z-index: 1001;
   transition: 0.3s;
   width: 100%;
+}
+@media (max-width: 991.98px) {
+  .navbar {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--hover);
+    padding-bottom: 12px;
+  }
 }
 .navbar a {
   color: var(--text);
@@ -222,7 +233,6 @@ button, input {
   z-index: 1100;
   padding: 0;
   transition: 0.3s;
-  margin-bottom: auto;
 }
 .navbar__burger span {
   font-size: 16px;
@@ -242,21 +252,23 @@ button, input {
   }
 }
 
-body.hero-active .navbar:not(.is-open) a {
-  color: white;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
-}
-body.hero-active .navbar:not(.is-open) .navbar__logo {
-  background-image: url("../media/logos/logo-white.png");
-}
-body.hero-active .navbar:not(.is-open) .sun {
-  background-image: url("../media/icons/dark-mode-moon-white.png");
-}
-body.hero-active .navbar:not(.is-open) .navbar__burger .icon {
-  background-image: url("../media/icons/dark-mode-menu.png");
-}
-body.hero-active .navbar:not(.is-open) .navbar__burger.open .icon {
-  background-image: url("../media/icons/dark-mode-close.png");
+@media (min-width: 992px) {
+  body.hero-active .navbar:not(.is-open) a {
+    color: white;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  }
+  body.hero-active .navbar:not(.is-open) .navbar__logo {
+    background-image: url("../media/logos/logo-white.png");
+  }
+  body.hero-active .navbar:not(.is-open) .sun {
+    background-image: url("../media/icons/dark-mode-moon-white.png");
+  }
+  body.hero-active .navbar:not(.is-open) .navbar__burger .icon {
+    background-image: url("../media/icons/dark-mode-menu.png");
+  }
+  body.hero-active .navbar:not(.is-open) .navbar__burger.open .icon {
+    background-image: url("../media/icons/dark-mode-close.png");
+  }
 }
 
 body.dark .navbar__burger .icon {
@@ -290,6 +302,17 @@ body.no-scroll {
   transition: 0.3s;
   opacity: 1;
 }
+@media (max-width: 991.98px) {
+  .footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--hover);
+    padding-top: 12px;
+    height: auto;
+    bottom: -1px;
+  }
+}
 .footer a {
   color: var(--text);
   text-decoration: none;
@@ -315,8 +338,10 @@ body.no-scroll {
   color: var(--text);
 }
 
-body.footer-hero .footer {
-  opacity: 0;
+@media (min-width: 992px) {
+  body.footer-hero .footer {
+    opacity: 0;
+  }
 }
 
 .home {
@@ -404,8 +429,19 @@ body.footer-hero .footer {
 .about {
   padding-top: 100px;
 }
+.about__divider {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 24px 0;
+}
+@media (min-width: 992px) {
+  .about__divider {
+    margin: 60px 0;
+  }
+}
 .about__content {
-  padding: 64px 24px 0px 24px;
+  padding: 24px 24px 0px 24px;
   background: var(--bg);
 }
 @media (min-width: 992px) {
@@ -459,14 +495,8 @@ body.footer-hero .footer {
 }
 .about__content__description {
   font-size: clamp(16px, 1.2vw, 24px);
-  margin-bottom: 40px;
   color: var(--text);
   line-height: 1.4;
-}
-@media (min-width: 992px) {
-  .about__content__description {
-    margin-bottom: 120px;
-  }
 }
 .about__content__description span {
   font-family: var(--fontFancy);
@@ -520,12 +550,12 @@ body.footer-hero .footer {
   padding-top: 100px;
 }
 .projects__content {
-  padding: 40px 24px 64px 24px;
+  padding: 24px 24px 0px 24px;
   background: var(--bg);
 }
 @media (min-width: 992px) {
   .projects__content {
-    padding: 80px 40px 80px 40px;
+    padding: 80px 40px 0px 40px;
   }
 }
 .projects__content__grid {
@@ -589,7 +619,7 @@ body.footer-hero .footer {
   padding-top: 100px;
 }
 .contact__content {
-  padding: 64px 24px 0px 24px;
+  padding: 24px 24px 0px 24px;
   background: var(--bg);
 }
 @media (min-width: 992px) {
@@ -724,6 +754,23 @@ body.footer-hero .footer {
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
+}
+.work__content__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.4;
+}
+.work__content__benefit__dot {
+  width: 6px;
+  height: 1px;
+  border-radius: 0;
+  margin-top: 12px;
+  background: var(--text);
+  margin-top: 10px;
+}
+.work__content__benefit__text {
+  flex: 1;
 }
 .work__content__grid {
   display: grid;
@@ -1039,25 +1086,34 @@ body.footer-hero .footer {
   color: red;
 }
 .offer__content {
-  padding: 80px 40px 0px 40px;
+  padding: 24px 24px 0px 24px;
   background: var(--bg);
+}
+@media (min-width: 992px) {
+  .offer__content {
+    padding: 80px 40px 0px 40px;
+  }
 }
 .offer__content__grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 60px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .offer__content__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
   }
 }
 .offer__content__sidebar {
-  position: sticky;
-  top: 100px;
   align-self: start;
+}
+@media (min-width: 992px) {
+  .offer__content__sidebar {
+    position: sticky;
+    top: 100px;
+  }
 }
 .offer__content__main {
   max-width: 700px;
@@ -1124,9 +1180,6 @@ body.footer-hero .footer {
 .offer__content__extra-info {
   margin-top: 120px;
 }
-.offer__content {
-  /* BENEFITS SECTION */
-}
 .offer__content__benefits {
   position: relative;
   margin-top: 40px;
@@ -1145,9 +1198,6 @@ body.footer-hero .footer {
   font-style: italic;
   line-height: 1.6;
   max-width: 700px;
-}
-.offer__content {
-  /* SINGLE BENEFIT */
 }
 .offer__content__benefit {
   display: flex;
@@ -1240,11 +1290,13 @@ body.footer-hero .footer {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-top: 65px;
 }
 @media (min-width: 992px) {
   .project__hero {
     height: 100vh;
     width: 100%;
+    padding-top: 0px;
   }
 }
 .project__hero-img {

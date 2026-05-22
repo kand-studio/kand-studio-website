@@ -8,6 +8,9 @@
     --card: #f5f5f5;
     --gray: #828282;
     --bg-gray: #f1f1f1;
+
+    --glass-bg: rgba(248, 248, 246, 0.72);
+
     --hover: rgba(0,0,0,0.04);
     --hover-strong: rgba(0,0,0,0.06);
 
@@ -23,6 +26,9 @@ body.dark {
     --card: #1a1a1a;
     --gray: #828282;
     --bg-gray: #161616;
+
+    --glass-bg: rgba(17, 17, 17, 0.72);
+
     --hover: rgba(255,255,255,0.04);
     --hover-strong: rgba(255,255,255,0.06);
 
@@ -30,5 +36,4 @@ body.dark {
     --logo: url("../media/logos/logo-white.png");
     --logoSmall: url("../media/logos/logo-white-small.png");
     --arrowLink: url("../media/icons/link-arrow-white.png");
-
 }

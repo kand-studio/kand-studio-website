@@ -9,6 +9,14 @@
     transition: 0.3s;
     width: 100%;  
 
+    @media (max-width: 991.98px) {
+        background: var(--glass-bg);
+        backdrop-filter: blur(18px) saturate(140%);
+        -webkit-backdrop-filter: blur(18px) saturate(140%);
+        border-bottom: 1px solid var(--hover);
+        padding-bottom: 12px;
+    }
+
     a {
         color: var(--text);
         text-decoration: none;
@@ -200,7 +208,7 @@
         z-index: 1100;
         padding: 0;
         transition: 0.3s;
-        margin-bottom: auto;
+        // margin-bottom: auto;
 
         span {
             font-size: 16px;
@@ -223,26 +231,29 @@
 
 // project hero section 
 body.hero-active .navbar:not(.is-open) {
-    a {
-        color: white;
-        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    @media (min-width: 992px) {
+        a {
+            color: white;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .navbar__logo {
+            background-image: url("../media/logos/logo-white.png");
+        }
+
+        .sun {
+            background-image: url("../media/icons/dark-mode-moon-white.png");
+        }
+
+        .navbar__burger .icon {
+            background-image: url("../media/icons/dark-mode-menu.png");
+        }
+
+        .navbar__burger.open .icon {
+            background-image: url("../media/icons/dark-mode-close.png");
+        }
     }
 
-    .navbar__logo {
-        background-image: url("../media/logos/logo-white.png");
-    }
-
-    .sun {
-        background-image: url("../media/icons/dark-mode-moon-white.png");
-    }
-
-    .navbar__burger .icon {
-        background-image: url("../media/icons/dark-mode-menu.png");
-    }
-
-    .navbar__burger.open .icon {
-        background-image: url("../media/icons/dark-mode-close.png");
-    }
 }
 
 

@@ -11,6 +11,16 @@
     transition: 0.3s;
     opacity: 1;
 
+    @media (max-width: 991.98px) {
+      background: var(--glass-bg);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      border-bottom: 1px solid var(--hover);
+      padding-top: 12px;
+      height: auto;
+      bottom: -1px;
+    }
+
     a {
         color: var(--text);
         text-decoration: none;
@@ -42,6 +52,10 @@
 
 // project hero section 
 body.footer-hero .footer {
+
+        @media (min-width: 992px) {
+            opacity: 0;
+        }
   // &__text {
   //   color: white;
   // }
@@ -49,6 +63,4 @@ body.footer-hero .footer {
   // &__icon {
   //   background-image: url("../media/icons/insta-white.png");
   // }
-
-  opacity: 0;
 }

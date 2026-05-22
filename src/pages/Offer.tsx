@@ -117,6 +117,7 @@ function OfferPage() {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState<string>("");
+  const [info, setInfo] = useState<string>("");
 
   const calculate = (offer: Offer) => {
     const kitchen = Number(kitchenArea) || 0;
@@ -126,17 +127,22 @@ function OfferPage() {
 
     if (totalArea <= 0) {
       setResult(null);
+      setInfo("");
       setError("Podaj metraż większy niż 0 m²");
       return;
     }
 
-    if (totalArea > 10000) {
+    if (totalArea > 400) {
       setResult(null);
-      setError("Maksymalny metraż to 10 000 m²");
+      setError("");
+      setInfo(
+        "Przy projektach o wielkości ponad 400m² sugerowana jest wycena indywidualna."
+      );
       return;
     }
-
+    
     setError("");
+    setInfo("");
 
     const weightedArea = kitchen * 1.2 + other;
 
@@ -243,6 +249,10 @@ function OfferPage() {
 
             {error && (
               <p className="offer__calculator__error">{error}</p>
+            )}
+
+            {info && (
+              <p className="offer__calculator__disclaimer">{info}</p>
             )}
 
             {result && (

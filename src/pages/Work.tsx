@@ -83,31 +83,31 @@ function Work() {
             <p className="work__content__description">
               Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością prac z projektem. W zależności od potrzeb:
               <br /><br />
-                    <div className="offer__content__benefit">
-                      <span className="offer__content__benefit__dot" />
+                    <div className="work__content__benefit">
+                      <span className="work__content__benefit__dot" />
 
-                      <p className="offer__content__benefit__text">
+                      <p className="work__content__benefit__text">
                          koordynuję komunikację z wykonawcami
                       </p>
                     </div>
-                    <div className="offer__content__benefit">
-                      <span className="offer__content__benefit__dot" />
+                    <div className="work__content__benefit">
+                      <span className="work__content__benefit__dot" />
 
-                      <p className="offer__content__benefit__text">
+                      <p className="work__content__benefit__text">
                         odpowiadam na bieżące pytania i decyzje techniczne
                       </p>
                     </div>
-                    <div className="offer__content__benefit">
-                      <span className="offer__content__benefit__dot" />
+                    <div className="work__content__benefit">
+                      <span className="work__content__benefit__dot" />
 
-                      <p className="offer__content__benefit__text">
+                      <p className="work__content__benefit__text">
                         weryfikuję zgodność realizacji z projektem
                       </p>
                     </div>
-                    <div className="offer__content__benefit">
-                      <span className="offer__content__benefit__dot" />
+                    <div className="work__content__benefit">
+                      <span className="work__content__benefit__dot" />
 
-                      <p className="offer__content__benefit__text">
+                      <p className="work__content__benefit__text">
                        pełnię autorski nadzór nad inwestycją
                       </p>
                     </div>

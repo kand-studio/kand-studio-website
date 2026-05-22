@@ -2,12 +2,12 @@
     padding-top: 100px;
 
     &__content {
-        padding: 40px 24px 64px 24px;
+        padding: 24px 24px 0px 24px;
         background: var(--bg);
 
         @media (min-width: 992px) {
-            padding: 80px 40px 80px 40px;
-        }
+        padding: 80px 40px 0px 40px;
+    }
 
         &__grid {
             display: grid;

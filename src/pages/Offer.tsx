@@ -85,7 +85,7 @@ function OfferPage() {
       id: 4,
       name: "Premium",
       priceMin: 290,
-      priceMax: 360,
+      priceMax: 370,
       content: {
         items: [
           "Inwentaryzacja",
@@ -351,17 +351,24 @@ function OfferPage() {
             })}
 
             <p className="offer__content__title">
-              INFORMACJE DOTYCZĄCE WYCENY
+             USŁUGA PRIORYTETOWA
             </p>
 
             <div className="offer__content__benefits">
               <p className="offer__content__benefit">
-                Przy projekcie całego mieszkania/domu (wszystkich pomieszczeń
-                należących do inwestora) oferujemy dodatkowe 2% rabatu “RABAT
-                dla CAŁOŚCI - RC”.
+                Projekt bez czekania w kolejce - do miesiąca czasu.
               </p>
+            </div>
 
-              <br />
+            <div className="offer__divider" />
+
+
+            <p className="offer__content__title">
+              INFORMACJE DOTYCZĄCE WYCENY
+            </p>
+
+
+            <div className="offer__content__benefits">
 
               <p className="offer__content__benefit">
                 Płatności następują w ratach i są one dostosowane do wartości

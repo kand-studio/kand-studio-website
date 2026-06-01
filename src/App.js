@@ -13,7 +13,6 @@ import Work from "./pages/Work"
 import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
-import Project001 from "./pages/Project001"
 import ProjectPage from "./pages/ProjectPage"
 
 function App() {

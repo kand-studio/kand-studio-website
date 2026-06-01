@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Offer = {
   id: number;
@@ -119,6 +119,7 @@ function OfferPage() {
   const [kitchenArea, setKitchenArea] = useState<string>("");
   const [otherArea, setOtherArea] = useState<string>("");
   const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const [priorityService, setPriorityService] = useState(false);
 
   const [result, setResult] = useState<Result | null>(null);
 
@@ -152,10 +153,24 @@ function OfferPage() {
     setError("");
     setInfo("");
 
-    const weightedArea = kitchen * 1.2 + other;
+    let weightedArea: number;
 
-    const min = offer.priceMin * weightedArea;
-    const max = offer.priceMax * weightedArea;
+    if (totalArea < 10) {
+      // minimalna wycena za 10 m²
+
+      if (kitchen > 0) {
+        weightedArea = 10 * 1.2;
+      } else {
+        weightedArea = 10;
+      }
+    } else {
+      weightedArea = kitchen * 1.2 + other;
+    }
+
+    const multiplier = priorityService ? 1.3 : 1;
+
+    const min = offer.priceMin * weightedArea * multiplier;
+    const max = offer.priceMax * weightedArea * multiplier;
 
     setResult({ min, max });
   };
@@ -165,6 +180,19 @@ function OfferPage() {
       style: "currency",
       currency: "PLN",
     });
+
+    // automatyczne odświeanie calc
+
+    // useEffect(() => {
+    //   if (kitchenArea || otherArea) {
+    //     calculate(selectedOffer);
+    //   }
+    // }, [
+    //   kitchenArea,
+    //   otherArea,
+    //   priorityService,
+    //   selectedOffer,
+    // ]);
 
   return (
     <div className="offer">
@@ -235,7 +263,13 @@ function OfferPage() {
                 className="offer__calculator__input"
                 type="number"
                 value={kitchenArea}
-                onChange={(e) => setKitchenArea(e.target.value)}
+                onChange={(e) => {
+                  const value = e.target.value;
+
+                  if (/^\d*([.,]\d{0,1})?$/.test(value)) {
+                    setKitchenArea(value);
+                  }
+                }}
               />
 
               <p className="offer__content__label">
@@ -246,8 +280,23 @@ function OfferPage() {
                 className="offer__calculator__input"
                 type="number"
                 value={otherArea}
-                onChange={(e) => setOtherArea(e.target.value)}
+                onChange={(e) => {
+                  const value = e.target.value;
+
+                  if (/^\d*([.,]\d{0,1})?$/.test(value)) {
+                    setOtherArea(value);
+                  }
+                }}
               />
+
+              <label className="offer__calculator__checkbox">
+                <input
+                  type="checkbox"
+                  checked={priorityService}
+                  onChange={(e) => setPriorityService(e.target.checked)}
+                />
+                <span>Usługa priorytetowa</span>
+              </label>
 
               <button
                 className="offer__calculator__button"

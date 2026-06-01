@@ -39,8 +39,8 @@ function About() {
 
             <p className="about__content__title">Informacje</p>
             <p className="about__content__description about__content__description--info">
-                <p><strong>E-mail:</strong> projekt@kandstudio.pl</p>
-                <p><strong>Telefon:</strong> (+48) 668 642 807</p>
+                <p><strong>E-mail:</strong> <a href="mailto:projekt@kandstudio.pl">projekt@kandstudio.pl</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+48668642807">(+48) 668 642 807</a></p>
                 <p><strong>Godziny pracy:</strong> Poniedziałek - Piątek 09:00-18:00</p>
                 <Link to="/contact">
                   <span className="arrow-link" />

@@ -147,7 +147,7 @@ export const projects: Project[] = [
     area: "Mieszkanie 120",
   },
     {
-    number: "009",
+    number: "005",
     title: "Refined Heritage Apartment",
     style: "Modern Heritage",
     location: "Kraków, Polska",
@@ -220,7 +220,7 @@ export const projects: Project[] = [
     area: "Apartamentowiec 670m",
   },
     {
-    number: "005",
+    number: "009",
     title: "Monochrome Apartment",
     style: "Monochrome Modern Design",
     location: "Kraków, Polska",

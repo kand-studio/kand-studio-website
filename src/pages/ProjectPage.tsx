@@ -5,7 +5,8 @@ import { projects } from "../data/projects";
 function ProjectPage() {
   const { number } = useParams();
   const project = projects.find((p) => p.number === number);
-
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+  const [heroLoaded, setHeroLoaded] = useState(false);
   const currentIndex = projects.findIndex((p) => p.number === number);
 
   const nextProject =
@@ -39,6 +40,10 @@ function ProjectPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    // useEffect(() => {
+    //   setHeroLoaded(false);
+    // }, [number]);
+
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, [number]);
@@ -54,33 +59,39 @@ function ProjectPage() {
   return (
     <div className="project">
 
-      <section className="project__hero">
-        <img
-          src={project.cover}
-          alt={project.title}
-          className="project__hero-img"
-          style={{
-            transform: `translateY(${parallax}px)`
-          }}
-        />
+    <section className="project__hero">
 
-        <div
-          className="project__hero-overlay"
-          style={{
-            opacity: overlayOpacity
-          }}
-        />
+      {!heroLoaded && (
+        <div className="project__hero-placeholder" />
+      )}
 
-        <h1
-          className="project__hero-title"
-          style={{
-            opacity: titleOpacity,
-            transform: `translateY(${titleTranslate}px)`
-          }}
-        >
-          {project.title}
-        </h1>
-      </section>
+      <img
+        src={project.cover}
+        alt={project.title}
+        className={`project__hero-img ${heroLoaded ? "loaded" : ""}`}
+        onLoad={() => setHeroLoaded(true)}
+        style={{
+          transform: `translateY(${parallax}px)`
+        }}
+      />
+
+      <div
+        className="project__hero-overlay"
+        style={{
+          opacity: overlayOpacity
+        }}
+      />
+
+      <h1
+        className="project__hero-title"
+        style={{
+          opacity: titleOpacity,
+          transform: `translateY(${titleTranslate}px)`
+        }}
+      >
+        {project.title}
+      </h1>
+    </section>
 
       <section className="project__content">
         <div className="project__content__grid">
@@ -120,7 +131,25 @@ function ProjectPage() {
 
             <div className="project__content__gallery">
               {project.images.map((img, i) => (
-                <img key={i} src={img} alt={`${project.title}-${i}`} />
+                <div key={i} className="project__content__gallery-item">
+                  {!loadedImages[i] && (
+                    <div className="project__content__gallery-placeholder" />
+                  )}
+
+                  <img
+                    src={img}
+                    alt={`${project.title}-${i}`}
+                    loading="lazy"
+                    decoding="async"
+                    className={loadedImages[i] ? "loaded" : ""}
+                    onLoad={() =>
+                      setLoadedImages((prev) => ({
+                        ...prev,
+                        [i]: true,
+                      }))
+                    }
+                  />
+                </div>
               ))}
             </div>
 

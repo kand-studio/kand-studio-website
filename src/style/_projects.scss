@@ -38,6 +38,7 @@
             width: 100%;
             aspect-ratio: 16 / 9;
             overflow: hidden;
+            background-color: #e8e8e8;
 
             @media (min-width: 992px) {
                 aspect-ratio: 3 / 4;

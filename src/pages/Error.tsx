@@ -4,15 +4,18 @@ function Error() {
 
   return (
     <div className="error">
+      <section className="error__content">
+        <div className="error__content__grid">
 
-      {/* TODO DOKOŃCZYC */}
-      <section className="about__content">
-        <div className="about__content__grid">
-
-          <div className="about__content__main">
-            <p className="work__content__title">404</p>
-            <p className="about__content__description">
-              Nie znaleziono strony
+          <div className="error__content__main">
+            <p className="error__content__title">404</p>
+            <p className="error__content__description">
+              Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona. Wróć na stronę główną, aby kontynuować przeglądanie projektów i oferty.
+              <br />
+                <Link to="/">
+                  <span className="arrow-link" />
+                  Powrót na stronę główną
+                </Link>
             </p>
           </div>
 

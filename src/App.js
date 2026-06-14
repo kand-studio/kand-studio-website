@@ -14,6 +14,7 @@ import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
 import ProjectPage from "./pages/ProjectPage"
+import Cookies from "./pages/Cookies"
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
         {/* projects */}
         <Route path="/project/:number" element={<ProjectPage />} />
         <Route path="*" element={<Error />} />
+        <Route path="/cookies" element={<Cookies />} />
       </Routes>
 
       {!isHome && <Footer />}

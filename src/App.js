@@ -10,6 +10,7 @@ import HomeV2 from "./pages/HomeV2"
 import Projects from "./pages/Projects"
 import About from "./pages/About"
 import Work from "./pages/Work"
+import WorkScroll from "./pages/WorkScroll"
 import Offer from "./pages/Offer"
 import Contact from "./pages/Contact"
 import Error from "./pages/Error"
@@ -43,6 +44,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/how-we-work" element={<Work />} />
+        <Route path="/how-we-work-scroll" element={<WorkScroll />} />
         <Route path="/offer" element={<Offer />} />
         <Route path="/contact" element={<Contact />} />
         {/* projects */}

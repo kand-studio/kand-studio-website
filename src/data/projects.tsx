@@ -162,7 +162,7 @@ export const projects: Project[] = [
     cover: cover9,
     images: [img9_2, img9_1, img9_0, img9_3],
     year: 2025,
-    area: "Mieszkanie 110m",
+    area: "Mieszkanie 110",
   },
   {
     number: "006",
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     cover: cover6,
     images: [img6_2, img6_0, img6_1, img6_3, img6_4],
     year: 2024,
-    area: "Dom 280m",
+    area: "Dom 280",
   },
   {
     number: "007",
@@ -198,7 +198,7 @@ export const projects: Project[] = [
     cover: cover7,
     images: [img7_0, img7_1, img7_2, img7_3],
     year: 2025,
-    area: "Mieszkanie 40m",
+    area: "Mieszkanie 40",
   },
   {
     number: "008",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     cover: cover8,
     images: [img8_0, img8_1, img8_2, img8_3, img8_4],
     year: 2025,
-    area: "Apartamentowiec 670m",
+    area: "Apartamentowiec 670",
   },
     {
     number: "009",

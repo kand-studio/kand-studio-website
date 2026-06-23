@@ -50,7 +50,11 @@ function Work() {
           <div className="work__content__main">
             <p className="work__content__title">Jak działamy?</p>
             <p className="work__content__description">
-              Projektowanie wnętrza to proces, który wymaga nie tylko estetyki, ale przede wszystkim przemyślanej strategii i pełnej kontroli nad każdym etapem. Współpracę rozpoczynam od indywidualnej konsultacji, podczas której poznaję Twoje potrzeby, styl życia oraz oczekiwania wobec przyszłej przestrzeni. To kluczowy moment, który pozwala mi stworzyć spójną wizję projektu dopasowaną nie tylko do wnętrza, ale przede wszystkim do Ciebie. Na tej podstawie prowadzę cały proces projektowy w sposób uporządkowany, transparentny i maksymalnie odciążający dla Klienta.
+              Projektowanie wnętrza to proces, który wymaga nie tylko wyczucia estetyki, ale przede wszystkim przemyślanej strategii oraz pełnej kontroli nad każdym etapem realizacji.
+              <br /><br />
+              Współpracę rozpoczynam od indywidualnej konsultacji, podczas której poznaję Państwa potrzeby, styl życia oraz oczekiwania wobec przyszłej przestrzeni. To kluczowy moment, który pozwala mi stworzyć spójną wizję projektu, dopasowaną nie tylko do wnętrza, ale przede wszystkim do jego przyszłych użytkowników.
+              <br /><br />
+              Na tej podstawie prowadzę cały proces projektowy w sposób uporządkowany, transparentny i maksymalnie odciążający Klienta.
             </p>
 
             <div className="work__divider" /> 
@@ -58,7 +62,11 @@ function Work() {
             <p className="work__content__title work__content__title--with-label">Układ funkcjonalny</p>
             <p className="work__content__label">Pierwszy krok</p>
             <p className="work__content__description">
-              Każdy projekt zaczyna się od dobrze zaplanowanej przestrzeni. Tworzę dopracowane warianty układu funkcjonalnego, które analizujemy pod kątem ergonomii, komfortu i realnych możliwości wykonawczych. Wspólnie wybieramy najlepsze rozwiązanie, które następnie dopracowuję w szczegółach. To etap, który decyduje o jakości codziennego życia w projektowanym wnętrzu.
+              Każdy projekt rozpoczyna się od starannie zaplanowanej przestrzeni.
+              <br /><br />
+              Przygotowuję dopracowane warianty układu funkcjonalnego, które wspólnie analizujemy pod kątem ergonomii, komfortu użytkowania oraz realnych możliwości wykonawczych. Następnie wybieramy rozwiązanie najlepiej odpowiadające Państwa potrzebom, które dopracowuję w najdrobniejszych szczegółach.
+              <br /><br />
+              To etap, który w największym stopniu wpływa na komfort codziennego funkcjonowania we wnętrzu.
             </p>
 
             <div className="work__divider" /> 
@@ -66,7 +74,11 @@ function Work() {
             <p className="work__content__title work__content__title--with-label">Koncepcja i wizualizacje</p>
             <p className="work__content__label">Drugi krok</p>
             <p className="work__content__description">
-                Na tym etapie projekt zyskuje swój charakter i tożsamość. Dobieram materiały, faktury i wyposażenie, tworząc spójną, ponadczasową estetykę. Całość przedstawiam w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji. Dopracowujemy każdy detal - aż do momentu, w którym projekt jest w pełni zgodny z Twoją wizją.
+              Na tym etapie projekt nabiera charakteru i indywidualnej tożsamości.
+              <br /><br />
+              Dobieram materiały, faktury, wyposażenie oraz elementy wykończeniowe, tworząc spójną i ponadczasową estetykę. Całość prezentuję w formie realistycznych wizualizacji, które pozwalają precyzyjnie zobaczyć finalny efekt jeszcze przed rozpoczęciem realizacji.
+              <br /><br />
+              Każdy detal jest starannie dopracowywany aż do momentu, w którym projekt w pełni odpowiada Państwa oczekiwaniom.
             </p>
 
             <div className="work__divider" /> 
@@ -74,92 +86,104 @@ function Work() {
             <p className="work__content__title work__content__title--with-label">Dokumentacja techniczna</p>
             <p className="work__content__label">Trzeci krok</p>
             <p className="work__content__description">
-              Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą. Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, po detale wykończeniowe. Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień jest ograniczone do minimum.
+              Po zatwierdzeniu koncepcji przygotowuję kompletną dokumentację wykonawczą.
+              <br /><br />
+              Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, aż po detale wykończeniowe.
+              <br /><br />
+              Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień zostaje ograniczone do minimum.
             </p>
 
             <div className="work__divider" /> 
 
             <p className="work__content__title">Realizacja i nadzór</p>
             <p className="work__content__description">
-              Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością prac z projektem. W zależności od potrzeb:
+              Na etapie realizacji zapewniam wsparcie oraz kontrolę nad zgodnością wykonywanych prac z projektem.
+              <br /><br />
+              W zależności od zakresu współpracy:
               <br /><br />
                     <div className="work__content__benefit">
                       <span className="work__content__benefit__dot" />
 
                       <p className="work__content__benefit__text">
-                         koordynuję komunikację z wykonawcami
+                         koordynuję komunikację z wykonawcami,
                       </p>
                     </div>
                     <div className="work__content__benefit">
                       <span className="work__content__benefit__dot" />
 
                       <p className="work__content__benefit__text">
-                        odpowiadam na bieżące pytania i decyzje techniczne
+                        odpowiadam na bieżące pytania i kwestie techniczne,
                       </p>
                     </div>
                     <div className="work__content__benefit">
                       <span className="work__content__benefit__dot" />
 
                       <p className="work__content__benefit__text">
-                        weryfikuję zgodność realizacji z projektem
+                        weryfikuję zgodność realizacji z dokumentacją projektową,
                       </p>
                     </div>
                     <div className="work__content__benefit">
                       <span className="work__content__benefit__dot" />
 
                       <p className="work__content__benefit__text">
-                       pełnię autorski nadzór nad inwestycją
+                       sprawuję autorski nadzór nad inwestycją.
                       </p>
                     </div>
               <br />
-              Dodatkowo otrzymujesz szczegółową listę wyposażenia oraz kosztorys, co pozwala zachować pełną kontrolę nad budżetem.
+             Dodatkowo Klient otrzymuje szczegółową listę wyposażenia oraz kosztorys, co pozwala zachować pełną kontrolę nad budżetem i przebiegiem realizacji.
             </p>  
 
             <div className="work__divider" /> 
             
             <p className="work__content__title">Realizacja „pod klucz”</p>
             <p className="work__content__description">
-              Dla Klientów, którzy cenią swój czas i komfort, oferuję kompleksową realizację wnętrza „pod klucz”. W tym modelu przejmuję pełną odpowiedzialność za cały proces - od zatwierdzenia projektu aż po oddanie gotowej, w pełni urządzonej przestrzeni. Twoje zaangażowanie ogranicza się do kluczowych decyzji.
+              Dla Klientów ceniących swój czas, komfort oraz kompleksową obsługę oferuję realizację wnętrza „pod klucz”.
+              <br /><br />
+              W tym modelu przejmuję pełną odpowiedzialność za cały proces - od momentu zatwierdzenia projektu aż po przekazanie gotowej, w pełni urządzonej przestrzeni.
               <br /><br />
               Całą resztą zajmuję się ja i mój zespół:
               <br /><br />
+              Zaangażowanie Klienta ogranicza się wyłącznie do kluczowych decyzji projektowych. Całą pozostałą częścią procesu zajmuję się wraz z zespołem specjalistów.
+              <br /><br />
+              Zakres usługi obejmuje:
+                    <br /><br />
                     <div className="offer__content__benefit">
                       <span className="offer__content__benefit__dot" />
 
                       <p className="offer__content__benefit__text">
-                        kompleksowa koordynacja zamówień i dostaw
+                        kompleksową koordynację zamówień i dostaw,
                       </p>
                     </div>
                     <div className="offer__content__benefit">
                       <span className="offer__content__benefit__dot" />
 
                       <p className="offer__content__benefit__text">
-                        zarządzanie ekipami wykonawczymi    
+                        zarządzanie ekipami wykonawczymi,   
                       </p>
                     </div>
                     <div className="offer__content__benefit">
                       <span className="offer__content__benefit__dot" />
 
                       <p className="offer__content__benefit__text">
-                        kontrola jakości i harmonogramu prac
+                        kontrolę jakości oraz harmonogramu prac,
                       </p>
                     </div>
                     <div className="offer__content__benefit">
                       <span className="offer__content__benefit__dot" />
 
                       <p className="offer__content__benefit__text">
-                        rozwiązywanie bieżących kwestii technicznych
+                         rozwiązywanie bieżących kwestii technicznych,
                       </p>
                     </div>
                     <div className="offer__content__benefit">
                       <span className="offer__content__benefit__dot" />
 
                       <p className="offer__content__benefit__text">
-                        obsługa ewentualnych reklamacji
+                        obsługę ewentualnych reklamacji i niezgodności.
                       </p>
                     </div>
               <br />
-              Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu - bez chaosu organizacyjnego i bez angażowania Cię w procesy techniczne.
+              Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu, bez chaosu organizacyjnego i bez konieczności angażowania się przez Klienta w kwestie techniczne czy logistyczne.
             </p> 
     
           </div>

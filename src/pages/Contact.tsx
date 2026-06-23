@@ -8,7 +8,15 @@ function Contact() {
         <div className="contact__content__grid">
           <div className="contact__content__main">
             <p className="contact__content__title">Kontakt</p>
-            <p className="contact__content__description">Współpracę z Klientem rozpoczynam od wstępnej konsultacji, która stanowi fundament całego procesu projektowego. Ten etap pozwala na szczegółowe omówienie założeń oraz oczekiwań wobec przyszłego wnętrza. Skupiam się na poznaniu estetycznych preferencji, funkcjonalnych potrzeb oraz stylu życia Inwestora, co umożliwia stworzenie projektu.</p>
+            <p className="contact__content__description">
+              Każdy projekt rozpoczyna się od rozmowy.
+              <br /><br />
+              To właśnie podczas pierwszego kontaktu poznaję Państwa potrzeby, oczekiwania oraz zakres planowanej inwestycji. Dzięki temu mogę zaproponować najbardziej odpowiedni model współpracy oraz wstępnie określić harmonogram prac.
+              <br /><br />
+              Jeżeli planują Państwo budowę, remont lub wykończenie wnętrza i poszukują kompleksowego wsparcia projektowego, zapraszam do kontaktu.
+              <br /><br />
+              Chętnie odpowiem na pytania, omówię założenia projektu oraz przedstawię możliwości współpracy.
+            </p>
             
             <div className="contact__content__description contact__content__description--info">
                 <p><strong>E-mail:</strong><a href="mailto:projekt@kandstudio.pl">projekt@kandstudio.pl</a></p>

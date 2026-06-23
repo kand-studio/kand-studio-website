@@ -17,8 +17,15 @@ function About() {
             <p className="about__content__title">Firma</p>
             <span className="about__content__logo"></span>
             <p className="about__content__description">
-              KAND.studio to autorskie biuro projektowe, które tworzę z pasją, zaangażowaniem i pełnym oddaniem najwyższym standardom. Specjalizuję się w kompleksowych, nowoczesnych rozwiązaniach projektowych, w których każdy detal ma znaczenie. Moje podejście łączy estetykę z funkcjonalnością, a nadrzędną wartością pozostaje jakość - zarówno w koncepcji, jak i w realizacji.<br /><br />
-              Wyróżniam się dbałością o detale i konsekwentnym dążeniem do perfekcji. Tworzę wnętrza z klasą i charakterem - dopracowane, eleganckie i skrojone na miarę codziennych potrzeb użytkowników. Dzięki transparentnej współpracy i wysokiej kulturze projektowej moje biuro zyskało opinię rzetelnego i niezawodnego partnera w świecie architektury wnętrz.
+              KAND.studio to autorskie biuro projektowe specjalizujące się w kompleksowym projektowaniu wnętrz prywatnych oraz inwestycyjnych.
+              <br /><br />
+              Studio powstało z potrzeby tworzenia przestrzeni, które łączą wysoką estetykę, funkcjonalność oraz najwyższą jakość wykonania. Każdy projekt realizowany jest z dbałością o najmniejsze detale, przy zachowaniu pełnej kontroli nad procesem projektowym i realizacyjnym.
+              <br /><br />
+              Filozofia KAND.studio opiera się na indywidualnym podejściu do każdego Klienta oraz przekonaniu, że najlepsze wnętrza powstają tam, gdzie przemyślana koncepcja spotyka się z doskonałym wykonaniem.
+              <br /><br />
+              Dzięki kompleksowej obsłudze studio prowadzi inwestycje od pierwszych szkiców i wizualizacji, przez dokumentację techniczną, aż po nadzór nad realizacją i projekty „pod klucz”.
+              <br /><br />
+              Efektem są wnętrza eleganckie, ponadczasowe i dopracowane w każdym detalu - tworzone dla osób, które cenią jakość, komfort oraz profesjonalne wsparcie na każdym etapie inwestycji.
             </p>
 
             <div className="about__divider" /> 
@@ -31,8 +38,17 @@ function About() {
               <img src={AboutMe} className="about__content__img mobile" />
               <br />
               <br />
-              Każdy projekt to dla mnie indywidualna historia - dlatego z pełną uwagą wsłuchuję się w potrzeby klientów, doradzam na wszystkich etapach współpracy i konsekwentnie dążę do realizacji ich wizji. Kluczowe znaczenie mają dla mnie precyzja, staranność oraz spójność estetyczna, co przekłada się na wysokie zadowolenie klientów i długofalowe relacje oparte na zaufaniu.<br /><br />
-              Każde zlecenie traktuję indywidualnie, z pełnym profesjonalizmem i zaangażowaniem - tak, aby efekt końcowy nie tylko spełniał, ale często przekraczał oczekiwania. Fundamentem mojej pracy są odpowiedzialność, relacja z klientem oraz zaufanie, które buduję od pierwszego spotkania aż po finalne oddanie projektu.
+              Projektuję wnętrza z myślą o tym, jak będą funkcjonować na co dzień - nie tylko jak będą wyglądać na wizualizacjach.
+              <br /><br />
+              Prowadzę pracownię projektową, w której łączę estetykę z przemyślanymi rozwiązaniami funkcjonalnymi i pełną kontrolą nad procesem realizacji. Każdy projekt traktuję indywidualnie - <strong>nie pracuję na schematach</strong>, tylko szukam rozwiązań dopasowanych do konkretnej przestrzeni i stylu życia jej użytkowników.
+              <br /><br />
+              Specjalizuję się w projektach, które wymagają czegoś więcej niż standardowych rozwiązań - gdzie liczy się spójność, jakość materiałów i dopracowanie detalu.
+              <br /><br />
+              Dużą wagę przykładam do tego, aby projekt był nie tylko estetyczny, ale przede wszystkim realny do wykonania. Dlatego cały proces opieram na doświadczeniu technicznym i współpracy ze sprawdzonymi wykonawcami.
+              <br /><br />
+              Pracuję w sposób uporządkowany i transparentny - tak, aby Klient na każdym etapie miał pełną kontrolę nad tym, co powstaje, bez konieczności angażowania się w kwestie techniczne.
+              <br /><br />
+              Efektem jest wnętrze dopracowane w każdym detalu - spójne, funkcjonalne i gotowe do życia.
             </p>
 
             <div className="about__divider" /> 

@@ -1,6 +1,11 @@
 .offer {
   padding-top: 100px;
-  scroll-behavior: smooth;
+  // stoping id link scroll animation above title
+
+  #\30 1,
+  #\30 2 {
+      scroll-margin-top: 60px;
+  }
 
   &__divider {
     width: 100%;
@@ -446,6 +451,10 @@
       align-items: flex-start;
       gap: 12px;
       line-height: 1.4;
+
+      &--link {
+        color: var(--text);
+      }
 
       &__dot {
         width: 6px;

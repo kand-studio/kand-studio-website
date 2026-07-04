@@ -5,6 +5,7 @@ type Offer = {
   name: string;
   priceMin: number;
   priceMax: number;
+  description?: string;
   content: {
     items: string[];
     priceText: string;
@@ -21,97 +22,97 @@ function OfferPage() {
   const offers: Offer[] = [
     {
       id: 1,
-      name: "Funkcjonalny",
-      priceMin: 70,
+      name: "Pakiet Funkcjonalny",
+      priceMin: 60,
       priceMax: 100,
+      description: "To pierwszy i najważniejszy etap projektowania, którego celem jest stworzenie ergonomicznego i przemyślanego układu wnętrza, dopasowanego do stylu życia oraz potrzeb przyszłych użytkowników.",
       content: {
         items: [
-          "Rzuty układu funkcjonalnego z wyposażeniem",
-          "Przedstawienie proponowanej kolorystyki i materiałów",
-          "Spis gładzi i podłóg (bez metrażu)",
+          "Konsultacja projektowa",
+          "Analiza potrzeb i oczekiwań",
+          "Układ funkcjonalny wnętrza",
+          "Propozycje zmian ścian działowych i otworów drzwiowych",
+          "Rzuty z rozmieszczeniem wyposażenia"
         ],
         description:
-          "Dla osób, które chcą zobaczyć koncepcję wnętrza bez pełnej dokumentacji.",
-        priceText: "Cena od 70 zł/m²",
+          "Dla osób, które potrzebują profesjonalnego wsparcia w zaplanowaniu przestrzeni.",
+        priceText: "Cena od 60 zł/m²",
       },
     },
     {
       id: 2,
-      name: "Koncepcyjny",
+      name: "Pakiet Koncepcyjny",
       priceMin: 150,
       priceMax: 200,
+      description: "Pakiet pozwala określić kierunek stylistyczny projektu oraz zwizualizować finalny efekt przy pomocy realistycznych wizualizacji.",
       content: {
         items: [
-          "Konsultacje",
-          "Rzuty układu funkcjonalnego z wyposażeniem",
-          "Przedstawienie proponowanej kolorystyki i materiałów",
-          "Wizualizacje 3D o charakterze poglądowym",
-          "Uproszczony rysunek techniczny z zaznaczeniem układu gładzi ściennych",
-          "Spis gładzi i podłóg (bez metrażu)",
+          "Koncepcja stylistyczna wnętrza",
+          "Dobór materiałów, kolorystyki i wyposażenia",
+          "Wizualizacje 3D",
+          "Wstępne zestawienie materiałów wykończeniowych",
         ],
         description:
-          "Spójna koncepcja wnętrza bez pełnej dokumentacji technicznej.",
+          "Dla osób, które chcą zobaczyć przyszłe wnętrze jeszcze przed rozpoczęciem realizacji.",
         priceText: "Cena od 150 zł/m²",
       },
     },
     {
       id: 3,
-      name: "Wykonawczy",
-      priceMin: 210,
+      name: "Projekt Kompleksowy",
+      priceMin: 260,
       priceMax: 290,
+      description: "To rozwiązanie dla osób, które oczekują kompletnego projektu wnętrza, dopracowanego zarówno pod względem estetycznym, jak i technicznym. Oprócz pełnej dokumentacji projektowej zapewniam również bieżące wsparcie podczas procesu zakupowego oraz realizacji projektu.",
       content: {
         items: [
-          "Inwentaryzacja",
-          "Konsultacje",
-          "Rzuty układu funkcjonalnego z wyposażeniem",
-          "Przedstawienie proponowanej kolorystyki i materiałów",
-          "Wizualizacje 3D o charakterze poglądowym",
-          "Rzuty techniczne określające układy ścian, sufitów podwieszanych i ścianek dekoracyjnych",
-          "Układ płytek oraz pełny spis gładzi i podłóg z podanym metrażem",
-          "Rzuty określające położenie przyłączy wodno-kanalizacyjnych oraz ich ewentualne przesunięcia",
-          "Rzuty określające położenie przyłączy elektrycznych",
-          "Przekroje techniczne projektowanych zabudów meblowych",
-          "Podstawowa lista zakupów wyposażenia wraz z organizacją zamówień",
-          "Wizyty w sklepach branżowych, prezentowanie materiałów i wyposażenia na żywo oraz omówienie i przedstawienie zalet i wad wybranych produktów",
-          "Omówienie projektu z wykonawcami",
-          "Druk projektu dla Inwestora",
+          "Inwentaryzacja pomieszczeń",
+          "Kompleksowa dokumentacja techniczna",
+          "Projekty instalacji elektrycznych i wodno-kanalizacyjnych",
+          "Projekty sufitów podwieszanych i oświetlenia",
+          "Projekty ścian dekoracyjnych oraz układów płytek",
+          "Projekty mebli wykonywanych na wymiar",
+          "Dokumentacja zakupowa",
+          "Pomoc przy wyborze materiałów i wyposażenia",
+          "Konsultacje zakupowe",
+          "Konsultacje dla wykonawców dotyczące dokumentacji projektowej",
+          "Wsparcie przy rozwiązywaniu problemów pojawiających się podczas prac wykończeniowych",
         ],
         description:
-          "Dokładna dokumentacja techniczna i pełna kontrola projektu.",
-        priceText: "Cena od 210 zł/m²",
+          "Najczęściej wybierana forma współpracy.",
+        priceText: "Cena od 260 zł/m²",
       },
     },
-    {
-      id: 4,
-      name: "Premium",
-      priceMin: 290,
-      priceMax: 370,
-      content: {
-        items: [
-          "Inwentaryzacja",
-          "Konsultacje",
-          "Rzuty układu funkcjonalnego z wyposażeniem",
-          "Przedstawienie proponowanej kolorystyki i materiałów",
-          "Wizualizacje 3D o charakterze poglądowym",
-          "Rzuty techniczne określające układy ścian, sufitów podwieszanych i ścianek dekoracyjnych",
-          "Rysunki rozwiązań szczegółowych (jeśli są konieczne) w skali 1:1",
-          "Układ płytek oraz pełny spis gładzi i podłóg z podanym metrażem",
-          "Rzuty określające położenie przyłączy wodno-kanalizacyjnych oraz ich ewentualne przesunięcia (zaznaczone również na przekrojach)",
-          "Rzuty określające położenie przyłączy elektrycznych, (elektryka zaznaczona również na przekrojach)",
-          "Przekroje techniczne wszystkich pomieszczeń, widoki projektowanych ścian oraz zabudów meblowych",
-          "Rysunki techniczne mebli, wymiarowanie mebli autorskich",
-          "Rozszerzona lista zakupów wyposażenia wraz z organizacją zamówień i dostaw oraz kontrolą ustalonego budżetu",
-          "Wizyty w sklepach branżowych, prezentowanie materiałów i wyposażenia na żywo oraz omówienie i przedstawienie zalet i wad wybranych produktów",
-          "Pełna opieka poprojektowa związana ze stałym kontaktem z wykonawcami oraz wizytami na budowie dając pełną kontrolę prac budowlano-wykończeniowych",
-          "Cotygodniowe raporty zrealizowanych prac wykończeniowych",
-          "Druk projektu dla wykonawców",
-          "Druk projektu oraz GiftBox dla Inwestora",
-        ],
-        description:
-          "Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
-        priceText: "Cena od 290 zł/m²",
-      },
-    },
+    // {
+    //   id: 4,
+    //   name: "Projekt Kompleksowy + Opieka Projektowa",
+    //   priceMin: 310,
+    //   priceMax: 370,
+    //   content: {
+    //     items: [
+    //       "Inwentaryzacja",
+    //       "Konsultacje",
+    //       "Rzuty układu funkcjonalnego z wyposażeniem",
+    //       "Przedstawienie proponowanej kolorystyki i materiałów",
+    //       "Wizualizacje 3D o charakterze poglądowym",
+    //       "Rzuty techniczne określające układy ścian, sufitów podwieszanych i ścianek dekoracyjnych",
+    //       "Rysunki rozwiązań szczegółowych (jeśli są konieczne) w skali 1:1",
+    //       "Układ płytek oraz pełny spis gładzi i podłóg z podanym metrażem",
+    //       "Rzuty określające położenie przyłączy wodno-kanalizacyjnych oraz ich ewentualne przesunięcia (zaznaczone również na przekrojach)",
+    //       "Rzuty określające położenie przyłączy elektrycznych, (elektryka zaznaczona również na przekrojach)",
+    //       "Przekroje techniczne wszystkich pomieszczeń, widoki projektowanych ścian oraz zabudów meblowych",
+    //       "Rysunki techniczne mebli, wymiarowanie mebli autorskich",
+    //       "Rozszerzona lista zakupów wyposażenia wraz z organizacją zamówień i dostaw oraz kontrolą ustalonego budżetu",
+    //       "Wizyty w sklepach branżowych, prezentowanie materiałów i wyposażenia na żywo oraz omówienie i przedstawienie zalet i wad wybranych produktów",
+    //       "Pełna opieka poprojektowa związana ze stałym kontaktem z wykonawcami oraz wizytami na budowie dając pełną kontrolę prac budowlano-wykończeniowych",
+    //       "Cotygodniowe raporty zrealizowanych prac wykończeniowych",
+    //       "Druk projektu dla wykonawców",
+    //       "Druk projektu oraz GiftBox dla Inwestora",
+    //     ],
+    //     description:
+    //       "Pełna obsługa projektu od A do Z wraz z nadzorem realizacji.",
+    //     priceText: "Cena od 290 zł/m²",
+    //   },
+    // },
   ];
 
   const [selectedOffer, setSelectedOffer] = useState<Offer>(offers[0]);
@@ -335,11 +336,25 @@ function OfferPage() {
           </aside>
 
           <div className="offer__content__main">
+
+            <p className="offer__content__title">
+              OFERTA
+            </p>
+
+            <div className="offer__content__benefits">
+
+              <p className="offer__content__benefit">
+                Każdy projekt jest wyjątkowy, dlatego zakres współpracy dopasowuję do indywidualnych potrzeb Klienta oraz etapu inwestycji. Oferuję kilka poziomów współpracy - od opracowania układu funkcjonalnego po kompleksową realizację wnętrza „pod klucz”.
+              </p>
+            </div>
+
+            <div className="offer__divider" />
+
             {offers.map((offer) => {
               const isOpen = openOffers.includes(offer.id);
 
               return (
-                <div key={offer.id}>
+                <div key={offer.id} id={`0${offer.id}`}>
                   <button
                     className="offer__content__title-benefits offer__content__title-benefits--mobile"
                     onClick={() => {
@@ -350,7 +365,7 @@ function OfferPage() {
                       );
                     }}
                   >
-                    <span>Pakiet {offer.name}</span>
+                    <span>{offer.name}</span>
 
                     <span className="offer__content__price">
                       {offer.content.priceText}
@@ -376,7 +391,33 @@ function OfferPage() {
                       </div>
 
                       <div className="offer__content__benefits">
+
+                        <div className="offer__description">
+                          {offer.description}
+                        </div>
+
+                        <br />
+                        <br />
+
                         <div className="offer__content__benefits__list">
+                          Zakres: 
+                          {offer.id === 2 && 
+                            <a href="#01" className="offer__content__benefit offer__content__benefit--link">
+                              <span className="offer__content__benefit__dot" />
+                              <span className="offer__content__benefit__text">
+                                Wszystko z Pakietu Funkcjonalnego
+                              </span>
+                            </a>
+                          }
+                          {offer.id === 3 && 
+                            <a href="#02" className="offer__content__benefit offer__content__benefit--link">
+                              <span className="offer__content__benefit__dot" />
+                              <span className="offer__content__benefit__text">
+                                Wszystko z Pakietu Koncepcyjnego
+                              </span>
+                            </a>
+                          }
+
                           {offer.content.items.map((benefit) => (
                             <div
                               className="offer__content__benefit"
@@ -398,6 +439,18 @@ function OfferPage() {
                 </div>
               );
             })}
+
+            <p className="offer__content__title">
+             Usługi dodatkowe
+            </p>
+
+            <div className="offer__content__benefits">
+              <p className="offer__content__benefit">
+                Projekt bez czekania w kolejce - do miesiąca czasu.
+              </p>
+            </div>
+
+            <div className="offer__divider" />
 
             <p className="offer__content__title">
              USŁUGA PRIORYTETOWA

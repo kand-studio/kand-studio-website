@@ -15,7 +15,7 @@ function Contact() {
               <br /><br />
               Jeżeli planują Państwo budowę, remont lub wykończenie wnętrza i poszukują kompleksowego wsparcia projektowego, zapraszam do kontaktu.
               <br /><br />
-              Chętnie odpowiem na pytania, omówię założenia projektu oraz przedstawię możliwości współpracy.
+              Chętnie poznam Państwa potrzeby i pokażę, jak wygląda cały proces — od pierwszej koncepcji aż po realizację wymarzonego wnętrza. 
             </p>
             
             <div className="contact__content__description contact__content__description--info">

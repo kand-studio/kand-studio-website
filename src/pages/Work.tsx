@@ -91,6 +91,8 @@ function Work() {
               Zawiera ona wszystkie niezbędne rysunki i wytyczne dla ekip realizacyjnych - od instalacji, przez zabudowy meblowe, aż po detale wykończeniowe.
               <br /><br />
               Dzięki temu realizacja przebiega sprawnie, a ryzyko błędów i niedomówień zostaje ograniczone do minimum.
+              <br /><br />
+              Każdy etap współpracy został opracowany tak, aby zapewnić Państwu komfort, przejrzystą komunikację oraz poczucie bezpieczeństwa podczas całego procesu projektowego.
             </p>
 
             <div className="work__divider" /> 
@@ -184,6 +186,92 @@ function Work() {
                     </div>
               <br />
               Efektem jest spójnie zrealizowane wnętrze, dopracowane w każdym detalu, bez chaosu organizacyjnego i bez konieczności angażowania się przez Klienta w kwestie techniczne czy logistyczne.
+            </p> 
+
+            <div className="work__divider" /> 
+            
+            <p className="work__content__title">Sprawdzona sieć wykonawców i partnerów</p>
+            <p className="work__content__description">
+              Dobrze zaprojektowane wnętrze to dopiero początek. Równie istotna jest jakość jego wykonania oraz współpraca z doświadczonymi specjalistami.
+              <br /><br />
+              Na przestrzeni lat nawiązałem współpracę z zaufanymi wykonawcami oraz producentami, dzięki czemu mogę zapewnić Klientom dostęp do sprawdzonych fachowców i wysokiej jakości usług.
+              <br /><br />
+              W zależności od wybranego zakresu współpracy oraz potrzeb inwestycji możliwe jest skorzystanie z rekomendowanych przeze mnie specjalistów, takich jak:
+                    <br /><br />
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        ekipy wykończeniowe,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        stolarze wykonujący meble na wymiar,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        tapicerzy,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        kamieniarze,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        szklarze,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        elektrycy,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        hydraulicy,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        parkieciarze,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        wykonawcy zabudów gipsowo-kartonowych,
+                      </p>
+                    </div>
+                    <div className="offer__content__benefit">
+                      <span className="offer__content__benefit__dot" />
+
+                      <p className="offer__content__benefit__text">
+                        producenci i dostawcy wyposażenia wnętrz.
+                      </p>
+                    </div>
+              <br />
+              W przypadku inwestycji prowadzonych z moim nadzorem istnieje możliwość kompleksowej współpracy z rekomendowanymi wykonawcami, których prace są koordynowane zgodnie z założeniami projektu.
+              <br /><br />
+Dzięki temu cały proces przebiega sprawniej, a Klient zyskuje komfort współpracy z doświadczonym zespołem specjalistów oraz pewność, że projekt zostanie zrealizowany zgodnie z przyjętą koncepcją.
             </p> 
     
           </div>

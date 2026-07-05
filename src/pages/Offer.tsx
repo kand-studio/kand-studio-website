@@ -503,7 +503,7 @@ function OfferPage() {
               const isOpen = openOffers.includes(offer.id);
 
               return (
-                <div key={offer.id} id={`0${offer.id}`}>
+                <div key={offer.id} id={`0${offer.id}`} className="offer__extra-padding-desktop">
                   <button
                     className="offer__content__title-benefits offer__content__title-benefits--mobile"
                     onClick={() => {
@@ -627,7 +627,7 @@ function OfferPage() {
               const isOpen = openOffers.includes(offer.id);
 
               return (
-                <div key={offer.id} id={`0${offer.id}`}>
+                <div key={offer.id} id={`0${offer.id}`} className="offer__extra-padding-desktop">
                   <button
                     className="offer__content__title-benefits offer__content__title-benefits--mobile"
                     onClick={() => {

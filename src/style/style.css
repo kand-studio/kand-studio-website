@@ -673,7 +673,7 @@ body.no-scroll {
 }
 @media (min-width: 992px) {
   .contact__content__description {
-    margin-bottom: 120px;
+    margin-bottom: 40px;
     max-width: 800px;
   }
 }
@@ -993,6 +993,11 @@ body.no-scroll {
     margin: 60px 0 0 0;
   }
 }
+@media (min-width: 992px) {
+  .offer__extra-padding-desktop {
+    padding: 0 20px;
+  }
+}
 .offer__description span {
   display: block;
   margin-bottom: 16px;
@@ -1255,6 +1260,7 @@ body.no-scroll {
 @media (min-width: 992px) {
   .offer__content__main {
     max-width: 700px;
+    margin-top: -20px;
   }
 }
 .offer__content__wrapper-title {

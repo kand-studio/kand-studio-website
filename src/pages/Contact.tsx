@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 function Contact() {
 
@@ -23,7 +22,7 @@ function Contact() {
                 <p><strong>Telefon:</strong><a href="tel:+48668642807">(+48) 668 642 807</a></p>
                 <p><strong>Godziny pracy:</strong> Poniedziałek - Piątek 09:00-18:00</p>
                 <p><strong>Social Media:</strong></p>
-                <a href="https://www.instagram.com/kand.studio/" target="_blank">
+                <a href="https://www.instagram.com/kand.studio/" target="_blank" rel="noreferrer">
                   <div className="contact__icon"></div>
                 </a>
             </div>

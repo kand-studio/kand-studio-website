@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer__text">
         <p>{currentYear} © All rights reserved</p>
       </div>
-      <a href="https://www.instagram.com/kand.studio/" target="_blank">
+      <a href="https://www.instagram.com/kand.studio/" target="_blank" rel="noreferrer">
         <div className="footer__icon"></div>
       </a>
     </nav>

@@ -1,6 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ReactComponent as Logo } from "../media/icons/logo.svg";
 
 const links = [
   { path: "/projects", label: "Projekty" },
@@ -73,7 +72,7 @@ function Navbar() {
             </div>
           </button>
 
-          <a href="https://www.instagram.com/kand.studio/" target="_blank">
+          <a href="https://www.instagram.com/kand.studio/" target="_blank" rel="noreferrer">
             <div className="navbar__ig"></div>
           </a>
         </div>

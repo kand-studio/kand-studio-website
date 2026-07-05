@@ -10,7 +10,7 @@ function About() {
         <div className="about__content__grid">
 
           <aside className="about__content__sidebar desktop">
-            <img src={AboutMe} className="about__content__img" />
+            <img src={AboutMe} alt="" className="about__content__img" />
           </aside>
 
           <div className="about__content__main">
@@ -35,7 +35,7 @@ function About() {
               <span>Kamil Niemiec</span>
               <br className="mobile" />
               <br className="mobile" />
-              <img src={AboutMe} className="about__content__img mobile" />
+              <img src={AboutMe} alt="" className="about__content__img mobile" />
               <br />
               <br />
               Projektuję wnętrza z myślą o tym, jak będą funkcjonować na co dzień - nie tylko jak będą wyglądać na wizualizacjach.

@@ -13,6 +13,19 @@ type Offer = {
   };
 };
 
+type OfferExtra = {
+  id: number;
+  name: string;
+  description: {
+    items: string[];
+  }
+  content: {
+    items: string[];
+    priceText?: string;
+    description?: string;
+  };
+};
+
 type Result = {
   min: number;
   max: number;
@@ -113,6 +126,142 @@ function OfferPage() {
     //     priceText: "Cena od 290 zł/m²",
     //   },
     // },
+  ];
+
+  const offersExtra: OfferExtra[] = [
+    {
+      id: 21,
+      name: "Nadzór autorski",
+      description: {
+        items: [
+          "Regularna kontrola przebiegu prac oraz wsparcie projektowe na etapie realizacji inwestycji.",
+        ],
+      },
+      content: {
+        items: [
+          "Wizyty na budowie",
+          "Kontrola zgodności realizacji z projektem",
+          "Konsultacje dla wykonawców",
+          "Weryfikacja kluczowych etapów prac",
+          "Rozwiązywanie bieżących kwestii technicznych",
+          "Raportowanie postępów realizacji"
+        ],
+        description: "",
+        priceText: "od 2 000 zł / miesiąc",
+      },
+    },
+    {
+      id: 22,
+      name: 'Realizacja „Pod Klucz"',
+      description: {
+        items: [
+          "Usługa skierowana do osób, które chcą powierzyć cały proces jednemu partnerowi — od projektu aż po odbiór gotowego wnętrza.",
+          "W tym modelu przejmuję pełną odpowiedzialność za organizację i koordynację inwestycji, dbając o każdy etap realizacji.",
+        ],
+      },
+      content: {
+        items: [
+          "Kompleksowy projekt wnętrza",
+          "Pełna koordynacja zamówień i dostaw",
+          "Zarządzanie harmonogramem prac",
+          "Stały kontakt z wykonawcami",
+          "Kontrola jakości realizacji",
+          "Rozwiązywanie bieżących kwestii technicznych",
+          "Obsługa reklamacji i niezgodności",
+          "Regularne raportowanie postępów prac",
+          "Przekazanie gotowego, wykończonego wnętrza",
+        ],
+        description: "Najbardziej kompleksowa forma współpracy.",
+        priceText: "Wycena indywidualna",
+      },
+    },
+    {
+      id: 23,
+      name: 'Konsultacje projektowe',
+      description: {
+        items: [
+          "Indywidualne spotkania przeznaczone dla osób, które potrzebują profesjonalnej porady bez konieczności realizacji pełnego projektu.",
+        ],
+      },
+      content: {
+        items: [
+          "Konsultacje dotyczące układu funkcjonalnego,",
+          "Dobór materiałów wykończeniowych,",
+          "Dobór kolorystyki,",
+          "Pomoc przy wyborze wyposażenia,",
+          "Analizę projektu deweloperskiego,",
+          "Konsultacje podczas zakupu nieruchomości,",
+          "Odpowiedzi na bieżące pytania projektowe.",   
+        ],
+        description: "",
+        priceText: "od 300 zł / godz.",
+      },
+    },
+    {
+      id: 24,
+      name: 'Home Staging',
+      description: {
+        items: [
+          "Usługa skierowana do właścicieli mieszkań i domów przygotowujących nieruchomość do sprzedaży lub wynajmu.",
+          "Celem Home Stagingu jest zwiększenie atrakcyjności nieruchomości, skrócenie czasu sprzedaży oraz uzyskanie korzystniejszej ceny."
+        ],
+      },
+      content: {
+        items: [
+          "Konsultację projektową,",
+          "Analizę potencjału nieruchomości,",
+          "Opracowanie koncepcji aranżacji,",
+          "Dobór dodatków, dekoracji i oświetlenia,",
+          "Zmianę aranżacji istniejącego wyposażenia,",
+          "Organizację zakupów niezbędnych elementów wyposażenia i dekoracji,",
+          "Koordynację dostaw oraz przygotowania wnętrza,",
+          "Przygotowanie nieruchomości do profesjonalnej sesji fotograficznej.",
+        ],
+        description: "",
+        priceText: "Wycena indywidualna",
+      },
+    },
+    {
+      id: 25,
+      name: 'Tryb Priorytetowy',
+      description: {
+        items: [
+          "Ze względu na indywidualny charakter każdego projektu oraz ograniczoną liczbę realizowanych inwestycji, terminy rozpoczęcia współpracy ustalane są zgodnie z aktualnym harmonogramem pracowni.",
+          "Dla Klientów realizujących inwestycję w krótszym terminie lub potrzebujących pilnego wsparcia projektowego oferuję możliwość skorzystania z Trybu Priorytetowego."
+        ],
+      },
+      content: {
+        items: [
+          "Rozpoczęcie prac projektowych następuje w ciągu maksymalnie 14 dni od podpisania umowy,",
+          "Projekt otrzymuje najwyższy priorytet w bieżącym harmonogramie prac,",
+          "Harmonogram projektowy dostosowywany jest do terminów realizacji inwestycji,",
+          "Zapewniam zwiększoną dostępność oraz sprawniejszy proces komunikacji,",
+          "Terminy spotkań i konsultacji ustalane są w pierwszej kolejności."
+        ],
+        description: "Dla Klientów, którzy potrzebują szybszego rozpoczęcia prac projektowych.",
+        priceText: "",
+      },
+    },
+  ];
+
+  const shoppingProducts = [
+    "Płytki ścienne i podłogowe",
+    "Podłogi",
+    "Farby i tapety",
+    "Armaturę łazienkową",
+    "Ceramikę sanitarną",
+    "Oświetlenie",
+    "Gniazda i włączniki",
+    "Drzwi wewnętrzne",
+    "Meble wolnostojące",
+    "Tekstylia i dodatki dekoracyjne",
+  ];
+
+  const shoppingDetails = [
+    "Szczegółowe zestawienia ilościowe",
+    "Orientacyjne ceny produktów",
+    "Rekomendowane miejsca zakupu",
+    "Linki do produktów",
   ];
 
   const [selectedOffer, setSelectedOffer] = useState<Offer>(offers[0]);
@@ -337,20 +486,20 @@ function OfferPage() {
 
           <div className="offer__content__main">
 
-            <p className="offer__content__title">
-              OFERTA
-            </p>
-
-            <div className="offer__content__benefits">
-
-              <p className="offer__content__benefit">
-                Każdy projekt jest wyjątkowy, dlatego zakres współpracy dopasowuję do indywidualnych potrzeb Klienta oraz etapu inwestycji. Oferuję kilka poziomów współpracy - od opracowania układu funkcjonalnego po kompleksową realizację wnętrza „pod klucz”.
+            <div className="offer__content__wrapper-title">
+              <p className="offer__content__title">
+                OFERTA
               </p>
+
+              <div className="offer__content__benefits">
+
+                <p className="offer__content__benefit">
+                  Każdy projekt jest wyjątkowy, dlatego zakres współpracy dopasowuję do indywidualnych potrzeb Klienta oraz etapu inwestycji. Oferuję kilka poziomów współpracy - od opracowania układu funkcjonalnego po kompleksową realizację wnętrza „pod klucz”.
+                </p>
+              </div>
             </div>
 
-            <div className="offer__divider" />
-
-            {offers.map((offer) => {
+            {offers.map((offer, index) => {
               const isOpen = openOffers.includes(offer.id);
 
               return (
@@ -419,6 +568,115 @@ function OfferPage() {
                           }
 
                           {offer.content.items.map((benefit) => (
+                            <>
+                            {benefit === "Dokumentacja zakupowa" ? 
+                              <div
+                                className="offer__content__benefit"
+                                key={benefit}
+                              >
+                              <a href="#shopping-documentation" className="offer__content__benefit offer__content__benefit--link">
+                                <span className="offer__content__benefit__dot" />
+                                <span className="offer__content__benefit__text">
+                                  {benefit}
+                                </span>
+                              </a>
+                              </div>
+                              :
+                              <div
+                                className="offer__content__benefit"
+                                key={benefit}
+                              >
+                                <span className="offer__content__benefit__dot" />
+
+                                <span className="offer__content__benefit__text">
+                                  {benefit}
+                                </span>
+                              </div>
+                             }
+                            </>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className={`offer__divider ${
+                      index === offers.length - 1
+                        ? "offer__divider--last"
+                        : ""
+                    }`}
+                  />
+                </div>
+              );
+            })}
+
+            <div className="offer__content__wrapper-title">
+              <p className="offer__content__title">
+              Usługi dodatkowe
+              </p>
+
+              <div className="offer__content__benefits">
+                <p className="offer__content__benefit">
+                Projekt Kompleksowy można rozszerzyć o dodatkowe usługi, które pozwalają ograniczyć zaangażowanie Inwestora i zapewniają jeszcze większy komfort podczas realizacji.
+                </p>
+              </div>
+            </div>
+
+            {offersExtra.map((offer, index) => {
+              const isOpen = openOffers.includes(offer.id);
+
+              return (
+                <div key={offer.id} id={`0${offer.id}`}>
+                  <button
+                    className="offer__content__title-benefits offer__content__title-benefits--mobile"
+                    onClick={() => {
+                      setOpenOffers((prev) =>
+                        prev.includes(offer.id)
+                          ? prev.filter((id) => id !== offer.id)
+                          : [...prev, offer.id]
+                      );
+                    }}
+                  >
+                    <span>{offer.name}</span>
+
+                    <span className="offer__content__price">
+                      {offer.content.priceText}
+                    </span>
+
+                    <span
+                      className={`offer__select__arrow offer__select__arrow--benefit ${
+                        isOpen ? "offer__select__arrow--open" : ""
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+
+                  <div
+                    className={`offer__content__accordion ${
+                      isOpen ? "offer__content__accordion--open" : ""
+                    }`}
+                  >
+                    <div>
+                      <div className="offer__content__label">
+                        {offer.content.description}
+                      </div>
+
+                      <div className="offer__content__benefits">
+
+                      <div className="offer__description">
+                        {offer.description.items.map((item) => (
+                          <span key={item}>{item}</span>
+                        ))}
+                      </div>
+
+                        <br />
+                        <br />
+
+                        <div className="offer__content__benefits__list">
+                          {(offer.id === 21 || offer.id === 22 || offer.id === 25) ? "Zakres:" : "Usługa może obejmować:" }
+                          {offer.content.items.map((benefit) => (
                             <div
                               className="offer__content__benefit"
                               key={benefit}
@@ -432,51 +690,98 @@ function OfferPage() {
                           ))}
                         </div>
                       </div>
+                        {offer.id === 25 && 
+                          <>
+                          <br />
+                          <br />
+                          <div className="offer__description">
+                                <span>Usługa dostępna jest wyłącznie dla ograniczonej liczby projektów w ciągu roku i zależy od aktualnej dostępności terminów.</span>
+                                <span><strong>Tryb Priorytetowy dostępny za dodatkową opłatą ustaloną indywidualnie.</strong></span>
+                          </div>
+                          </>
+                        }
                     </div>
                   </div>
 
-                  <div className="offer__divider" />
+                  <div
+                      className={`offer__divider ${
+                        index === offersExtra.length - 1
+                          ? "offer__divider--last"
+                          : ""
+                      }`}
+                    />
                 </div>
               );
             })}
 
-            <p className="offer__content__title">
-             Usługi dodatkowe
-            </p>
-
-            <div className="offer__content__benefits">
-              <p className="offer__content__benefit">
-                Projekt bez czekania w kolejce - do miesiąca czasu.
+            <div className="offer__content__wrapper-title">
+              <p className="offer__content__title">
+              Informacje dodatkowe
               </p>
+
+              <div className="offer__content__benefits">
+                <p className="offer__content__benefit">
+                Każdy projekt wyceniany jest indywidualnie w zależności od zakresu prac oraz stopnia skomplikowania inwestycji.
+                </p>
+                <br />
+                <p className="offer__content__benefit">
+                Podane ceny mają charakter orientacyjny.
+                </p>
+                <br />
+                <p className="offer__content__benefit">
+                 Minimalna wartość opracowania projektowego wynosi 3 000 zł netto.
+                </p>
+              </div>
             </div>
 
-            <div className="offer__divider" />
-
-            <p className="offer__content__title">
-             USŁUGA PRIORYTETOWA
-            </p>
-
-            <div className="offer__content__benefits">
-              <p className="offer__content__benefit">
-                Projekt bez czekania w kolejce - do miesiąca czasu.
+            <div id="shopping-documentation" className="offer__content__wrapper-title">
+              <p className="offer__content__title">
+              Co zawiera Dokumentacja Zakupowa?
               </p>
-            </div>
 
-            <div className="offer__divider" />
+              <div className="offer__content__benefits">
+                <p className="offer__content__benefit">
+                Dokumentacja zakupowa stanowi zestawienie materiałów oraz elementów wyposażenia uwzględnionych w projekcie.
+                </p>
+                <br />
+                <p className="offer__content__benefit">
+                  W zależności od zakresu projektu może obejmować między innymi:
+                </p>
+                <br />
 
+                {shoppingProducts.map((item) => (
+                  <div className="offer__content__benefit" key={item}>
+                    <span className="offer__content__benefit__dot" />
+                    <span className="offer__content__benefit__text">
+                      {item}
+                    </span>
+                  </div>
+                ))}
 
-            <p className="offer__content__title">
-              INFORMACJE DOTYCZĄCE WYCENY
-            </p>
+                <br />
+                <p className="offer__content__benefit">
+                 Dla każdego elementu wskazywane są rekomendowane produkty oraz producenci zgodni z założeniami projektowymi.
+                </p>
+                <br />
+                <p className="offer__content__benefit">
+                  Oprócz rekomendowanych produktów dokumentacja zawiera również:
+                </p>
+                <br />
 
+                {shoppingDetails.map((item) => (
+                  <div className="offer__content__benefit" key={item}>
+                    <span className="offer__content__benefit__dot" />
+                    <span className="offer__content__benefit__text">
+                      {item}
+                    </span>
+                  </div>
+                ))}
 
-            <div className="offer__content__benefits">
-
-              <p className="offer__content__benefit">
-                Płatności następują w ratach i są one dostosowane do wartości
-                projektu. Czas realizacji projektu zależny jest od ilości
-                pomieszczeń oraz wybranego pakietu projektowego.
-              </p>
+                <br />
+                <p className="offer__content__benefit">
+                 Dzięki temu Klient otrzymuje nie tylko informację, co należy kupić, ale również gdzie może nabyć rekomendowane produkty. Dodatkowo w razie potrzeby oferuję wsparcie pozwalające sprawnie przeprowadzić cały proces zakupowy i ograniczyć ryzyko kosztownych pomyłek.
+                </p>
+              </div>
             </div>
           </div>
         </div>

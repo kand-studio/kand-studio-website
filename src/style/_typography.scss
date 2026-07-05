@@ -1,0 +1,40 @@
+:root {
+  --font: "Work Sans", sans-serif;
+  --fontFancy: "Caveat", cursive;
+  --fontTitle: "Cormorant", serif;
+
+  --font-10: 10px;
+  --font-12: 12px;
+  --font-14: 14px;
+  --font-16: 16px;
+  --font-20: 20px;
+  --font-24: 24px;
+  --font-32: 32px;
+  --font-48: 48px;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --font-10: 11px;
+    --font-12: 13px;
+    --font-14: 16px;
+    --font-16: 18px;
+    --font-20: 22px;
+    --font-24: 28px;
+    --font-32: 36px;
+    --font-48: 56px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --font-10: 12px;
+    --font-12: 14px;
+    --font-14: 18px;
+    --font-16: 20px;
+    --font-20: 24px;
+    --font-24: 32px;
+    --font-32: 40px;
+    --font-48: 64px;
+  }
+}

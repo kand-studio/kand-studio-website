@@ -63,7 +63,7 @@
     }
 
     &__title {
-        font-size: 16px;
+        font-size: var(--font-16);
         margin-bottom: 40px;
         color: var(--text);
         font-weight: 500;
@@ -71,11 +71,10 @@
     }
 
     &__description {
-        font-size: clamp(16px, 1.2vw, 24px);
+        font-size: var(--font-16);
         //margin-bottom: 40px;
         color: var(--text);
         line-height: 1.4;
-
 
         @media (min-width: 992px) {
             //margin-bottom: 120px;
@@ -83,22 +82,22 @@
 
         span {
             font-family: var(--fontFancy);
-            font-size: 24px;
+            font-size: var(--font-24);
             margin-bottom: 20px;
         }
 
         &--info {
-            font-size: 14px;
+            font-size: var(--font-14);
             color: var(--text);
             margin-bottom: 40px;
 
             p {
                 margin-bottom: 12px;
-                max-width: 280px;
+                max-width: 400px;
                 strong {
                     font-weight: 500;
                     display: block;
-                    font-size: 10px;
+                    font-size: var(--font-10);
                     line-height: 16px;
                     color: var(--gray);
                     margin-bottom: 4px;
@@ -112,7 +111,7 @@
 
         a {
             color: var(--text);
-            font-size: 14px;
+            font-size: var(--font-14);
             text-decoration: none;
             margin-top: 24px;
             display: flex;

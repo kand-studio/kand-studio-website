@@ -32,6 +32,16 @@
         background-position: center;
         position: relative;
         z-index: 1001;
+        
+        @media (min-width: 1440px) {
+            width: 100px;
+            height: 45px;
+        }
+
+        @media (min-width: 1920px) {
+            width: 120px;
+            height: 55px;
+        }
     }
 
     &__wrapper {
@@ -74,7 +84,7 @@
 
         @media (min-width: 992px) {
             margin: 0 0 0 20px;
-            font-size: 12px;
+           font-size: clamp(12px, 0.9vw, 20px);
             width: auto;
         }
 
@@ -102,7 +112,7 @@
         background: none;
         cursor: pointer;
         color: var(--text);
-        font-size: 12px;
+       font-size: clamp(12px, 0.9vw, 20px);
 
         @media (min-width: 992px) {
             margin: 0 0 0 20px;

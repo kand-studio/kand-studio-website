@@ -21,7 +21,7 @@
         }
 
         &__title {
-            font-size: 16px;
+            font-size: var(--font-16);
             margin-bottom: 40px;
             color: var(--text);
             font-weight: 500;
@@ -29,7 +29,7 @@
         }
 
         &__description {
-            font-size: 16px;
+            font-size: var(--font-16);
             margin-bottom: 40px;
             color: var(--text);
 
@@ -40,12 +40,12 @@
 
             span {
                 font-family: var(--fontFancy);
-                font-size: 24px;
+                font-size: var(--font-24);
                 margin-bottom: 20px;
             }
 
             &--info {
-                font-size: 14px;
+                font-size: var(--font-14);
                 color: var(--text);
                 margin-bottom: 40px;
 
@@ -55,7 +55,7 @@
                     strong {
                         font-weight: 500;
                         display: block;
-                        font-size: 10px;
+                        font-size: var(--font-10);
                         line-height: 16px;
                         color: var(--gray);
                         margin-bottom: 4px;
@@ -65,7 +65,7 @@
 
             a {
                 color: var(--text);
-                font-size: 14px;
+                font-size: var(--font-14);
                 text-decoration: none;
                 display: flex;
                 margin-top: 40px;

@@ -5,7 +5,7 @@
     color: var(--text);
     @media (min-width: 992px) {
       max-width: 1024px;
-      font-size: clamp(32px, 4vw, 48px);
+      font-size: var(--font-32);
       margin-bottom: 40px;
     }    
 }

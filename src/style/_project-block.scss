@@ -11,18 +11,29 @@
             color: var(--gray);
             font-size: 10px;
             font-weight: 500;
+
+            @media (min-width: 1440px) {
+                font-size: clamp(10px, 1.0vw, 20px);
+            }
         }
 
         &__title {
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 16px;
+
+            @media (min-width: 1440px) {
+                font-size: clamp(16px, 1.2vw, 28px);
+            }
         }
 
         &__desc {
             color: var(--gray);
             font-size: 12px;
             margin-bottom: 16px;
+            @media (min-width: 1440px) {
+                font-size: clamp(12px, 1.1vw, 24px);
+            }
         }
     }
 

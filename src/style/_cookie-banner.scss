@@ -22,7 +22,7 @@
 
   p {
     margin: 0;
-    font-size: 14px;
+    font-size: var(--font-14);
     line-height: 1.6;
     color: #333;
   }
@@ -43,7 +43,7 @@
     border: none;
     background: #111;
     color: #fff;
-    font-size: 14px;
+    font-size: var(--font-14);
     cursor: pointer;
     transition: background .2s;
 

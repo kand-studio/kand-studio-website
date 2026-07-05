@@ -36,6 +36,7 @@
   }
 
   &__description {
+    font-size: var(--font-16);
     span {
       display: block;
       margin-bottom: 16px;
@@ -66,7 +67,7 @@
       transition: 0.25s;
 
       @media (min-width: 992px) {
-        font-size: 12px;
+        font-size: var(--font-12);
         padding: 8px;
       }
       
@@ -74,7 +75,7 @@
 
     &__arrow {
       transition: transform 0.25s ease;
-      font-size: 16px;
+      font-size: var(--font-16);
       line-height: 1;
 
       &--open {
@@ -137,7 +138,7 @@
         font-size: 16px;
       
         @media (min-width: 992px) {
-          font-size: 12px;
+          font-size: var(--font-12);
         }
       }
 
@@ -146,7 +147,7 @@
         color: var(--gray);
       
         @media (min-width: 992px) {
-          font-size: 10px;
+          font-size: var(--font-10);
         }
       }
     }
@@ -167,7 +168,7 @@
       font-size: 16px;
 
       @media (min-width: 992px) {
-        font-size: 12px;
+        font-size: var(--font-12);
         padding: 8px;
         width: 200px;
       }
@@ -182,7 +183,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        font-size: 12px;
+        font-size: var(--font-12);
         color: var(--text);
         margin-bottom: 12px;
 
@@ -240,7 +241,7 @@
       margin-top: 12px;
 
       @media (min-width: 992px) {
-        font-size: 12px;
+        font-size: var(--font-12);
         padding: 8px;
         margin-top: 0px;
       }
@@ -258,7 +259,7 @@
         max-width: 200px;
         font-weight: 500;
         display: block;
-        font-size: 10px;
+        font-size: var(--font-10);
         line-height: 14px;
         color: var(--gray);
       }
@@ -280,7 +281,7 @@
       max-width: 220px;
       font-weight: 500;
       display: block;
-      font-size: 10px;
+      font-size: var(--font-10);
       line-height: 14px;
       color: var(--gray);
     }
@@ -353,7 +354,7 @@
     }
 
     &__title {
-      font-size: 16px;
+      font-size: var(--font-16);
       margin-bottom: 40px;
       font-weight: 500;
       text-transform: uppercase;
@@ -362,7 +363,7 @@
     }
 
     &__title-benefits {
-      font-size: 16px;
+      font-size: var(--font-16);
       margin-bottom: 8px;
       font-weight: 500;
       text-transform: uppercase;
@@ -420,7 +421,7 @@
     &__label {
       font-weight: 500;
       display: block;
-      font-size: 10px;
+      font-size: var(--font-10);
       line-height: 14px;
       color: var(--gray);
       margin-bottom: 4px;
@@ -447,7 +448,7 @@
       background: transparent;
       border: none;
       cursor: pointer;
-      font-size: 12px;
+      font-size: var(--font-12);
       text-transform: uppercase;
       font-weight: 500;
       color: var(--text);
@@ -457,7 +458,7 @@
       margin-bottom: 12px;
 
       h4 {
-        font-size: 16px;
+        font-size: var(--font-16);
         color: var(--text);
         font-weight: 500;
         text-transform: uppercase;
@@ -483,6 +484,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        font-size: var(--font-16);
       }
 
       &__description {
@@ -501,6 +503,7 @@
       align-items: center;
       gap: 12px;
       line-height: 1.4;
+      font-size: var(--font-16);
 
       &--link {
         color: var(--text);

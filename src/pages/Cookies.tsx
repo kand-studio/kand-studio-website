@@ -8,14 +8,10 @@ function Cookies() {
         <div className="cookies__content__grid">
 
           <div className="cookies__content__main">
-            <p className="cookies__content__title">404</p>
+            <p className="cookies__content__title">Polityka Cookies</p>
             <p className="cookies__content__description">
-              Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona. Wróć na stronę główną, aby kontynuować przeglądanie projektów i oferty.
+              Uzupełnić treść...
               <br />
-                <Link to="/">
-                  <span className="arrow-link" />
-                  Powrót na stronę główną
-                </Link>
             </p>
           </div>
 

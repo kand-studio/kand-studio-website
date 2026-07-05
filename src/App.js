@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import "./style/style.css"
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 
 import Home from "./pages/Home"
 import HomeV2 from "./pages/HomeV2"
@@ -52,6 +53,8 @@ function App() {
         <Route path="*" element={<Error />} />
         <Route path="/cookies" element={<Cookies />} />
       </Routes>
+
+      <CookieBanner/>
 
       {!isHome && <Footer />}
     </div>

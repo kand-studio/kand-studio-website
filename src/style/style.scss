@@ -25,6 +25,17 @@ button, input {
     font-family: var(--font);
 }
 
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 // @import "./base/colors";
 // @import "./base/breakpoints";
 @import "./container";
@@ -38,10 +49,12 @@ button, input {
 @import "./work";
 @import "./offer";
 @import "./error";
+@import "./cookies";
 
 @import "./project-block";
 @import "./project";
 @import "./page-title";
+@import "./cookie-banner";
 
 .mobile {
     @media (min-width: 992px) {

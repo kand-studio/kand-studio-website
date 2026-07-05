@@ -325,6 +325,9 @@
         max-width: 700px;
         margin-top: -20px;
       }
+      @media (min-width: 1920px) {
+        max-width: 800px;
+      }
     }
 
     &__wrapper-title {
@@ -332,7 +335,7 @@
       background-color: var(--bg-gray);
       padding: 20px;
       margin-bottom: 60px;
-      @media (max-width: 991px) {
+      @media (max-width: 991.98px) {
           margin-top: 40px;
           margin-bottom: 40px;
           margin-left: -24px;

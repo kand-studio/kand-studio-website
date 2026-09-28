@@ -12,6 +12,8 @@ const links = [
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = window.innerWidth <= 992;
+
 
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
@@ -63,6 +65,18 @@ function Navbar() {
             {link.label}
           </NavLink>
         ))}
+
+        {isMobile &&
+           <NavLink
+            to="/cookies"
+            onClick={() => setMenuOpen(false)}
+            className={({ isActive }) =>
+              "navbar__link" + (isActive ? " navbar__link--active" : "")
+            }
+          >
+            Polityka prywatności
+          </NavLink>
+        }
 
         <div  className="navbar__darkmode-wrapper">
           <button className="navbar__darkmode" onClick={() => setDarkMode((prev) => !prev)} >

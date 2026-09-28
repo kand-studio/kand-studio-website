@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap");
 :root {
   --bg: #F8F8F6;
   --text: #111111;
@@ -31,6 +28,27 @@ body.dark {
   --arrowLink: url("../media/icons/link-arrow-white.png");
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url("../media/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../media/fonts/Caveat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("../media/fonts/Cormorant-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --font: "Work Sans", sans-serif;
   --fontFancy: "Caveat", cursive;
@@ -1657,6 +1675,9 @@ body.no-scroll {
     gap: 60px;
   }
 }
+.cookies__content__main {
+  max-width: 800px;
+}
 .cookies__content__title {
   font-size: var(--font-16);
   margin-bottom: 40px;
@@ -1664,32 +1685,77 @@ body.no-scroll {
   font-weight: 500;
   text-transform: uppercase;
 }
-.cookies__content__description {
-  font-size: var(--font-16);
+.cookies__content__date {
+  font-size: var(--font-10);
+  line-height: 16px;
+  color: var(--gray);
   margin-bottom: 40px;
-  color: var(--text);
 }
-@media (min-width: 992px) {
-  .cookies__content__description {
-    margin-bottom: 120px;
-    max-width: 800px;
+.cookies__content__date--bottom {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.cookies__content__article {
+  max-width: 700px;
+}
+.cookies__content__article__title {
+  font-size: var(--font-20);
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: uppercase;
+  margin: 0 0 60px;
+}
+@media (max-width: 991px) {
+  .cookies__content__article__title {
+    margin-bottom: 40px;
   }
 }
-.cookies__content__description span {
+.cookies__content__article__subtitle {
+  font-size: var(--font-16);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text);
+  margin: 60px 0 20px;
+}
+.cookies__content__article__subtitle:first-of-type {
+  margin-top: 0;
+}
+.cookies__content__article__text {
+  font-size: var(--font-14);
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 20px;
+}
+.cookies__content__article__text strong {
+  font-weight: 500;
+}
+.cookies__content__article__list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+}
+.cookies__content__article__list li {
+  font-size: var(--font-14);
+  line-height: 1.6;
+  color: var(--text);
+  padding-left: 4px;
+  margin-bottom: 8px;
+}
+.cookies__content span {
   font-family: var(--fontFancy);
   font-size: var(--font-24);
   margin-bottom: 20px;
 }
-.cookies__content__description--info {
+.cookies__content--info {
   font-size: var(--font-14);
   color: var(--text);
   margin-bottom: 40px;
 }
-.cookies__content__description--info p {
+.cookies__content--info p {
   margin-bottom: 12px;
   max-width: 280px;
 }
-.cookies__content__description--info p strong {
+.cookies__content--info p strong {
   font-weight: 500;
   display: block;
   font-size: var(--font-10);
@@ -1697,7 +1763,7 @@ body.no-scroll {
   color: var(--gray);
   margin-bottom: 4px;
 }
-.cookies__content__description a {
+.cookies__content--info a {
   color: var(--text);
   font-size: var(--font-14);
   text-decoration: none;
@@ -1705,14 +1771,41 @@ body.no-scroll {
   margin-top: 40px;
 }
 @media (min-width: 992px) {
-  .cookies__content__description a {
+  .cookies__content--info a {
     margin-top: 80px;
   }
 }
-.cookies__content__description a:hover {
+.cookies__content--info a:hover {
   text-decoration: underline;
 }
-.cookies__content__description .arrow-link {
+.cookies__content--info a .arrow-link {
+  transform: rotate(90deg);
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: var(--arrowLink);
+  background-size: cover;
+  background-position: center;
+  margin-right: 8px;
+  margin-bottom: 0px;
+}
+.cookies__content a {
+  color: var(--text);
+  font-size: var(--font-14);
+  text-decoration: none;
+  display: flex;
+  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  .cookies__content a {
+    margin-top: 80px;
+  }
+}
+.cookies__content a:hover {
+  text-decoration: underline;
+}
+.cookies__content a .arrow-link {
   transform: rotate(90deg);
   content: "";
   display: block;

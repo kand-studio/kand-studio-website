@@ -61,6 +61,31 @@ import img9_1 from "../media/projects/syr-009/img1.jpg";
 import img9_2 from "../media/projects/syr-009/img2.jpg";
 import img9_3 from "../media/projects/syr-009/img3.jpg";
 
+import cover10 from "../media/projects/bien-010/cover.jpg";
+import img10_0 from "../media/projects/bien-010/img0.jpg";
+import img10_1 from "../media/projects/bien-010/img1.jpg";
+import img10_2 from "../media/projects/bien-010/img2.jpg";
+import img10_3 from "../media/projects/bien-010/img3.jpg";
+import img10_4 from "../media/projects/bien-010/img4.jpg";
+import img10_5 from "../media/projects/bien-010/img5.jpg";
+import img10_6 from "../media/projects/bien-010/img6.jpg";
+
+import cover11 from "../media/projects/karola-011/cover.jpg";
+import img11_0 from "../media/projects/karola-011/img0.jpg";
+import img11_1 from "../media/projects/karola-011/img1.jpg";
+import img11_2 from "../media/projects/karola-011/img2.jpg";
+import img11_3 from "../media/projects/karola-011/img3.jpg";
+import img11_4 from "../media/projects/karola-011/img4.jpg";
+import img11_5 from "../media/projects/karola-011/img5.jpg";
+import img11_6 from "../media/projects/karola-011/img6.jpg";
+
+import cover12 from "../media/projects/warm-012/cover.jpg";
+import img12_0 from "../media/projects/warm-012/img0.jpg";
+import img12_1 from "../media/projects/warm-012/img1.jpg";
+import img12_2 from "../media/projects/warm-012/img2.jpg";
+import img12_3 from "../media/projects/warm-012/img3.jpg";
+import img12_4 from "../media/projects/warm-012/img4.jpg";
+
 export type Project = {
   number: string;
   title: string;
@@ -237,5 +262,59 @@ export const projects: Project[] = [
     images: [img5_1, img5_2, img5_3, img5_4, img5_0],
     year: 2025,
     area: "Mieszkanie 55",
+  },
+  {
+    number: "010",
+    title: "Earthbound Mid-century",
+    style: "Mid-century Organic",
+    location: "Katowice, Polska",
+      description: [
+        "Projekt wnętrza w Katowicach to interpretacja współczesnej elegancji inspirowanej naturą, naturalnymi materiałami i ponadczasowym rzemiosłem.",
+        "Koncepcja opiera się na głębokiej, ziemistej palecie barw, w której dominują odcienie brązu, oliwkowej zieleni i ciepłego beżu. Drewno, kamień oraz strukturalne wykończenia tworzą wielowymiarową kompozycję, nadając przestrzeni wyrazisty, a jednocześnie harmonijny charakter.",
+        "Istotną rolę odgrywa zestawienie surowych faktur z miękkimi, organicznymi formami. Nieregularne kształty, rzeźbiarskie elementy wyposażenia oraz starannie zaprojektowane oświetlenie budują atmosferę wnętrza, w którym materiały stają się głównym środkiem wyrazu.",
+        "Całość stanowi świadome odejście od chłodnego minimalizmu na rzecz bardziej zmysłowej estetyki. To przestrzeń pełna głębi, naturalnych kontrastów i wyrazistych detali, w której współczesna architektura spotyka się z autentycznością materiałów.",
+    ],
+    styleDescription:
+      "Współczesna estetyka inspirowana naturą, łącząca organiczne formy, surowe struktury i szlachetne materiały. Głęboka kolorystyka, naturalne drewno i kamień tworzą przestrzeń o wyrazistym, ponadczasowym charakterze.",
+    cover: cover5,
+    images: [img10_1, img10_2, img10_3, img10_4, img10_5, img10_6, img10_0],
+    year: 2026,
+    area: "Dom 180",
+  },
+    {
+    number: "011",
+    title: "Refined Heritage Apartment",
+    style: "Modern Heritage",
+    location: "Kraków, Polska",
+      description: [
+        "Projekt mieszkania w krakowskiej kamienicy opiera się na dialogu między klasyczną architekturą a współczesnym minimalizmem.",
+        "Zachowane detale - sztukaterie i proporcje wnętrza - stanowią tło dla nowoczesnych, surowych materiałów. Odsłonięty beton stropu oraz kamień wprowadzają wyrazisty, architektoniczny charakter, który został przełamany ciepłem drewna i subtelnym światłem.",
+        "Zabudowa kuchenna została zaprojektowana w sposób minimalistyczny, z naciskiem na czystość formy i jakość materiałów. Ograniczona paleta kolorystyczna podkreśla elegancję wnętrza, jednocześnie pozwalając wybrzmieć detalom.",
+        "Całość tworzy przestrzeń, która łączy historię miejsca z nowoczesnym podejściem do życia - bez zbędnych kontrastów, ale z wyraźną tożsamością.",
+    ],
+    styleDescription:
+      "Styl oparty na zestawieniu klasycznych elementów architektury z surowymi, współczesnymi materiałami. Minimalizm wzbogacony o strukturę i detal, tworzący elegancką, ponadczasową przestrzeń.",
+    cover: cover5,
+    images: [img11_0, img11_1, img11_2, img11_3, img11_4, img11_5, img11_6],
+    year: 2025,
+    area: "Mieszkanie 110",
+  },
+    {
+    number: "012",
+    title: "The Essence of Warmth",
+    style: "Warm Minimalism",
+    location: "Kraków, Polska",
+      description: [
+        "Projekt domu w zabudowie bliźniaczej w Krakowie opiera się na połączeniu współczesnego minimalizmu z naturalną elegancją i subtelną przytulnością.",
+        "Koncepcja wnętrza została zbudowana wokół świadomego zestawienia materiałów, faktur i proporcji. Ciepłe odcienie drewna, jasne powierzchnie oraz naturalne struktury tworzą spójną kompozycję, w której każdy element ma swoje uzasadnienie. Ograniczona paleta kolorystyczna pozwala skupić uwagę na detalach, szlachetności materiałów i jakości zastosowanych rozwiązań.",
+        "Charakter projektu definiują proste formy przełamane miękkimi liniami, zaokrągleniami oraz subtelnymi kontrastami. Indywidualnie zaprojektowane zabudowy, starannie dobrane oświetlenie i konsekwentne prowadzenie materiałów nadają wnętrzu architektoniczną spójność, zachowując jednocześnie jego lekkość i naturalny charakter.",
+        "Całość tworzy przestrzeń, w której współczesna estetyka spotyka się z codziennym komfortem. Minimalizm nie oznacza tu surowości, lecz świadomą selekcję form i materiałów, pozwalającą wydobyć to, co najważniejsze.",
+    ],
+    styleDescription:
+      "Współczesny minimalizm oparty na naturalnych materiałach, stonowanej kolorystyce i miękkich formach. Połączenie ciepłego drewna, subtelnych struktur i oszczędnej geometrii tworzy ponadczasową, harmonijną przestrzeń.",
+    cover: cover5,
+    images: [img12_0, img12_1, img12_2, img12_3, img12_4],
+    year: 2026,
+    area: "Dom w zabudowie bliźniaczej 140",
   },
 ];

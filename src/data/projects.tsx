@@ -81,15 +81,15 @@ export const projects: Project[] = [
     style: "Modern Heritage",
     location: "Kraków, Polska",
     description: [
-        "Projekt tej kamienicy w centrum Krakowa to świadome połączenie historii z nowoczesnym, rzeźbiarskim podejściem do wnętrza. Zamiast konkurować z istniejącą architekturą, wnętrze zostało zbudowane wokół materiału, który naturalnie wpisuje się w kontekst miejsca - kamienia.",
-        "To on nadaje ton całej przestrzeni. Pojawia się nie tylko jako wykończenie, ale jako główny element kompozycyjny - ciężki wizualnie, a jednocześnie precyzyjnie opracowany w formie. Zestawiony z miękkim, rozproszonym światłem tworzy kontrast, który buduje atmosferę wnętrza.",
-        "Zieleń, naturalne drewno i stonowana paleta kolorystyczna uzupełniają całość, nadając przestrzeni spokój i ponadczasowość. Detale zostały ograniczone do minimum, dzięki czemu materiały i światło przejmują główną rolę.",
-        "To wnętrze nie próbuje dominować nad historią miejsca - ono ją podkreśla i interpretuje na nowo."
+        "Projekt mieszkania w ponadczasowej kamienicy w centrum Krakowa to świadome połączenie historii z nowoczesnym, rzeźbiarskim podejściem do wnętrza. Zamiast konkurować z istniejącą architekturą, wnętrze zostało zbudowane w zgodzie z materiałem, który naturalnie wpisuje się w kontekst tego miejsca.",
+        "Wyrazisty kamień nadaje ton całej przestrzeni. Pojawia się nie tylko jako wykończenie, ale jako główny element kompozycyjny - ciężki wizualnie, a jednocześnie precyzyjnie opracowany w formie. Zestawiony z miękkim, rozproszonym światłem tworzy kontrast, który buduje atmosferę wnętrza.",
+        "Zieleń, naturalne drewno i stonowana paleta kolorystyczna uzupełniają całość, nadając przestrzeni spokój i ponadczasowość. Detale stanowią istotne dopełnienie, a światło nadaje domowego ciepła i delikatności w całym wnętrzu.",
+        "To wnętrze nie dominuje nad historią miejsca - ono ją podkreśla i interpretuje na nowo."
     ],
     styleDescription:
       "Styl oparty na zestawieniu historycznego kontekstu z nowoczesną, minimalistyczną formą. Kluczową rolę odgrywają naturalne materiały - przede wszystkim kamień - traktowane w sposób rzeźbiarski. Całość dopełnia świadomie zaprojektowane światło, które wydobywa fakturę i buduje klimat wnętrza.",
     cover: cover1,
-    images: [img1_0, img1_1, img1_2, img1_3, img1_4, img1_5],
+    images: [img1_0, img1_4, img1_1, img1_2, img1_3, img1_5],
     year: 2026,
     area: "Mieszkanie 100",
   },
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     styleDescription:
       "Połączenie surowych, naturalnych materiałów z minimalistyczną formą i rzeźbiarskim podejściem do detalu. Styl oparty na kontraście: ciężar kamienia zestawiony z lekkością światła, prostota brył z organiczną nieregularnością.",
     cover: cover2,
-    images: [img2_0, img2_1, img2_2, img2_3, img2_4],
+    images: [img2_4, img2_2, img2_3, img2_0, img2_1],
     year: 2026,
     area: "Dom 300",
   },
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     styleDescription:
       "Połączenie klasycznej architektury z nowoczesnym, minimalistycznym podejściem do formy. Styl oparty na świetle, proporcji i selektywnym użyciu materiałów, z wyraźnym odniesieniem do estetyki galerii sztuki. ",
     cover: cover3,
-    images: [img3_4, img3_0, img3_1, img3_2, img3_3, img3_4, img3_5],
+    images: [img3_4, img3_3, img3_2, img3_1, img3_5, img3_0],
     year: 2025,
     area: "Dom 220",
   },
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na naturalnych materiałach, ciepłej palecie barw i prostych formach. Kluczowe są tu proporcja, światło i autentyczność materiałów, które razem budują spokojną, ponadczasową przestrzeń.",
     cover: cover4,
-    images: [img4_0, img4_1, img4_2, img4_3],
+    images: [img4_3, img4_1, img4_2, img4_0],
     year: 2025,
     area: "Mieszkanie 120",
   },
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na zestawieniu klasycznych elementów architektury z surowymi, współczesnymi materiałami. Minimalizm wzbogacony o strukturę i detal, tworzący elegancką, ponadczasową przestrzeń.",
     cover: cover9,
-    images: [img9_2, img9_1, img9_0, img9_3],
+    images: [img9_3, img9_1, img9_2, img9_0],
     year: 2025,
     area: "Mieszkanie 110",
   },
@@ -178,7 +178,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na silnym powiązaniu wnętrza z otoczeniem. Kontrast naturalnych materiałów — kamienia i drewna — z nowoczesną, minimalistyczną formą tworzy przestrzeń elegancką, ale jednocześnie osadzoną w naturze.",
     cover: cover6,
-    images: [img6_2, img6_0, img6_1, img6_3, img6_4],
+    images: [img6_4, img6_2, img6_3, img6_0, img6_1],
     year: 2024,
     area: "Dom 280",
   },
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na tworzeniu atmosfery poprzez światło, kolor i proporcję. Minimalizm wzbogacony o miękkie formy i ciepłe materiały, dostosowany do życia w przestrzeni o ograniczonym metrażu.",
     cover: cover7,
-    images: [img7_0, img7_1, img7_2, img7_3],
+    images: [img7_0, img7_1, img7_3, img7_2],
     year: 2025,
     area: "Mieszkanie 40",
   },
@@ -215,7 +215,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na eksponowaniu surowych materiałów — betonu, kamienia i metalu — przełamanych miękkimi, naturalnymi elementami. Minimalizm o wyraźnym, industrialnym charakterze, dostosowany do funkcji wypoczynkowej.",
     cover: cover8,
-    images: [img8_0, img8_1, img8_2, img8_3, img8_4],
+    images: [img8_3, img8_1, img8_4, img8_2, img8_0],
     year: 2025,
     area: "Apartamentowiec 670",
   },
@@ -234,7 +234,7 @@ export const projects: Project[] = [
     styleDescription:
       "Styl oparty na kontraście, prostocie i wysokiej jakości materiałach. Minimalizm wzbogacony o wyraźne akcenty kamienia i światła, tworzący elegancką, miejską przestrzeń.",
     cover: cover5,
-    images: [img5_1, img5_0, img5_2, img5_3, img5_4],
+    images: [img5_1, img5_2, img5_3, img5_4, img5_0],
     year: 2025,
     area: "Mieszkanie 55",
   },

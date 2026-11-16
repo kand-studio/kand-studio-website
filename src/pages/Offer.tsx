@@ -55,7 +55,7 @@ function OfferPage() {
     {
       id: 2,
       name: "Pakiet Koncepcyjny",
-      priceMin: 150,
+      priceMin: 160,
       priceMax: 200,
       description: "Pakiet pozwala określić kierunek stylistyczny projektu oraz zwizualizować finalny efekt przy pomocy realistycznych wizualizacji.",
       content: {
@@ -67,13 +67,13 @@ function OfferPage() {
         ],
         description:
           "Dla osób, które chcą zobaczyć przyszłe wnętrze jeszcze przed rozpoczęciem realizacji.",
-        priceText: "Cena od 150 zł/m²",
+        priceText: "Cena od 160 zł/m²",
       },
     },
     {
       id: 3,
       name: "Projekt Kompleksowy",
-      priceMin: 260,
+      priceMin: 220,
       priceMax: 290,
       description: "To rozwiązanie dla osób, które oczekują kompletnego projektu wnętrza, dopracowanego zarówno pod względem estetycznym, jak i technicznym. Oprócz pełnej dokumentacji projektowej zapewniam również bieżące wsparcie podczas procesu zakupowego oraz realizacji projektu.",
       content: {
@@ -92,7 +92,7 @@ function OfferPage() {
         ],
         description:
           "Najczęściej wybierana forma współpracy.",
-        priceText: "Cena od 260 zł/m²",
+        priceText: "Cena od 220 zł/m²",
       },
     },
     // {
@@ -618,7 +618,7 @@ function OfferPage() {
 
               <div className="offer__content__benefits">
                 <p className="offer__content__benefit">
-                Projekt Kompleksowy można rozszerzyć o dodatkowe usługi, które pozwalają ograniczyć zaangażowanie Inwestora i zapewniają jeszcze większy komfort podczas realizacji.
+               Pakiety można rozszerzyć o dodatkowe usługi, które pozwalają ograniczyć zaangażowanie Inwestora i zapewniają jeszcze większy komfort podczas realizacji. Na indywidualne życzenie przygotowuję również spersonalizowany zakres współpracy, dostosowany do charakteru inwestycji oraz oczekiwań Klienta. W ramach takiej współpracy mogę przejąć dodatkowe obowiązki związane z organizacją, koordynacją i prowadzeniem inwestycji, zapewniając maksymalny komfort oraz kompleksowe wsparcie na każdym etapie realizacji. Zakres usługi oraz wycena ustalane są indywidualnie.
                 </p>
               </div>
             </div>

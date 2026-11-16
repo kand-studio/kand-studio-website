@@ -17,7 +17,7 @@ function About() {
             <p className="about__content__title">Firma</p>
             <span className="about__content__logo"></span>
             <p className="about__content__description">
-              KAND.studio to autorskie biuro projektowe specjalizujące się w kompleksowym projektowaniu wnętrz prywatnych oraz inwestycyjnych.
+             KAND.studio to autorskie biuro projektowe specjalizujące się w kompleksowym projektowaniu wnętrz prywatnych, inwestycyjnych oraz usługowych.
               <br /><br />
               Studio powstało z potrzeby tworzenia przestrzeni, które łączą wysoką estetykę, funkcjonalność oraz najwyższą jakość wykonania. Każdy projekt realizowany jest z dbałością o najmniejsze detale, przy zachowaniu pełnej kontroli nad procesem projektowym i realizacyjnym.
               <br /><br />

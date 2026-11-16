@@ -61,7 +61,7 @@ import img9_1 from "../media/projects/syr-009/img1.jpg";
 import img9_2 from "../media/projects/syr-009/img2.jpg";
 import img9_3 from "../media/projects/syr-009/img3.jpg";
 
-import cover10 from "../media/projects/bien-010/cover.jpg";
+//import cover10 from "../media/projects/bien-010/cover.jpg";
 import img10_0 from "../media/projects/bien-010/img0.jpg";
 import img10_1 from "../media/projects/bien-010/img1.jpg";
 import img10_2 from "../media/projects/bien-010/img2.jpg";
@@ -70,7 +70,7 @@ import img10_4 from "../media/projects/bien-010/img4.jpg";
 import img10_5 from "../media/projects/bien-010/img5.jpg";
 import img10_6 from "../media/projects/bien-010/img6.jpg";
 
-import cover11 from "../media/projects/karola-011/cover.jpg";
+//import cover11 from "../media/projects/karola-011/cover.jpg";
 import img11_0 from "../media/projects/karola-011/img0.jpg";
 import img11_1 from "../media/projects/karola-011/img1.jpg";
 import img11_2 from "../media/projects/karola-011/img2.jpg";
@@ -79,7 +79,7 @@ import img11_4 from "../media/projects/karola-011/img4.jpg";
 import img11_5 from "../media/projects/karola-011/img5.jpg";
 import img11_6 from "../media/projects/karola-011/img6.jpg";
 
-import cover12 from "../media/projects/warm-012/cover.jpg";
+//import cover12 from "../media/projects/warm-012/cover.jpg";
 import img12_0 from "../media/projects/warm-012/img0.jpg";
 import img12_1 from "../media/projects/warm-012/img1.jpg";
 import img12_2 from "../media/projects/warm-012/img2.jpg";

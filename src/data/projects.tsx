@@ -61,7 +61,7 @@ import img9_1 from "../media/projects/syr-009/img1.jpg";
 import img9_2 from "../media/projects/syr-009/img2.jpg";
 import img9_3 from "../media/projects/syr-009/img3.jpg";
 
-//import cover10 from "../media/projects/bien-010/cover.jpg";
+import cover10 from "../media/projects/bien-010/cover.jpg";
 import img10_0 from "../media/projects/bien-010/img0.jpg";
 import img10_1 from "../media/projects/bien-010/img1.jpg";
 import img10_2 from "../media/projects/bien-010/img2.jpg";
@@ -70,7 +70,7 @@ import img10_4 from "../media/projects/bien-010/img4.jpg";
 import img10_5 from "../media/projects/bien-010/img5.jpg";
 import img10_6 from "../media/projects/bien-010/img6.jpg";
 
-//import cover11 from "../media/projects/karola-011/cover.jpg";
+import cover11 from "../media/projects/karola-011/cover.jpg";
 import img11_0 from "../media/projects/karola-011/img0.jpg";
 import img11_1 from "../media/projects/karola-011/img1.jpg";
 import img11_2 from "../media/projects/karola-011/img2.jpg";
@@ -79,7 +79,7 @@ import img11_4 from "../media/projects/karola-011/img4.jpg";
 import img11_5 from "../media/projects/karola-011/img5.jpg";
 import img11_6 from "../media/projects/karola-011/img6.jpg";
 
-//import cover12 from "../media/projects/warm-012/cover.jpg";
+import cover12 from "../media/projects/warm-012/cover.jpg";
 import img12_0 from "../media/projects/warm-012/img0.jpg";
 import img12_1 from "../media/projects/warm-012/img1.jpg";
 import img12_2 from "../media/projects/warm-012/img2.jpg";
@@ -276,7 +276,7 @@ export const projects: Project[] = [
     ],
     styleDescription:
       "Współczesna estetyka inspirowana naturą, łącząca organiczne formy, surowe struktury i szlachetne materiały. Głęboka kolorystyka, naturalne drewno i kamień tworzą przestrzeń o wyrazistym, ponadczasowym charakterze.",
-    cover: cover5,
+    cover: cover10,
     images: [img10_1, img10_2, img10_3, img10_4, img10_5, img10_6, img10_0],
     year: 2026,
     area: "Dom 180",
@@ -294,7 +294,7 @@ export const projects: Project[] = [
     ],
     styleDescription:
       "Styl oparty na zestawieniu klasycznych elementów architektury z surowymi, współczesnymi materiałami. Minimalizm wzbogacony o strukturę i detal, tworzący elegancką, ponadczasową przestrzeń.",
-    cover: cover5,
+    cover: cover11,
     images: [img11_0, img11_1, img11_2, img11_3, img11_4, img11_5, img11_6],
     year: 2025,
     area: "Mieszkanie 110",
@@ -312,7 +312,7 @@ export const projects: Project[] = [
     ],
     styleDescription:
       "Współczesny minimalizm oparty na naturalnych materiałach, stonowanej kolorystyce i miękkich formach. Połączenie ciepłego drewna, subtelnych struktur i oszczędnej geometrii tworzy ponadczasową, harmonijną przestrzeń.",
-    cover: cover5,
+    cover: cover12,
     images: [img12_0, img12_1, img12_2, img12_3, img12_4],
     year: 2026,
     area: "Dom w zabudowie bliźniaczej 140",
